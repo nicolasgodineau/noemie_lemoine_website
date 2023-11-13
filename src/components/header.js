@@ -16,7 +16,6 @@ const Header = () => {
         position: "fixed",
         top: "0",
         display: "flex",
-        gap: "48px",
         paddingTop: "1rem",
         backgroundColor: theme.palette.dark,
         color: theme.palette.light,
@@ -28,7 +27,8 @@ const Header = () => {
           display: "flex",
           flexDirection: "column",
           gap: "48px",
-          flexGrow: "1",
+          width: "50%",
+          /* flexGrow: "1", */
           color: theme.palette.light,
         }}
       >
