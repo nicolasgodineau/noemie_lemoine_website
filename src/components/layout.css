@@ -42,10 +42,12 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background-color: #edeae4;
 }
 a {
   background-color: transparent;
-  color: var(--color-primary);
+  color: #edeae4;
+
   text-decoration: none;
   font-weight: 500;
   text-decoration: underline;
