@@ -11,7 +11,7 @@ const Header = () => {
   const theme = useTheme()
 
   const links = [
-    { href: "/page1", name: "Portfolio" },
+    { href: "/#portfolio", name: "Portfolio" },
     { href: "/page2", name: "À propos" },
     { href: "/page3", name: "Contact" },
     { href: "/page4", name: "Mariage" },
@@ -21,9 +21,6 @@ const Header = () => {
     <Container
       maxWidth={false}
       sx={{
-        position: "fixed",
-        top: "0",
-        width: "100%",
         display: "flex",
         justifyContent: "space-between",
         paddingTop: "1rem",
