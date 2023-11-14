@@ -12,6 +12,14 @@ const IndexPage = () => {
   const { t } = useTranslation()
   const theme = useTheme()
 
+  const dataForLettres = {
+    name: "Noëmie",
+    lastName: "Lemoine",
+  }
+
+  const lettersName = dataForLettres.name.split("")
+  const lettersLastName = dataForLettres.lastName.split("")
+
   return (
     <Container
       maxWidth={false}
@@ -34,7 +42,13 @@ const IndexPage = () => {
           color: theme.palette.light,
         }}
       >
-        <Typography sx={{ fontSize: "36px", letterSpacing: "11px" }}>
+        <Typography
+          variant="h4"
+          sx={{
+            fontFamily: "Cinizel",
+            letterSpacing: "11px",
+          }}
+        >
           {t("jobName")}
         </Typography>
         <Box
@@ -52,54 +66,11 @@ const IndexPage = () => {
               gap: "48px",
             }}
           >
-            <Typography
-              sx={{
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              N
-            </Typography>
-            <Typography
-              sx={{
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              O
-            </Typography>
-            <Typography
-              sx={{
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              Ë
-            </Typography>
-            <Typography
-              sx={{
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              M
-            </Typography>
-            <Typography
-              sx={{
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              I
-            </Typography>
-            <Typography
-              sx={{
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              E
-            </Typography>
+            {lettersName.map((letter, index) => (
+              <Typography key={index} variant="h1">
+                {letter}
+              </Typography>
+            ))}
           </Box>
           {/* Séparation */}
           <Box
@@ -117,69 +88,11 @@ const IndexPage = () => {
               gap: "48px",
             }}
           >
-            <Typography
-              sx={{
-                textAlign: "center",
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              L
-            </Typography>
-            <Typography
-              sx={{
-                textAlign: "center",
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              E
-            </Typography>
-            <Typography
-              sx={{
-                textAlign: "center",
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              M
-            </Typography>
-            <Typography
-              sx={{
-                textAlign: "center",
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              O
-            </Typography>
-            <Typography
-              sx={{
-                textAlign: "center",
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              I
-            </Typography>
-            <Typography
-              sx={{
-                textAlign: "center",
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              N
-            </Typography>
-            <Typography
-              sx={{
-                textAlign: "center",
-                maxWidth: "unset",
-                fontSize: "92px",
-              }}
-            >
-              E
-            </Typography>
+            {lettersLastName.map((letter, index) => (
+              <Typography key={index} variant="h1">
+                {letter}
+              </Typography>
+            ))}
           </Box>
         </Box>
       </Box>

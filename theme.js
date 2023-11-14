@@ -1,6 +1,6 @@
-import { createTheme } from "@mui/material/styles"
+import { createTheme, responsiveFontSizes } from "@mui/material/styles"
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     light: "#EDEAE4",
     dark: "#111010",
@@ -9,5 +9,7 @@ const theme = createTheme({
     fontFamily: "Cinzel Variable, sans-serif", // Police par défaut
   },
 })
+
+theme = responsiveFontSizes(theme)
 
 export default theme
