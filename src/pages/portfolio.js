@@ -30,6 +30,7 @@ function PortfolioPage() {
             }}>
             <Container
                 maxWidth="lg"
+                disableGutters
                 sx={{
                     maxWidth: "xl",
                     display: "flex",
@@ -68,19 +69,29 @@ function PortfolioPage() {
                     }}
                 />
             </Container>
-            <Container maxWidth="lg" sx={{
+            <Container maxWidth="lg" disableGutters sx={{
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
                 marginTop: "2rem",
             }}>
                 {portfolioData.paragraph1.map((paragraph, pIndex) => (
-                    <Typography key={pIndex} paragraph>
+                    <Typography key={pIndex} paragraph sx={{
+                        maxWidth: "unset",
+                        marginBottom: 0,
+                        fontFamily: "Gowun Batang",
+                        textTransform: "none",
+                    }}>
                         {t(paragraph.line)}
                     </Typography>
                 ))}
                 {portfolioData.paragraph2.map((paragraph, pIndex) => (
-                    <Typography key={pIndex} paragraph>
+                    <Typography key={pIndex} paragraph sx={{
+                        maxWidth: "unset",
+                        marginTop: "2rem",
+                        fontFamily: "Gowun Batang",
+                        textTransform: "none",
+                    }}>
                         {t(paragraph.line)}
                     </Typography>
                 ))}
