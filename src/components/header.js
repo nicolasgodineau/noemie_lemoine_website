@@ -4,75 +4,46 @@ import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 
 import { Link } from "gatsby"
-import { Box, Container } from "@mui/material"
+import { Box, Button, Container } from "@mui/material"
 
 const Header = () => {
   const { t } = useTranslation()
   const theme = useTheme()
+
+  const links = [
+    { href: "/page1", name: "Portfolio" },
+    { href: "/page2", name: "À propos" },
+    { href: "/page3", name: "Contact" },
+    { href: "/page4", name: "Mariage" },
+  ]
+
   return (
     <Container
       maxWidth={false}
       sx={{
         position: "fixed",
         top: "0",
+        width: "100%",
         display: "flex",
+        justifyContent: "space-between",
         paddingTop: "1rem",
         backgroundColor: theme.palette.dark,
         color: theme.palette.light,
         fontFamily: "Cinzel Variable",
       }}
     >
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "48px",
-          width: "50%",
-          /* flexGrow: "1", */
-          color: theme.palette.light,
-        }}
-      >
+      {links.map((link, index) => (
         <Link
-          to="/"
-          style={{
-            fontSize: `var(--font-sm)`,
-            textDecoration: `none`,
-          }}
+          key={index}
+          to={link.href}
+          style={
+            /* Style pour le dernier élément, qui est le portfolio */
+            index === links.length - 1 ? { position: "absolute", top: 70 } : {}
+          }
         >
-          Portfolio
+          <Button sx={{ color: theme.palette.light }}>{link.name}</Button>
         </Link>
-        <Link
-          to="/"
-          style={{
-            fontSize: `var(--font-sm)`,
-            textDecoration: `none`,
-          }}
-        >
-          Mariage
-        </Link>
-      </Box>
-      <Box
-        sx={{ width: "50%", display: "flex", justifyContent: "space-between" }}
-      >
-        <Link
-          to="/"
-          style={{
-            fontSize: `var(--font-sm)`,
-            textDecoration: `none`,
-          }}
-        >
-          À propos
-        </Link>
-        <Link
-          to="/"
-          style={{
-            fontSize: `var(--font-sm)`,
-            textDecoration: `none`,
-          }}
-        >
-          Contact
-        </Link>
-      </Box>
+      ))}
     </Container>
   )
 }
