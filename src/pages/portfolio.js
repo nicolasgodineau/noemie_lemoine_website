@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from 'gatsby';
 
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
@@ -6,9 +7,15 @@ import Typography from "@mui/material/Typography"
 import { StaticImage } from "gatsby-plugin-image"
 import { Box, Container } from "@mui/material"
 
+import AllData from '../languages/fr.json'
+
 function PortfolioPage() {
     const { t } = useTranslation()
     const theme = useTheme()
+
+    const portfolioData = AllData.portfolio
+    console.log('portfolioData:', portfolioData)
+
 
     return (
         <Container id="portfolio"
@@ -21,8 +28,10 @@ function PortfolioPage() {
                 justifyContent: "center",
                 backgroundColor: theme.palette.light,
             }}>
-            <Box
+            <Container
+                maxWidth="lg"
                 sx={{
+                    maxWidth: "xl",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "flex-end",
@@ -58,15 +67,24 @@ function PortfolioPage() {
                         borderRadius: "0px 200px 0px 0px",
                     }}
                 />
-            </Box>
-            <Box sx={{
+            </Container>
+            <Container maxWidth="lg" sx={{
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
                 marginTop: "2rem",
             }}>
-
-            </Box>
+                {portfolioData.paragraph1.map((paragraph, pIndex) => (
+                    <Typography key={pIndex} paragraph>
+                        {t(paragraph.line)}
+                    </Typography>
+                ))}
+                {portfolioData.paragraph2.map((paragraph, pIndex) => (
+                    <Typography key={pIndex} paragraph>
+                        {t(paragraph.line)}
+                    </Typography>
+                ))}
+            </Container>
         </Container>
     )
 }
