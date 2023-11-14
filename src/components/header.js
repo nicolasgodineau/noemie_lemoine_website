@@ -1,13 +1,11 @@
-import * as React from "react"
+import React from "react"
 
-import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 
 import { Link } from "gatsby"
-import { Box, Button, Container } from "@mui/material"
+import { Button, Container } from "@mui/material"
 
 const Header = () => {
-  const { t } = useTranslation()
   const theme = useTheme()
 
   const links = [

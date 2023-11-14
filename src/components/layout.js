@@ -1,22 +1,14 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from "@mui/material/styles" // Importez ThemeProvider
-import theme from "../../theme.js" // Importez votre thème personnalisé
+import React from "react"
+
+import { ThemeProvider } from "@mui/material/styles"
+import theme from "../../theme.js"
 
 import Header from "../components/header.js"
 import "./layout.css"
 import { Container } from "@mui/material"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+
 
   return (
     <ThemeProvider theme={theme}>

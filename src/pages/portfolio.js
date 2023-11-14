@@ -5,7 +5,6 @@ import { useTheme } from "@mui/material/styles"
 import Typography from "@mui/material/Typography"
 import { StaticImage } from "gatsby-plugin-image"
 import { Box, Container } from "@mui/material"
-import Header from "../components/header.js"
 
 function PortfolioPage() {
     const { t } = useTranslation()

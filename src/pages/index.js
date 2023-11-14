@@ -6,7 +6,7 @@ import { useTheme } from "@mui/material/styles"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Box, Container, Typography } from "@mui/material"
-import Header from "../components/header.js"
+
 import PortfolioPage from "./portfolio.js"
 
 const IndexPage = () => {
