@@ -29,7 +29,6 @@ const Header = () => {
         paddingTop: "1rem",
         backgroundColor: theme.palette.dark,
         color: theme.palette.light,
-        fontFamily: "Cinzel Variable",
       }}
     >
       {links.map((link, index) => (
