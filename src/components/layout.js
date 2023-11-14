@@ -3,8 +3,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "@mui/material/styles" // Importez ThemeProvider
 import theme from "../../theme.js" // Importez votre thème personnalisé
 
-import Header from "./header"
+import Header from "../components/header.js"
 import "./layout.css"
+import { Container } from "@mui/material"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,8 +20,10 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>{children}</main>
+      <Header />
+      <Container component="main" maxWidth={false} disableGutters>
+        {children}
+      </Container>
 
       <footer>
         © {new Date().getFullYear()} &middot; Built with

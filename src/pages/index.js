@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Box, Container, Typography } from "@mui/material"
 import Header from "../components/header.js"
+import PortfolioPage from "./portfolio.js"
 
 const IndexPage = () => {
   const { t } = useTranslation()
@@ -21,82 +22,84 @@ const IndexPage = () => {
   const lettersLastName = dataForLettres.lastName.split("")
 
   return (
-    <Container
-      maxWidth={false}
-      sx={{
-        height: "100svh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: theme.palette.dark,
-      }}
-    >
-      <Header />
-      <Box
+    <Layout>
+      <Container
+        maxWidth={false}
         sx={{
+          height: "100svh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "48px",
-          color: theme.palette.light,
+          justifyContent: "center",
+          backgroundColor: theme.palette.dark,
         }}
       >
-        <Typography
-          variant="h4"
-          sx={{
-            fontFamily: "Cinizel",
-            letterSpacing: "11px",
-          }}
-        >
-          {t("jobName")}
-        </Typography>
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            gap: "48px",
+            color: theme.palette.light,
           }}
         >
-          {/* Prénom */}
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: "Cinizel",
+              letterSpacing: "11px",
+            }}
+          >
+            {t("jobName")}
+          </Typography>
           <Box
             sx={{
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
-              gap: "48px",
             }}
           >
-            {lettersName.map((letter, index) => (
-              <Typography key={index} variant="h1">
-                {letter}
-              </Typography>
-            ))}
-          </Box>
-          {/* Séparation */}
-          <Box
-            sx={{
-              height: "1px",
-              width: "120%",
-              backgroundColor: theme.palette.light,
-            }}
-          />
-          {/* Nom */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: "48px",
-            }}
-          >
-            {lettersLastName.map((letter, index) => (
-              <Typography key={index} variant="h1">
-                {letter}
-              </Typography>
-            ))}
+            {/* Prénom */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "48px",
+              }}
+            >
+              {lettersName.map((letter, index) => (
+                <Typography key={index} variant="h1">
+                  {letter}
+                </Typography>
+              ))}
+            </Box>
+            {/* Séparation */}
+            <Box
+              sx={{
+                height: "1px",
+                width: "120%",
+                backgroundColor: theme.palette.light,
+              }}
+            />
+            {/* Nom */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "48px",
+              }}
+            >
+              {lettersLastName.map((letter, index) => (
+                <Typography key={index} variant="h1">
+                  {letter}
+                </Typography>
+              ))}
+            </Box>
           </Box>
         </Box>
-      </Box>
-    </Container>
+      </Container>
+      <PortfolioPage />
+    </Layout>
   )
 }
 
