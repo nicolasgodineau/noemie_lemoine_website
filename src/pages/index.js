@@ -13,179 +13,177 @@ const IndexPage = () => {
   const theme = useTheme()
 
   return (
-    <>
-      <Container
-        maxWidth={false}
+    <Container
+      maxWidth={false}
+      sx={{
+        height: "100svh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: theme.palette.dark,
+      }}
+    >
+      <Header />
+      <Box
         sx={{
-          height: "100svh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: theme.palette.dark,
+          gap: "48px",
+          color: theme.palette.light,
         }}
       >
-        <Header />
+        <Typography sx={{ fontSize: "36px", letterSpacing: "11px" }}>
+          {t("jobName")}
+        </Typography>
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "48px",
-            color: theme.palette.light,
           }}
         >
-          <Typography sx={{ fontSize: "36px", letterSpacing: "11px" }}>
-            {t("jobName")}
-          </Typography>
+          {/* Prénom */}
           <Box
             sx={{
               display: "flex",
-              flexDirection: "column",
               alignItems: "center",
+              gap: "48px",
             }}
           >
-            {/* Prénom */}
-            <Box
+            <Typography
               sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: "48px",
+                maxWidth: "unset",
+                fontSize: "92px",
               }}
             >
-              <Typography
-                sx={{
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                N
-              </Typography>
-              <Typography
-                sx={{
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                O
-              </Typography>
-              <Typography
-                sx={{
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                Ë
-              </Typography>
-              <Typography
-                sx={{
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                M
-              </Typography>
-              <Typography
-                sx={{
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                I
-              </Typography>
-              <Typography
-                sx={{
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                E
-              </Typography>
-            </Box>
-            {/* Séparation */}
-            <Box
+              N
+            </Typography>
+            <Typography
               sx={{
-                height: "1px",
-                width: "120%",
-                backgroundColor: theme.palette.light,
-              }}
-            />
-            {/* Nom */}
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: "48px",
+                maxWidth: "unset",
+                fontSize: "92px",
               }}
             >
-              <Typography
-                sx={{
-                  textAlign: "center",
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                L
-              </Typography>
-              <Typography
-                sx={{
-                  textAlign: "center",
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                E
-              </Typography>
-              <Typography
-                sx={{
-                  textAlign: "center",
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                M
-              </Typography>
-              <Typography
-                sx={{
-                  textAlign: "center",
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                O
-              </Typography>
-              <Typography
-                sx={{
-                  textAlign: "center",
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                I
-              </Typography>
-              <Typography
-                sx={{
-                  textAlign: "center",
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                N
-              </Typography>
-              <Typography
-                sx={{
-                  textAlign: "center",
-                  maxWidth: "unset",
-                  fontSize: "92px",
-                }}
-              >
-                E
-              </Typography>
-            </Box>
+              O
+            </Typography>
+            <Typography
+              sx={{
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              Ë
+            </Typography>
+            <Typography
+              sx={{
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              M
+            </Typography>
+            <Typography
+              sx={{
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              I
+            </Typography>
+            <Typography
+              sx={{
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              E
+            </Typography>
+          </Box>
+          {/* Séparation */}
+          <Box
+            sx={{
+              height: "1px",
+              width: "120%",
+              backgroundColor: theme.palette.light,
+            }}
+          />
+          {/* Nom */}
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: "48px",
+            }}
+          >
+            <Typography
+              sx={{
+                textAlign: "center",
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              L
+            </Typography>
+            <Typography
+              sx={{
+                textAlign: "center",
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              E
+            </Typography>
+            <Typography
+              sx={{
+                textAlign: "center",
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              M
+            </Typography>
+            <Typography
+              sx={{
+                textAlign: "center",
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              O
+            </Typography>
+            <Typography
+              sx={{
+                textAlign: "center",
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              I
+            </Typography>
+            <Typography
+              sx={{
+                textAlign: "center",
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              N
+            </Typography>
+            <Typography
+              sx={{
+                textAlign: "center",
+                maxWidth: "unset",
+                fontSize: "92px",
+              }}
+            >
+              E
+            </Typography>
           </Box>
         </Box>
-      </Container>
-    </>
+      </Box>
+    </Container>
   )
 }
 
