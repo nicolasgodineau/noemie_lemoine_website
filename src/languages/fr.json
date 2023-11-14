@@ -3,5 +3,21 @@
   "name": "Noëmie",
   "lastName": "Lemoine",
   "jobName": "Make-up Artist",
-  "country": "France"
+  "country": "France",
+  "portfolio": {
+    "title": "La photographie est une poésie...",
+    "paragraph1": [
+      {
+        "line": "Elle saisit un instant, un mouvement, une émotion. Elle raconte une histoire, VOTRE Histoire ! "
+      },
+      {
+        "line": "Et c'est là que j'interviens, en apportant mon art délicat et subtil, qui met en lumière votre plus belle expression."
+      }
+    ],
+    "paragraph2": [
+      {
+        "line": "Le maquillage est un art complet, s'exprimant de multiples façons. Il magnifie et dévoile la quintessence de notre être. Il possède cette faculté exceptionnelle de nous mettre en avant, d'amplifier nos traits distinctifs et d'insuffler une confiance inébranlable en nous-mêmes."
+      }
+    ]
+  }
 }
