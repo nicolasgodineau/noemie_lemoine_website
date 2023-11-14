@@ -41,7 +41,17 @@ const Header = () => {
             index === links.length - 1 ? { position: "absolute", top: 70 } : {}
           }
         >
-          <Button sx={{ color: theme.palette.light }}>{link.name}</Button>
+          <Button
+            sx={{
+              fontFamily: "Gowun Batang",
+              textTransform: "none",
+              letterSpacing: "1.6px",
+              fontSize: "1rem",
+              color: theme.palette.light,
+            }}
+          >
+            {link.name}
+          </Button>
         </Link>
       ))}
     </Container>

@@ -10,19 +10,9 @@ import { ThemeProvider } from "@mui/material/styles"
 import theme from "./theme"
 import "./src/languages/i18n"
 
-// Supports weights 400-900
+// Fonts
 import "@fontsource-variable/cinzel"
-
-// Ajoutez le lien vers la police ici
-export const onRenderBody = ({ setHeadComponents }) => {
-  setHeadComponents([
-    <link
-      key="google-fonts"
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
-    />,
-  ])
-}
+import "@fontsource/gowun-batang"
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>{element}</ThemeProvider>
