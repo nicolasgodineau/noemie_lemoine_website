@@ -13,6 +13,7 @@ import "./src/languages/i18n"
 // Fonts
 import "@fontsource-variable/cinzel"
 import "@fontsource/gowun-batang"
+import '@fontsource-variable/bodoni-moda';
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>{element}</ThemeProvider>

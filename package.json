@@ -7,6 +7,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/bodoni-moda": "^5.0.9",
     "@fontsource-variable/cinzel": "^5.0.8",
     "@fontsource/gowun-batang": "^5.0.7",
     "@mui/material": "^5.14.17",
