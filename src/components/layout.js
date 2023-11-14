@@ -17,11 +17,10 @@ const Layout = ({ children }) => {
         {children}
       </Container>
 
-      <footer>
-        © {new Date().getFullYear()} &middot; Built with
+      {/*       <footer>
+        © {new Date().getFullYear()} &middot; Noëmie Lemoine 
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+      </footer> */}
     </ThemeProvider>
   )
 }
