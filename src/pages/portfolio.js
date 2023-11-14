@@ -65,30 +65,7 @@ function PortfolioPage() {
                 flexDirection: "column",
                 marginTop: "2rem",
             }}>
-                {t("portfolio.paragraph1", { returnObjects: true }).map(
-                    (paragraph, pIndex) => (
-                        <Typography key={pIndex} paragraph sx={{
-                            maxWidth: "unset",
-                            marginBottom: 0,
-                            fontFamily: "Gowun Batang",
-                            textTransform: "none",
-                        }}>
-                            {t(paragraph.line)}
-                        </Typography>
-                    )
-                )}
-                {t("portfolio.paragraph2", { returnObjects: true }).map(
-                    (paragraph, pIndex) => (
-                        <Typography key={pIndex} paragraph sx={{
-                            maxWidth: "unset",
-                            marginTop: "2rem",
-                            fontFamily: "Gowun Batang",
-                            textTransform: "none",
-                        }}>
-                            {t(paragraph.line)}
-                        </Typography>
-                    )
-                )}
+
             </Box>
         </Container>
     )
