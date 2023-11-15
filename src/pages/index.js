@@ -8,6 +8,7 @@ import Seo from "../components/seo"
 import { Box, Container, Typography } from "@mui/material"
 
 import PortfolioPage from "./portfolio.js"
+import Portfolio2Page from "./portfolio2.js"
 
 const IndexPage = () => {
   const { t } = useTranslation()
@@ -99,6 +100,7 @@ const IndexPage = () => {
         </Box>
       </Container>
       <PortfolioPage />
+      <Portfolio2Page />
     </Layout>
   )
 }

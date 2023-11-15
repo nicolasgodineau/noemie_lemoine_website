@@ -1,11 +1,10 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby';
 
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 import Typography from "@mui/material/Typography"
 import { StaticImage } from "gatsby-plugin-image"
-import { Box, Container } from "@mui/material"
+import { Container } from "@mui/material"
 
 import AllData from '../languages/fr.json'
 
