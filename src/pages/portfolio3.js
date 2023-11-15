@@ -22,6 +22,8 @@ function Portfolio3Page() {
             sx={{
                 height: "100svh",
                 display: "flex",
+                justifyContent: "space-between",
+
                 backgroundColor: theme.palette.light,
             }}>
             <StaticImage
