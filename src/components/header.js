@@ -36,6 +36,7 @@ const Header = () => {
           }
         >
           <Button
+            color="secondary"
             sx={{
               fontFamily: "Gowun Batang",
               textTransform: "none",
