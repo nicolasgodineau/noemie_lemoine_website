@@ -18,7 +18,6 @@ function Portfolio4Page() {
                 backgroundColor: theme.palette.light,
             }}>
             <Box sx={{
-                width: "100%",
                 margin: "auto"
             }}>
                 <StaticImage
@@ -36,6 +35,7 @@ function Portfolio4Page() {
             <StaticImage
                 src="../images/portfolio/img_portfolio_8.webp"
                 alt="image d'illustration"
+                width={520}
                 style={{
                     width: "auto",
                     maxWidth: "520px",
