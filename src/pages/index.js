@@ -11,6 +11,7 @@ import PortfolioPage from "./portfolio.js"
 import Portfolio2Page from "./portfolio2.js"
 import Portfolio3Page from "./portfolio3.js"
 import Portfolio4Page from "./portfolio4.js"
+import Portfolio5Page from "./portfolio5.js"
 
 const IndexPage = () => {
   const { t } = useTranslation()
@@ -105,6 +106,7 @@ const IndexPage = () => {
       <Portfolio2Page />
       <Portfolio3Page />
       <Portfolio4Page />
+      <Portfolio5Page />
     </Layout>
   )
 }
