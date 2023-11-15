@@ -9,6 +9,7 @@ import { Box, Container, Typography } from "@mui/material"
 
 import PortfolioPage from "./portfolio.js"
 import Portfolio2Page from "./portfolio2.js"
+import Portfolio3Page from "./portfolio3.js"
 
 const IndexPage = () => {
   const { t } = useTranslation()
@@ -101,6 +102,7 @@ const IndexPage = () => {
       </Container>
       <PortfolioPage />
       <Portfolio2Page />
+      <Portfolio3Page />
     </Layout>
   )
 }

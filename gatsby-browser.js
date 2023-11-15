@@ -14,6 +14,7 @@ import "./src/languages/i18n"
 import "@fontsource-variable/cinzel"
 import "@fontsource/gowun-batang"
 import '@fontsource-variable/bodoni-moda';
+import '@fontsource/simonetta';
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>{element}</ThemeProvider>

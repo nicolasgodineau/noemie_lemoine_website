@@ -13,7 +13,6 @@ function PortfolioPage() {
     const theme = useTheme()
 
     const portfolioData = AllData.portfolio
-    console.log('portfolioData:', portfolioData)
 
 
     return (
