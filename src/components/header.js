@@ -12,12 +12,12 @@ const Header = () => {
     { href: "/#portfolio", name: "Portfolio" },
     { href: "/page2", name: "À propos" },
     { href: "/page3", name: "Contact" },
-    { href: "/page4", name: "Mariage" },
+    { href: "/portfolioTest", name: "Mariage" },
   ]
 
   return (
     <Container
-      maxWidth={false}
+      maxWidth="xl"
       sx={{
         display: "flex",
         justifyContent: "space-between",
