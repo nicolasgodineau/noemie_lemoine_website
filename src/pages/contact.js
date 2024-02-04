@@ -13,6 +13,7 @@ import FormControl from '@mui/material/FormControl';
 export default function Contact() {
     const { t } = useTranslation()
     const theme = useTheme()
+    console.log('theme:', theme)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,7 +29,7 @@ export default function Contact() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: "black",
+                backgroundColor: "#111010",
                 color: theme.palette.light,
             }}>
             <Container maxWidth="lg"
