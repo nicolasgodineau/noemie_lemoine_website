@@ -50,7 +50,6 @@ export default function Contact() {
                             label="Nom"
                             variant="standard"
                             fullWidth
-                            color="secondary"
                             InputLabelProps={{
                                 sx: {
                                     color: "#EDEAE4",
@@ -62,7 +61,6 @@ export default function Contact() {
                         <TextField
                             label="Prénom"
                             variant="standard"
-                            color="secondary"
                             InputLabelProps={{
                                 sx: {
                                     color: "#EDEAE4",
@@ -73,6 +71,7 @@ export default function Contact() {
                     <FormControl>
                         <TextField
                             label="Email"
+                            variant="standard"
                             type="email"
                             InputLabelProps={{
                                 sx: {
@@ -85,7 +84,6 @@ export default function Contact() {
                         <TextField
                             label="Téléphone"
                             variant="standard"
-                            color="secondary"
                             InputLabelProps={{
                                 sx: {
                                     color: "#EDEAE4",
@@ -98,7 +96,6 @@ export default function Contact() {
                             label="Date de l'évènement"
                             type="date"
                             variant="standard"
-                            color="secondary"
                             InputLabelProps={{
                                 sx: {
                                     color: "#EDEAE4",
