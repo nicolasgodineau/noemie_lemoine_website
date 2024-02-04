@@ -97,7 +97,7 @@ export default function Contact() {
                             }}
                         />
                     </FormControl>
-                    <FormControl>
+                    {/*                     <FormControl>
                         <TextField
                             label="Date de l'évènement"
                             type="date"
@@ -119,22 +119,23 @@ export default function Contact() {
                                 variant="standard"
                                 size="medium"
                                 format='DD-MM-YYYY'
-                                slotProps={{ textField: { variant: 'filled', } }}
+                                slotProps={{
+                                    textField: {
+                                        variant: 'filled',
+                                    },
+                                    sx: {
+                                        color: "#EDEAE4",
+                                    }
+                                }}
                                 InputLabelProps={{
                                     shrink: true,
                                     sx: {
                                         color: "#EDEAE4",
                                     }
                                 }}
-                                sx={{
-                                    color: "red !important",
-
-                                }}
                             />
-                            {/*   <DatePicker label="Date de l'évènement" name="startDate" variant="standard"
-                                /> */}
                         </LocalizationProvider>
-                    </FormControl>
+                    </FormControl> */}
                     <TextField
                         label="Message"
                         multiline
@@ -147,7 +148,9 @@ export default function Contact() {
                             }
                         }}
                     />
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button type="submit" variant="contained" color="primary" sx={{
+                        backgroundColor: "#EDEAE4",
+                    }}>
                         Envoyer
                     </Button>
                 </Box>
