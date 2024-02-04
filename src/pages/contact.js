@@ -28,7 +28,7 @@ export default function Contact() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: theme.palette.dark,
+                backgroundColor: "black",
                 color: theme.palette.light,
             }}>
             <Container maxWidth="lg"
