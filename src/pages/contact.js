@@ -30,7 +30,7 @@ export default function Contact() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: theme.palette.dark,
+                backgroundColor: theme.palette.secondary,
             }}>
             <Container maxWidth="lg"
                 disableGutters sx={{
@@ -74,11 +74,9 @@ export default function Contact() {
                         <TextField
                             label="Email"
                             type="email"
-                            variant="standard"
-                            color="secondary"
-                            sx={{
-                                ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                    color: theme.palette.light
+                            InputLabelProps={{
+                                sx: {
+                                    color: "#EDEAE4",
                                 }
                             }}
                         />
