@@ -87,18 +87,28 @@ export default function Contact() {
                             <TextField
                                 label="Téléphone"
                                 variant="standard"
+                                color="warning"
                             />
                         </FormControl>
+                        <Button
+                            color="secondary"
+                            sx={{
+                                fontFamily: "Gowun Batang",
+                                textTransform: "none",
+                                letterSpacing: "1.6px",
+                                fontSize: "1rem",
+                                color: theme.palette.light,
+                            }}
+                        >
+                            test
+                        </Button>
                         <FormControl>
                             <TextField
                                 label="Date de l'évènement"
                                 type="date"
                                 variant="standard"
-                                color="primary"
                                 sx={{
-                                    ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                        color: "#EDEAE4",
-                                    }
+                                    color: "red",
                                 }}
 
                             />
