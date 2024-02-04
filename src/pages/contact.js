@@ -30,7 +30,7 @@ export default function Contact() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: theme.palette.secondary,
+                backgroundColor: "#111010",
             }}>
             <Container maxWidth="lg"
                 disableGutters sx={{
@@ -79,17 +79,6 @@ export default function Contact() {
                                     color: "#EDEAE4",
                                 }
                             }}
-                        />
-                        <TextField
-                            InputLabelProps={{
-                                sx: {
-                                    color: "#EDEAE4",
-                                    fontSize: "28px",
-                                    fontWeight: 1000,
-                                    "&.MuiOutlinedInput-notchedOutline": { fontSize: "28px" }
-                                }
-                            }}
-                            label="Hovedkategori"
                         />
                     </FormControl>
                     <FormControl>
