@@ -100,7 +100,7 @@ export default function Contact() {
                                 label="Date de l'évènement"
                                 type="date"
                                 variant="standard"
-                                color="secondary"
+                                color="primary"
                                 sx={{
                                     ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
                                         color: "#EDEAE4",
