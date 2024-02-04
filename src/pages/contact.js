@@ -150,6 +150,7 @@ export default function Contact() {
                     />
                     <Button type="submit" variant="contained" color="primary" sx={{
                         backgroundColor: "#EDEAE4",
+                        color: "#111010"
                     }}>
                         Envoyer
                     </Button>
