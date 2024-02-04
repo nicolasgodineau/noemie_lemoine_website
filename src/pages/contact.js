@@ -110,10 +110,9 @@ export default function Contact() {
                         rows={4}
                         variant="standard"
                         fullWidth
-                        color="secondary"
-                        sx={{
-                            ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                color: theme.palette.light
+                        InputLabelProps={{
+                            sx: {
+                                color: "#EDEAE4",
                             }
                         }}
                     />
