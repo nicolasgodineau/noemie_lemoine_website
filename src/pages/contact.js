@@ -85,7 +85,7 @@ export default function Contact() {
                         <TextField
                             InputLabelProps={{
                                 sx: {
-                                    color: theme.palette.light.main,
+                                    color: theme.palette.light,
                                     fontSize: "28px",
                                     fontWeight: 1000,
                                     "&.MuiOutlinedInput-notchedOutline": { fontSize: "28px" }
