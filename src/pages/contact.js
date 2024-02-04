@@ -88,8 +88,8 @@ export default function Contact() {
                             color="secondary"
                             InputLabelProps={{
                                 sx: {
-                                    color: theme.palette.light.main, // Utilise la couleur du thème ici
-                                },
+                                    color: "#EDEAE4",
+                                }
                             }}
                         />
                     </FormControl>
