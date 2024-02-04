@@ -21,142 +21,143 @@ export default function Contact() {
     };
 
     return (
-
-        <Container maxWidth={false}
-            sx={{
-                height: "100svh",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#111010",
-                color: theme.palette.light,
-            }}>
-            <Container maxWidth="lg"
-                disableGutters sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-around",
-                    gap: "2rem"
-                }}>
-                <Box component="form" autoComplete="off" onSubmit={handleSubmit} sx={{
-                    width: "30ch",
+        <Layout>
+            <Container maxWidth={false}
+                sx={{
+                    height: "100svh",
                     display: "flex",
                     flexDirection: "column",
-                    gap: "1rem",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "#111010",
+                    color: "#EDEAE4",
                 }}>
-                    <FormControl>
+                <Container maxWidth="lg"
+                    disableGutters sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-around",
+                        gap: "2rem"
+                    }}>
+                    <Box component="form" autoComplete="off" onSubmit={handleSubmit} sx={{
+                        width: "30ch",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "1rem",
+                    }}>
+                        <FormControl>
+                            <TextField
+                                label="Nom"
+                                variant="standard"
+                                fullWidth
+                                color="secondary"
+                                sx={{
+                                    ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
+                                        color: theme.palette.light,
+                                    }
+                                }}
+                            />
+                        </FormControl>
+                        <FormControl>
+                            <TextField
+                                label="Prénom"
+                                variant="standard"
+                                color="secondary"
+                                sx={{
+                                    ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
+                                        color: theme.palette.light
+                                    }
+                                }}
+                            />
+                        </FormControl>
+                        <FormControl>
+                            <TextField
+                                label="Email"
+                                type="email"
+                                variant="standard"
+                                color="secondary"
+                                sx={{
+                                    ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
+                                        color: theme.palette.light
+                                    }
+                                }}
+                            />
+                        </FormControl>
+                        <FormControl>
+                            <TextField
+                                label="Téléphone"
+                                variant="standard"
+                                color="secondary"
+                                sx={{
+                                    ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
+                                        color: theme.palette.light
+                                    }
+                                }}
+                            />
+                        </FormControl>
+                        <FormControl>
+                            <TextField
+                                label="Date de l'évènement"
+                                type="date"
+                                variant="standard"
+                                color="secondary"
+                                sx={{
+                                    ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
+                                        color: theme.palette.light
+                                    }
+                                }}
+
+                            />
+                        </FormControl>
                         <TextField
-                            label="Nom"
+                            label="Message"
+                            multiline
+                            rows={4}
                             variant="standard"
                             fullWidth
                             color="secondary"
                             sx={{
                                 ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                    color: theme.palette.light,
-                                }
-                            }}
-                        />
-                    </FormControl>
-                    <FormControl>
-                        <TextField
-                            label="Prénom"
-                            variant="standard"
-                            color="secondary"
-                            sx={{
-                                ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
                                     color: theme.palette.light
                                 }
                             }}
                         />
-                    </FormControl>
-                    <FormControl>
-                        <TextField
-                            label="Email"
-                            type="email"
-                            variant="standard"
-                            color="secondary"
-                            sx={{
-                                ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                    color: theme.palette.light
-                                }
+                        <Button type="submit" variant="contained" color="primary">
+                            Envoyer
+                        </Button>
+                    </Box>
+                    <Box sx={{
+                        height: "100%", display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        position: "relative"
+                    }}>
+                        <StaticImage
+                            src="../images/contact/img_contact_1.webp"
+                            alt="image d'illustration"
+                            style={{
+                                position: "absolute",
+                                width: "270px",
+                                height: "360px",
+                                borderRadius: "200px 0px 0px 0px",
+                                marginTop: "20%",
+                                left: "0",
+                                zIndex: "100"
                             }}
                         />
-                    </FormControl>
-                    <FormControl>
-                        <TextField
-                            label="Téléphone"
-                            variant="standard"
-                            color="secondary"
-                            sx={{
-                                ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                    color: theme.palette.light
-                                }
+                        <StaticImage
+                            src="../images/contact/img_contact_2.webp"
+                            alt="image d'illustration"
+                            style={{
+                                width: "427px",
+                                height: "580px",
+                                marginLeft: "200px",
+                                borderRadius: "0px 200px 0px 0px",
                             }}
                         />
-                    </FormControl>
-                    <FormControl>
-                        <TextField
-                            label="Date de l'évènement"
-                            type="date"
-                            variant="standard"
-                            color="secondary"
-                            sx={{
-                                ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                    color: theme.palette.light
-                                }
-                            }}
-
-                        />
-                    </FormControl>
-                    <TextField
-                        label="Message"
-                        multiline
-                        rows={4}
-                        variant="standard"
-                        fullWidth
-                        color="secondary"
-                        sx={{
-                            ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                color: theme.palette.light
-                            }
-                        }}
-                    />
-                    <Button type="submit" variant="contained" color="primary">
-                        Envoyer
-                    </Button>
-                </Box>
-                <Box sx={{
-                    height: "100%", display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    position: "relative"
-                }}>
-                    <StaticImage
-                        src="../images/contact/img_contact_1.webp"
-                        alt="image d'illustration"
-                        style={{
-                            position: "absolute",
-                            width: "270px",
-                            height: "360px",
-                            borderRadius: "200px 0px 0px 0px",
-                            marginTop: "20%",
-                            left: "0",
-                            zIndex: "100"
-                        }}
-                    />
-                    <StaticImage
-                        src="../images/contact/img_contact_2.webp"
-                        alt="image d'illustration"
-                        style={{
-                            width: "427px",
-                            height: "580px",
-                            marginLeft: "200px",
-                            borderRadius: "0px 200px 0px 0px",
-                        }}
-                    />
-                </Box>
+                    </Box>
+                </Container>
             </Container>
-        </Container>
+        </Layout>
     )
 }
