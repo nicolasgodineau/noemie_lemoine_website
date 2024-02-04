@@ -82,6 +82,17 @@ export default function Contact() {
                                 }
                             }}
                         />
+                        <TextField
+                            InputLabelProps={{
+                                sx: {
+                                    color: theme.palette.light.main,
+                                    fontSize: "28px",
+                                    fontWeight: 1000,
+                                    "&.MuiOutlinedInput-notchedOutline": { fontSize: "28px" }
+                                }
+                            }}
+                            label="Hovedkategori"
+                        />
                     </FormControl>
                     <FormControl>
                         <TextField
