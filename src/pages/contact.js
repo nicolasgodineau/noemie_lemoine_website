@@ -53,7 +53,7 @@ export default function Contact() {
                                 color="secondary"
                                 sx={{
                                     ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                        color: theme.palette.light,
+                                        color: "#EDEAE4",
                                     }
                                 }}
                             />
@@ -65,7 +65,7 @@ export default function Contact() {
                                 color="secondary"
                                 sx={{
                                     ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                        color: theme.palette.light
+                                        color: "#EDEAE4",
                                     }
                                 }}
                             />
@@ -78,7 +78,7 @@ export default function Contact() {
                                 color="secondary"
                                 sx={{
                                     ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                        color: theme.palette.light
+                                        color: "#EDEAE4",
                                     }
                                 }}
                             />
@@ -90,7 +90,7 @@ export default function Contact() {
                                 color="secondary"
                                 sx={{
                                     ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                        color: theme.palette.light
+                                        color: "#EDEAE4",
                                     }
                                 }}
                             />
@@ -103,7 +103,7 @@ export default function Contact() {
                                 color="secondary"
                                 sx={{
                                     ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                        color: theme.palette.light
+                                        color: "#EDEAE4",
                                     }
                                 }}
 
@@ -118,7 +118,7 @@ export default function Contact() {
                             color="secondary"
                             sx={{
                                 ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                    color: theme.palette.light
+                                    color: "#EDEAE4",
                                 }
                             }}
                         />
