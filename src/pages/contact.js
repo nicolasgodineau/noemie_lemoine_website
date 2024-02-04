@@ -87,12 +87,6 @@ export default function Contact() {
                             <TextField
                                 label="Téléphone"
                                 variant="standard"
-                                color="secondary"
-                                sx={{
-                                    ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                        color: "#EDEAE4",
-                                    }
-                                }}
                             />
                         </FormControl>
                         <FormControl>
