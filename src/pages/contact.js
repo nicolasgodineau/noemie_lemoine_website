@@ -13,6 +13,12 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormHelperText from '@mui/material/FormHelperText';
 import { light } from '@mui/material/styles/createPalette'
 
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DateField } from '@mui/x-date-pickers/DateField';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+
 export default function Contact() {
     const { t } = useTranslation()
     const theme = useTheme()
@@ -30,7 +36,7 @@ export default function Contact() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: "#111010",
+                /*  backgroundColor: "#111010", */
             }}>
             <Container maxWidth="lg"
                 disableGutters sx={{
@@ -71,8 +77,8 @@ export default function Contact() {
                     <FormControl>
                         <TextField
                             label="Email"
-                            variant="standard"
                             type="email"
+                            variant="standard"
                             InputLabelProps={{
                                 sx: {
                                     color: "#EDEAE4",
@@ -96,13 +102,48 @@ export default function Contact() {
                             label="Date de l'évènement"
                             type="date"
                             variant="standard"
+                            format='DD-MM-YYYY'
                             InputLabelProps={{
+                                shrink: true,
                                 sx: {
                                     color: "#EDEAE4",
                                 }
                             }}
 
                         />
+                    </FormControl>
+                    <TextField
+                        id="date"
+                        label="Birthday"
+                        type="date"
+                        defaultValue="2017-05-24"
+
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                    />
+                    <FormControl components={['DateField']}>
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DatePicker
+                                label="Date de l'évènement"
+                                variant="standard"
+                                size="medium"
+                                format='DD-MM-YYYY'
+                                slotProps={{ textField: { variant: 'filled', } }}
+                                InputLabelProps={{
+                                    shrink: true,
+                                    sx: {
+                                        color: "#EDEAE4",
+                                    }
+                                }}
+                                sx={{
+                                    color: "red !important",
+
+                                }}
+                            />
+                            {/*   <DatePicker label="Date de l'évènement" name="startDate" variant="standard"
+                                /> */}
+                        </LocalizationProvider>
                     </FormControl>
                     <TextField
                         label="Message"
