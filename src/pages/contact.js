@@ -50,22 +50,17 @@ export default function Contact() {
                                 label="Nom"
                                 variant="standard"
                                 fullWidth
-                                color="secondary"
-                                sx={{
-                                    ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                        color: "#EDEAE4",
-                                    }
-                                }}
+                                color="light"
                             />
                         </FormControl>
                         <FormControl>
                             <TextField
                                 label="Prénom"
                                 variant="standard"
-                                color="secondary"
+                                color="light"
                                 sx={{
-                                    ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                        color: "#EDEAE4",
+                                    "MuiInputLabel-root": {
+                                        color: theme.palette.light.main,
                                     }
                                 }}
                             />
