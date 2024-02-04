@@ -9,7 +9,7 @@ let theme = createTheme({
       main: '#111010',
     },
     light: {
-      main: "#EDEAE4"
+      main: '#EDEAE4', // Assure-toi que la couleur est correctement définie ici
     },
     dark: "#111010",
   },

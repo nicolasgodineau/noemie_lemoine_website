@@ -51,9 +51,9 @@ export default function Contact() {
                             variant="standard"
                             fullWidth
                             color="secondary"
-                            sx={{
-                                ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                    color: theme.palette.light
+                            InputLabelProps={{
+                                sx: {
+                                    color: "#EDEAE4",
                                 }
                             }}
                         />
@@ -63,9 +63,9 @@ export default function Contact() {
                             label="Prénom"
                             variant="standard"
                             color="secondary"
-                            sx={{
-                                ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                    color: theme.palette.light
+                            InputLabelProps={{
+                                sx: {
+                                    color: "#EDEAE4",
                                 }
                             }}
                         />
@@ -86,10 +86,10 @@ export default function Contact() {
                             label="Téléphone"
                             variant="standard"
                             color="secondary"
-                            sx={{
-                                ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                    color: theme.palette.light
-                                }
+                            InputLabelProps={{
+                                sx: {
+                                    color: theme.palette.light.main, // Utilise la couleur du thème ici
+                                },
                             }}
                         />
                     </FormControl>
@@ -99,9 +99,9 @@ export default function Contact() {
                             type="date"
                             variant="standard"
                             color="secondary"
-                            sx={{
-                                ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                    color: theme.palette.light
+                            InputLabelProps={{
+                                sx: {
+                                    color: "#EDEAE4",
                                 }
                             }}
 
