@@ -36,7 +36,7 @@ export default function Contact() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                /*  backgroundColor: "#111010", */
+                backgroundColor: "#111010",
             }}>
             <Container maxWidth="lg"
                 disableGutters sx={{
@@ -112,16 +112,6 @@ export default function Contact() {
 
                         />
                     </FormControl>
-                    <TextField
-                        id="date"
-                        label="Birthday"
-                        type="date"
-                        defaultValue="2017-05-24"
-
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                    />
                     <FormControl components={['DateField']}>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <DatePicker
