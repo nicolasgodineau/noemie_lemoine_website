@@ -75,12 +75,7 @@ export default function Contact() {
                                 label="Email"
                                 type="email"
                                 variant="standard"
-                                color="secondary"
-                                sx={{
-                                    ".css-1mwhap2-MuiFormLabel-root-MuiInputLabel-root": {
-                                        color: "#EDEAE4",
-                                    }
-                                }}
+                                InputLabelProps={{ style: { color: theme.palette.light } }}
                             />
                         </FormControl>
                         <FormControl>
