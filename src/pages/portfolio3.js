@@ -24,7 +24,7 @@ function Portfolio3Page() {
                 display: "flex",
                 justifyContent: "space-between",
 
-                backgroundColor: theme.palette.light,
+                backgroundColor: theme.palette.primary.main,
             }}>
             <StaticImage
                 src="../images/portfolio/img_portfolio_6.webp"

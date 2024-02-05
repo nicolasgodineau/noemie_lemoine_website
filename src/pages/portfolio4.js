@@ -15,7 +15,7 @@ function Portfolio4Page() {
                 height: "100svh",
                 display: "flex",
                 justifyContent: "space-between",
-                backgroundColor: theme.palette.light,
+                backgroundColor: theme.palette.primary.main,
             }}>
             <Box sx={{
                 margin: "auto"

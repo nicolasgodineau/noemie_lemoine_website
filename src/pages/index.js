@@ -48,7 +48,7 @@ const IndexPage = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "48px",
-            color: theme.palette.primary.main,
+            color: theme.palette.primary.main
           }}
         >
           <Typography
@@ -86,7 +86,7 @@ const IndexPage = () => {
               sx={{
                 height: "1px",
                 width: "120%",
-                backgroundColor: theme.palette.primary.main,
+                backgroundColor: theme.palette.primary.main
               }}
             />
             {/* Nom */}

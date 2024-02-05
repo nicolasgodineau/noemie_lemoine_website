@@ -16,7 +16,7 @@ function Portfolio5Page() {
                 gap: "5rem",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: theme.palette.dark,
+                backgroundColor: theme.palette.secondary.main,
             }}>
             <StaticImage
                 src="../images/portfolio/img_portfolio_10.webp"

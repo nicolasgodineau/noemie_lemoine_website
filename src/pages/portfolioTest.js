@@ -31,7 +31,7 @@ function PortfolioTestPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: theme.palette.light,
+                    backgroundColor: theme.palette.primary.main,
                 }}
             >
                 <Container
@@ -127,7 +127,7 @@ function PortfolioTestPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: theme.palette.dark,
+                    backgroundColor: theme.palette.secondary.main,
                 }}
             >
                 <Container
@@ -181,7 +181,7 @@ function PortfolioTestPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: theme.palette.light,
+                    backgroundColor: theme.palette.primary.main,
                 }}
             >
                 <Container
@@ -255,7 +255,7 @@ function PortfolioTestPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: theme.palette.light,
+                    backgroundColor: theme.palette.primary.main,
                 }}
             >
                 <Container
@@ -313,7 +313,7 @@ function PortfolioTestPage() {
                     gap: "5rem",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: theme.palette.dark,
+                    backgroundColor: theme.palette.secondary.main,
                 }}
             >
                 <StaticImage
@@ -345,7 +345,7 @@ function PortfolioTestPage() {
                     minHeight: "100svh",
                     display: "flex",
                     justifyContent: "space-between",
-                    backgroundColor: theme.palette.light,
+                    backgroundColor: theme.palette.primary.main,
                 }}>
                 <Container
                     maxWidth="xl"

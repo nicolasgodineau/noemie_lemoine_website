@@ -24,7 +24,7 @@ function Portfolio6Page() {
                 display: "flex",
                 justifyContent: "space-between",
 
-                backgroundColor: theme.palette.light,
+                backgroundColor: theme.palette.primary.main,
             }}>
             <Box sx={{
                 display: "flex",

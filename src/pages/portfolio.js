@@ -24,7 +24,7 @@ function PortfolioPage() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: theme.palette.light,
+                backgroundColor: theme.palette.primary.main
             }}>
             <Container
                 maxWidth="lg"

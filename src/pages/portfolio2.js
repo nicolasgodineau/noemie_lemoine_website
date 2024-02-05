@@ -15,7 +15,7 @@ function Portfolio2Page() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: theme.palette.dark,
+                backgroundColor: theme.palette.secondary.main,
             }}>
             <Container
                 maxWidth="lg"
