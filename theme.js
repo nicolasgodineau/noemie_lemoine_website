@@ -11,7 +11,9 @@ let theme = createTheme({
     light: {
       main: '#EDEAE4', // Assure-toi que la couleur est correctement définie ici
     },
-    dark: "#111010",
+    dark: {
+      main: "#111010",
+    },
   },
   typography: {
     fontFamily: "Cinzel Variable, sans-serif", // Police par défaut

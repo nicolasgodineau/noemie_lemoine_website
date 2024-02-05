@@ -19,8 +19,8 @@ const Header = () => {
     <Container
       maxWidth="false"
       sx={{
-        backgroundColor: theme.palette.dark,
-        color: theme.palette.light,
+        backgroundColor: theme.palette.dark.main,
+        color: theme.palette.light.main,
       }}
     >
       <Container maxWidth="lg"
@@ -45,7 +45,7 @@ const Header = () => {
                 textTransform: "none",
                 letterSpacing: "1.6px",
                 fontSize: "1rem",
-                color: theme.palette.light,
+                color: theme.palette.light.main,
               }}
             >
               {link.name}
