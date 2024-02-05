@@ -4,7 +4,6 @@ import { ThemeProvider } from "@mui/material/styles"
 import theme from "../../theme.js"
 
 import Header from "../components/header.js"
-import "./layout.css"
 import { Container } from "@mui/material"
 
 const Layout = ({ children }) => {
