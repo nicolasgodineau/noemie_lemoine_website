@@ -41,7 +41,7 @@ const IndexPage = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: theme.palette.secondary.main,
+          backgroundColor: colorDark,
         }}
       >
         <Box

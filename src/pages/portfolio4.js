@@ -7,6 +7,10 @@ import { Container, Box } from "@mui/material"
 
 function Portfolio4Page() {
     const theme = useTheme()
+    // simplification des appels de couleurs
+    const { secondary: { main: colorDark } } = theme.palette;
+    const { primary: { main: colorLight } } = theme.palette;
+
     return (
         <Container
             maxWidth={false}
@@ -15,7 +19,7 @@ function Portfolio4Page() {
                 height: "100svh",
                 display: "flex",
                 justifyContent: "space-between",
-                backgroundColor: theme.palette.primary.main,
+                backgroundColor: colorLight,
             }}>
             <Box sx={{
                 margin: "auto"

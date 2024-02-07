@@ -5,9 +5,11 @@ import { useTheme } from "@mui/material/styles"
 import { Link } from "gatsby"
 import { Button, Container } from "@mui/material"
 
-const Header = ({ color }) => {
-  console.log('color:', color)
+const Header = ({ color, colorText }) => {
   const theme = useTheme()
+  // simplification des appels de couleurs
+  const { secondary: { main: colorDark } } = theme.palette;
+  const { primary: { main: colorLight } } = theme.palette;
 
   const links = [
     { href: "/#portfolio", name: "Portfolio" },
@@ -45,7 +47,7 @@ const Header = ({ color }) => {
                 textTransform: "none",
                 letterSpacing: "1.6px",
                 fontSize: "1rem",
-                color: theme.palette.primary.main
+                color: colorText
               }}
             >
               {link.name}

@@ -11,6 +11,9 @@ import AllData from '../languages/fr.json'
 function Portfolio6Page() {
     const { t } = useTranslation()
     const theme = useTheme()
+    // simplification des appels de couleurs
+    const { secondary: { main: colorDark } } = theme.palette;
+    const { primary: { main: colorLight } } = theme.palette;
 
     const portfolioData = AllData.portfolio6
 
@@ -24,7 +27,7 @@ function Portfolio6Page() {
                 display: "flex",
                 justifyContent: "space-between",
 
-                backgroundColor: theme.palette.primary.main,
+                backgroundColor: colorLight,
             }}>
             <Box sx={{
                 display: "flex",

@@ -6,6 +6,10 @@ import { Container } from "@mui/material"
 
 function Portfolio5Page() {
     const theme = useTheme()
+    // simplification des appels de couleurs
+    const { secondary: { main: colorDark } } = theme.palette;
+    const { primary: { main: colorLight } } = theme.palette;
+
     return (
         <Container
             maxWidth={false}
@@ -16,7 +20,7 @@ function Portfolio5Page() {
                 gap: "5rem",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: theme.palette.secondary.main,
+                backgroundColor: colorDark,
             }}>
             <StaticImage
                 src="../images/portfolio/img_portfolio_10.webp"

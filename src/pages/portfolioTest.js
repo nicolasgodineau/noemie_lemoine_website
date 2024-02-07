@@ -11,9 +11,11 @@ import AllData from "../languages/fr.json"
 function PortfolioTestPage() {
     const { t } = useTranslation()
     const theme = useTheme()
+    // simplification des appels de couleurs
+    const { secondary: { main: colorDark } } = theme.palette;
+    const { primary: { main: colorLight } } = theme.palette;
 
     const portfolioData = AllData.portfolio
-
     const portfolio3Data = AllData.portfolio3
     const portfolio6Data = AllData.portfolio6
 
@@ -31,7 +33,7 @@ function PortfolioTestPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: theme.palette.primary.main,
+                    backgroundColor: colorLight,
                 }}
             >
                 <Container
@@ -127,7 +129,7 @@ function PortfolioTestPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: theme.palette.secondary.main,
+                    backgroundColor: colorDark,
                 }}
             >
                 <Container
@@ -181,7 +183,7 @@ function PortfolioTestPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: theme.palette.primary.main,
+                    backgroundColor: colorLight,
                 }}
             >
                 <Container
@@ -255,7 +257,7 @@ function PortfolioTestPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: theme.palette.primary.main,
+                    backgroundColor: colorLight,
                 }}
             >
                 <Container
@@ -313,7 +315,7 @@ function PortfolioTestPage() {
                     gap: "5rem",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: theme.palette.secondary.main,
+                    backgroundColor: colorDark,
                 }}
             >
                 <StaticImage
@@ -345,7 +347,7 @@ function PortfolioTestPage() {
                     minHeight: "100svh",
                     display: "flex",
                     justifyContent: "space-between",
-                    backgroundColor: theme.palette.primary.main,
+                    backgroundColor: colorLight,
                 }}>
                 <Container
                     maxWidth="xl"

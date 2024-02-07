@@ -7,6 +7,10 @@ import { Container } from "@mui/material"
 
 function Portfolio2Page() {
     const theme = useTheme()
+    // simplification des appels de couleurs
+    const { secondary: { main: colorDark } } = theme.palette;
+    const { primary: { main: colorLight } } = theme.palette;
+
     return (
         <Container maxWidth={false}
             sx={{
@@ -15,7 +19,7 @@ function Portfolio2Page() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: theme.palette.secondary.main,
+                backgroundColor: colorDark,
             }}>
             <Container
                 maxWidth="lg"

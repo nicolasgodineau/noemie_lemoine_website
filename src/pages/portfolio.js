@@ -11,6 +11,9 @@ import AllData from '../languages/fr.json'
 function PortfolioPage() {
     const { t } = useTranslation()
     const theme = useTheme()
+    // simplification des appels de couleurs
+    const { secondary: { main: colorDark } } = theme.palette;
+    const { primary: { main: colorLight } } = theme.palette;
 
     const portfolioData = AllData.portfolio
 
@@ -24,7 +27,7 @@ function PortfolioPage() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: theme.palette.primary.main
+                backgroundColor: colorLight
             }}>
             <Container
                 maxWidth="lg"
