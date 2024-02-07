@@ -36,5 +36,16 @@
         "line": "Le maquillage est l'allié secret des séances photo, transformant chaque visage en une toile vivante, prête à raconter son histoire à travers l'objectif."
       }
     ]
+  },
+  "mariage": {
+    "title": "Vivez votre mise en beauté comme un moment suspendu dans le temps...",
+    "paragraph1": [
+      {
+        "line": "Depuis maintenant 10 ans, je vous accompagne avec soin à chaque étape de vos préparatifs jusqu’au jour J. Mon rôle est de vous conseiller et de vous guider pour atteindre la mise en beauté parfaite."
+      },
+      {
+        "line": "Cette expérience se divise en trois étapes cruciales :"
+      }
+    ]
   }
 }

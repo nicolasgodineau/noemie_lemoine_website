@@ -13,7 +13,7 @@ const Header = ({ color }) => {
     { href: "/#portfolio", name: "Portfolio" },
     { href: "/page2", name: "À propos" },
     { href: "/contact", name: "Contact" },
-    { href: "/portfolioTest", name: "Mariage" },
+    { href: "/mariage", name: "Mariage" },
   ]
 
   return (
