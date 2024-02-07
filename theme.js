@@ -4,10 +4,10 @@ let theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#EDEAE4',
+      main: '#EDEAE4', // couleur clair
     },
     secondary: {
-      main: '#111010',
+      main: '#111010', // couleur foncé
     },
     text: {
       primary: '#EDEAE4',

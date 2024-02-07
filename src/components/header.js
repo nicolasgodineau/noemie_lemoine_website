@@ -5,7 +5,8 @@ import { useTheme } from "@mui/material/styles"
 import { Link } from "gatsby"
 import { Button, Container } from "@mui/material"
 
-const Header = () => {
+const Header = ({ color }) => {
+  console.log('color:', color)
   const theme = useTheme()
 
   const links = [
@@ -19,8 +20,7 @@ const Header = () => {
     <Container
       maxWidth="false"
       sx={{
-        backgroundColor: theme.palette.secondary,
-        color: theme.palette.primary,
+        backgroundColor: color,
       }}
     >
       <Container maxWidth="lg"
@@ -45,7 +45,7 @@ const Header = () => {
                 textTransform: "none",
                 letterSpacing: "1.6px",
                 fontSize: "1rem",
-                color: theme.palette.primary,
+                color: theme.palette.primary.main
               }}
             >
               {link.name}

@@ -19,7 +19,9 @@ import BackToTopButton from "../components/BackToTopButton.js"
 const IndexPage = () => {
   const { t } = useTranslation()
   const theme = useTheme()
-  console.log('theme:', theme.palette)
+  // simplification des appels de couleurs
+  const { secondary: { main: colorDark } } = theme.palette;
+  const { primary: { main: colorLight } } = theme.palette;
 
   const dataForLettres = {
     name: "Noëmie",
@@ -30,7 +32,7 @@ const IndexPage = () => {
   const lettersLastName = dataForLettres.lastName.split("")
 
   return (
-    <Layout>
+    <Layout headerColor={colorDark}>
       <Container
         maxWidth={false}
         sx={{
@@ -48,7 +50,7 @@ const IndexPage = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "48px",
-            color: theme.palette.primary.main
+            color: colorLight
           }}
         >
           <Typography
@@ -86,7 +88,7 @@ const IndexPage = () => {
               sx={{
                 height: "1px",
                 width: "120%",
-                backgroundColor: theme.palette.primary.main
+                backgroundColor: colorLight
               }}
             />
             {/* Nom */}

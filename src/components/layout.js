@@ -6,12 +6,13 @@ import theme from "../../theme.js"
 import Header from "../components/header.js"
 import { Container } from "@mui/material"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, headerColor }) => {
+  console.log('headerColor:', headerColor)
 
 
   return (
     <ThemeProvider theme={theme}>
-      <Header />
+      <Header color={headerColor} />
       <Container component="main" maxWidth={false} disableGutters>
         {children}
       </Container>
