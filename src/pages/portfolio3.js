@@ -26,7 +26,6 @@ function Portfolio3Page() {
                 height: "100svh",
                 display: "flex",
                 justifyContent: "space-between",
-
                 backgroundColor: colorLight,
             }}>
             <StaticImage

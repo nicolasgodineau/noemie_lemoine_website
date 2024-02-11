@@ -8,6 +8,7 @@ import { Grid, Typography, Container, Paper, Box } from '@mui/material';
 import Layout from '../components/layout.js'
 
 import AllData from '../languages/fr.json'
+import Mariage2Page from "./mariage2.js";
 
 const TypoElement = ({ variant, children }) => (
     <Typography variant={variant} sx={{
@@ -37,15 +38,18 @@ function MariagePage() {
 
     return (
         <Layout headerColor={colorLight} headerColorText={colorDark}>
-            <Container maxWidth="lg">
+            <Container component="section" maxWidth="lg" sx={{
+            }}>
                 {/* Utilisation de la grille de MUI pour diviser la page en 12 colonnes avec une gouttière de 20 */}
-                <Grid container spacing={2}>
+                <Grid container spacing={2} sx={{
+                    marginTop: "3vmax"
+                }}>
                     {/* Les 7 colonnes de gauche pour le texte */}
-                    <Grid item xs={7} sx={{ paddingLeft: "0" }}>
+                    <Grid item xs={7} sx={{ paddingLeft: "0", display: "flex", flexDirection: "column", justifyContent: "center", }}>
                         <TypoElementTitle variant="h4">
                             {t("mariage.title")}
                         </TypoElementTitle>
-                        <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+                        <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly", flexGrow: "1" }}>
                             <TypoElement variant="body1">
                                 {t("mariage.paragraph")}
                             </TypoElement>
@@ -65,7 +69,10 @@ function MariagePage() {
                         </Box>
                     </Grid>
                     {/* Les 5 colonnes de droite pour l'image */}
-                    <Grid item xs={5}>
+                    <Grid item xs={5} sx={{
+                        height: "calc(100vh - 150px)",
+
+                    }}>
                         <StaticImage
                             src="../images/mariage/img_mariage_1.webp"
                             alt="image d'illustration"
@@ -78,59 +85,7 @@ function MariagePage() {
                     </Grid>
                 </Grid>
             </Container>
-
-
-
-
-
-
-
-
-            {/*             <Container id="mariage"
-                maxWidth={false}
-                disableGutters
-                sx={{
-                    height: "100svh",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor: colorLight
-                }}>
-                <Container
-                    maxWidth="lg"
-                    disableGutters
-                    sx={{
-                        height: "100%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "flex-start",
-                        marginRight: "0"
-                    }}
-                >
-                    <Typography
-                        variant="h4"
-                        sx={{
-                            paddingTop: "3rem",
-                            fontFamily: "Bodoni Moda Variable",
-                            alignSelf: "start",
-                        }}
-                    >
-                        {t("mariage.title")}
-                    </Typography>
-                    <StaticImage
-                        src="../images/mariage/img_mariage_1.webp"
-                        alt="image d'illustration"
-                        style={{
-                            width: "518px",
-                            height: "100%",
-                            borderRadius: "200px 0px 0px 0px",
-                            flexGrow: 1,
-                        }}
-                    />
-                </Container>
-
-            </Container> */}
+            <Mariage2Page />
         </Layout>
     )
 }
