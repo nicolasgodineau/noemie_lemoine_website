@@ -37,11 +37,7 @@ function MariagePage() {
 
     return (
         <Layout headerColor={colorLight} headerColorText={colorDark}>
-            <Container maxWidth="lg"
-                disableGutters
-                sx={{
-                    marginRight: "0"
-                }}>
+            <Container maxWidth="lg">
                 {/* Utilisation de la grille de MUI pour diviser la page en 12 colonnes avec une gouttière de 20 */}
                 <Grid container spacing={2}>
                     {/* Les 7 colonnes de gauche pour le texte */}
