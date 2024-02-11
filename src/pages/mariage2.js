@@ -37,13 +37,18 @@ function Mariage2Page() {
 
     return (
         <Container component="section" maxWidth="lg" sx={{
+            height: "100svh",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
         }}>
             {/* Utilisation de la grille de MUI pour diviser la page en 12 colonnes avec une gouttière de 20 */}
 
             <Grid container spacing={2} sx={{
             }}>
                 <Grid item xs={5} sx={{
-                    height: "100svh",
+
 
                 }}>
                     <StaticImage
@@ -51,7 +56,7 @@ function Mariage2Page() {
                         alt="image d'illustration"
                         style={{
                             height: '100%', width: '100%',
-                            borderRadius: "0px 0px 1000px 0px",
+                            borderRadius: "0px 0px 300px 0px",
                             flexGrow: 1,
                         }}
                     />

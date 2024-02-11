@@ -39,6 +39,7 @@ function MariagePage() {
     return (
         <Layout headerColor={colorLight} headerColorText={colorDark}>
             <Container component="section" maxWidth="lg" sx={{
+                height: "calc(100vh - 150px)",
             }}>
                 {/* Utilisation de la grille de MUI pour diviser la page en 12 colonnes avec une gouttière de 20 */}
                 <Grid container spacing={2} sx={{
@@ -70,7 +71,7 @@ function MariagePage() {
                     </Grid>
                     {/* Les 5 colonnes de droite pour l'image */}
                     <Grid item xs={5} sx={{
-                        height: "calc(100vh - 150px)",
+
 
                     }}>
                         <StaticImage
