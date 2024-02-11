@@ -32,7 +32,7 @@ const IndexPage = () => {
   const lettersLastName = dataForLettres.lastName.split("")
 
   return (
-    <Layout headerColor={colorDark}>
+    <Layout headerColor={colorDark} headerColorText={colorLight}>
       <Container
         maxWidth={false}
         sx={{

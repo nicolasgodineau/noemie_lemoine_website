@@ -17,7 +17,15 @@ let theme = createTheme({
   typography: {
     fontFamily: "Cinzel Variable, sans-serif", // Police par défaut
   },
+  button: {
+    fontFamily: "Gowun Batang",
+    textTransform: "none",
+    letterSpacing: "1.6px",
+    fontSize: "1rem",
+    cursor: "pointer",
+  },
 })
+
 
 theme = responsiveFontSizes(theme)
 

@@ -1,58 +1,78 @@
 import React from "react"
-
 import { useTheme } from "@mui/material/styles"
-
 import { Link } from "gatsby"
-import { Button, Container } from "@mui/material"
+import { Box, Button, Container } from "@mui/material"
 
+// Composant HeaderLink qui représente un lien dans le header
+const HeaderLink = ({ to, children, colorText, theme }) => (
+  <Link to={to} sx={{ cursor: "pointer" }}>
+    <Button
+      sx={{
+        ...theme.button,
+        color: colorText,
+        cursor: "pointer"
+      }}
+    >
+      {children}
+    </Button>
+  </Link>
+)
+
+// Composant principal du header
 const Header = ({ color, colorText }) => {
   const theme = useTheme()
-  // simplification des appels de couleurs
-  const { secondary: { main: colorDark } } = theme.palette;
-  const { primary: { main: colorLight } } = theme.palette;
 
+  // Liste des liens du header avec leurs destinations et noms
   const links = [
-    { href: "/#portfolio", name: "Portfolio" },
-    { href: "/page2", name: "À propos" },
-    { href: "/contact", name: "Contact" },
-    { href: "/mariage", name: "Mariage" },
+    { to: "/#portfolio", name: "Portfolio" },
+    { to: "/mariage", name: "Mariage" },
+    { to: "/page2", name: "À propos" },
+    { to: "/contact", name: "Contact" },
   ]
 
   return (
+    // Conteneur principal du header avec la couleur de fond
     <Container
-      maxWidth="false"
+      maxWidth={false}
       sx={{
         backgroundColor: color,
       }}
     >
+      {/* Conteneur interne avec une largeur maximale et disposition flex */}
       <Container maxWidth="lg"
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          paddingTop: "1rem",
         }}>
-        {links.map((link, index) => (
-          <Link
-            key={index}
-            to={link.href}
-            style={
-              /* Style pour le dernier élément, qui est le portfolio */
-              index === links.length - 1 ? { position: "absolute", top: 70 } : {}
-            }
-          >
-            <Button
-              color="secondary"
-              sx={{
-                fontFamily: "Gowun Batang",
-                textTransform: "none",
-                letterSpacing: "1.6px",
-                fontSize: "1rem",
-                color: colorText
-              }}
+        {/* Première colonne avec des liens du header */}
+        <Box sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          gap: "1rem"
+        }}>
+          {links.slice(0, 2).map((link, index) => (
+            // Utilisation du composant HeaderLink pour chaque lien
+            <HeaderLink
+              key={index}
+              to={link.to}
+              colorText={colorText}
+              theme={theme}
             >
               {link.name}
-            </Button>
-          </Link>
+            </HeaderLink>
+          ))}
+        </Box>
+        {/* Deuxième colonne avec d'autres liens du header */}
+        {links.slice(2).map((link, index) => (
+          <HeaderLink
+            key={index}
+            to={link.to}
+            colorText={colorText}
+            theme={theme}
+          >
+            {link.name}
+          </HeaderLink>
         ))}
       </Container>
     </Container>

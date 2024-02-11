@@ -32,7 +32,7 @@ export default function Contact() {
     };
 
     return (
-        <Layout headerColor={colorDark}>
+        <Layout headerColor={colorDark} headerColorText={colorLight}>
             <Container maxWidth={false}
                 sx={{
                     height: "100svh",

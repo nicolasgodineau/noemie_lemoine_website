@@ -40,5 +40,15 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `gowun batang\:400`, // Remplacez cela par la police et les variantes que vous souhaitez
+          `Cinizel\:400,700`, // Ajoutez d'autres polices avec leurs variantes
+        ],
+        display: 'swap',
+      },
+    },
   ],
 }

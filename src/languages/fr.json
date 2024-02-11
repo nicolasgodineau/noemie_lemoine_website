@@ -39,12 +39,20 @@
   },
   "mariage": {
     "title": "Vivez votre mise en beauté comme un moment suspendu dans le temps...",
-    "paragraph1": [
+    "paragraph": "Depuis maintenant 10 ans, je vous accompagne avec soin à chaque étape de vos préparatifs jusqu’au jour J. Mon rôle est de vous conseiller et de vous guider pour atteindre la mise en beauté parfaite.",
+    "line": "Cette expérience se divise en trois étapes cruciales :",
+    "steps": [
       {
-        "line": "Depuis maintenant 10 ans, je vous accompagne avec soin à chaque étape de vos préparatifs jusqu’au jour J. Mon rôle est de vous conseiller et de vous guider pour atteindre la mise en beauté parfaite."
+        "title": "Étape 1 : La première rencontre",
+        "line": "Nous commençons par un premier entretien en visioconférence. Cela me permet de mieux appréhender vos préférences et vos souhaits pour le jour J."
       },
       {
-        "line": "Cette expérience se divise en trois étapes cruciales :"
+        "title": "Étape 2 : L'essai",
+        "line": "La phase d'essai matérialise nos discussions antérieures, mettant en œuvre les idées que nous avons évoquées précédemment."
+      },
+      {
+        "title": "Étape 3 : Le jour J",
+        "line": "La dernière étape, le jour de l'événement, revêt une importance capitale pour vous. Profitez pleinement du moment présent tandis que je veille à vous choyer et à prendre soin de chaque détail."
       }
     ]
   }
