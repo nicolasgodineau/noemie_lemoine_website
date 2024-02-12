@@ -54,6 +54,38 @@
         "title": "Étape 3 : Le jour J",
         "line": "La dernière étape, le jour de l'événement, revêt une importance capitale pour vous. Profitez pleinement du moment présent tandis que je veille à vous choyer et à prendre soin de chaque détail."
       }
+    ],
+    "titleWeeding": "Forfaits maquillage",
+    "included": "Inclus",
+    "stepsIncluded": [
+      {
+        "line": "Analyse de style (30/45mn)"
+      },
+      {
+        "line": "Conseils routine beauté"
+      },
+      {
+        "line": "Test maquillage (2h)"
+      },
+      {
+        "line": "Mise en place du planning jour J"
+      },
+      {
+        "line": "Maquillage jour J mariée (1h15)"
+      },
+      {
+        "line": "3 invitées (2h15) OU 5 invitées (3h30)"
+      }
+    ],
+    "free": "Offert",
+    "titleFree": " Pour la mariée le jour J :",
+    "stepsFree": [
+      {
+        "line": "Rituel soin bonne mine"
+      },
+      {
+        "line": "Un échantillon de votre rouge à lèvres"
+      }
     ]
   }
 }

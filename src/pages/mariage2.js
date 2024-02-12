@@ -5,21 +5,21 @@ import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import { Grid, Typography, Container, Paper, Box } from '@mui/material';
 
-import Layout from '../components/layout.js'
-
 import AllData from '../languages/fr.json'
 
-const TypoElement = ({ variant, children }) => (
+const TypoElement = ({ variant, children, sx }) => (
     <Typography variant={variant} sx={{
         fontFamily: "Simonetta",
+        ...sx,// Propagation des styles supplémentaires
     }}>
         {children}
     </Typography>
 );
-const TypoElementTitle = ({ variant, children }) => (
+const TypoElementTitle = ({ variant, children, sx }) => (
     <Typography variant={variant} sx={{
         paddingY: "3rem",
         fontFamily: "Bodoni Moda Variable",
+        ...sx,// Propagation des styles supplémentaires
     }}>
         {children}
     </Typography>
@@ -62,27 +62,34 @@ function Mariage2Page() {
                     />
                 </Grid>
                 {/* Les 7 colonnes de gauche pour le texte */}
-                <Grid item xs={7} sx={{ paddingLeft: "0", display: "flex", flexDirection: "column", justifyContent: "center", }}>
+                <Grid item xs={7} sx={{ paddingLeft: "0", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", }}>
                     <TypoElementTitle variant="h4">
-                        {t("mariage.title")}
+                        {t("mariage.titleWeeding")}
                     </TypoElementTitle>
                     <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly", flexGrow: "1" }}>
-                        <TypoElement variant="body1">
-                            {t("mariage.paragraph")}
-                        </TypoElement>
-                        <TypoElement variant="body1">
-                            {t("mariage.line")}
-                        </TypoElement>
-                        {mariageData.steps.map((step, index) => (
-                            <Box key={index}>
-                                <TypoElement variant="h6">
-                                    {step.title}
-                                </TypoElement>
-                                <TypoElement variant="body1">
+                        <Box>
+                            <TypoElement variant="h5" sx={{ marginBottom: '1rem' }}>
+                                {t("mariage.included")}
+                            </TypoElement>
+                            {mariageData.stepsIncluded.map((step, index) => (
+                                <TypoElement variant="body1" key={index}>
                                     {step.line}
                                 </TypoElement>
-                            </Box>
-                        ))}
+                            ))}
+                        </Box>
+                        <Box>
+                            <TypoElement variant="h5" sx={{ marginBottom: "1rem" }}>
+                                {t("mariage.free")}
+                            </TypoElement>
+                            <TypoElement variant="h6">
+                                {t("mariage.titleFree")}
+                            </TypoElement>
+                            {mariageData.stepsFree.map((step, index) => (
+                                <TypoElement variant="body1" key={index}>
+                                    {step.line}
+                                </TypoElement>
+                            ))}
+                        </Box>
                     </Box>
                 </Grid>
                 {/* Les 5 colonnes de droite pour l'image */}
