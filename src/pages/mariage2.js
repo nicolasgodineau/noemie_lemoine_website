@@ -3,7 +3,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
-import { Grid, Typography, Container, Paper, Box } from '@mui/material';
+import { Grid, Typography, Container, Box } from '@mui/material';
 
 import AllData from '../languages/fr.json'
 
@@ -28,12 +28,8 @@ const TypoElementTitle = ({ variant, children, sx }) => (
 function Mariage2Page() {
     const { t } = useTranslation()
     const theme = useTheme()
-    // simplification des appels de couleurs
-    const { secondary: { main: colorDark } } = theme.palette;
-    const { primary: { main: colorLight } } = theme.palette;
 
     const mariageData = AllData.mariage
-
 
     return (
         <Container component="section" maxWidth="lg" sx={{
@@ -43,13 +39,9 @@ function Mariage2Page() {
             alignItems: "center",
             justifyContent: "center",
         }}>
-            {/* Utilisation de la grille de MUI pour diviser la page en 12 colonnes avec une gouttière de 20 */}
-
             <Grid container spacing={2} sx={{
             }}>
                 <Grid item xs={5} sx={{
-
-
                 }}>
                     <StaticImage
                         src="../images/mariage/img_mariage_3.webp"
@@ -92,8 +84,6 @@ function Mariage2Page() {
                         </Box>
                     </Box>
                 </Grid>
-                {/* Les 5 colonnes de droite pour l'image */}
-
             </Grid>
         </Container>
     )

@@ -3,7 +3,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
-import { Grid, Typography, Container, Paper, Box } from '@mui/material';
+import { Grid, Typography, Container, Box } from '@mui/material';
 
 import Layout from '../components/layout.js'
 
