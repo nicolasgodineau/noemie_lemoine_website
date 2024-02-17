@@ -56,14 +56,14 @@ function Mariage2Page() {
                 {/* Les 7 colonnes de gauche pour le texte */}
                 <Grid item xs={7} sx={{ paddingLeft: "0", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", }}>
                     <TypoElementTitle variant="h4">
-                        {t("mariage.titleWeeding")}
+                        {t("mariage.MakeupPackage.label")}
                     </TypoElementTitle>
                     <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly", flexGrow: "1" }}>
                         <Box>
                             <TypoElement variant="h5" sx={{ marginBottom: '1rem' }}>
-                                {t("mariage.included")}
+                                {t("mariage.MakeupPackage.included")}
                             </TypoElement>
-                            {mariageData.stepsIncluded.map((step, index) => (
+                            {mariageData.MakeupPackage.stepsIncluded.map((step, index) => (
                                 <TypoElement variant="body1" key={index}>
                                     {step.line}
                                 </TypoElement>
@@ -71,12 +71,12 @@ function Mariage2Page() {
                         </Box>
                         <Box>
                             <TypoElement variant="h5" sx={{ marginBottom: "1rem" }}>
-                                {t("mariage.free")}
+                                {t("mariage.MakeupPackage.free")}
                             </TypoElement>
                             <TypoElement variant="h6">
-                                {t("mariage.titleFree")}
+                                {t("mariage.MakeupPackage.titleFree")}
                             </TypoElement>
-                            {mariageData.stepsFree.map((step, index) => (
+                            {mariageData.MakeupPackage.stepsFree.map((step, index) => (
                                 <TypoElement variant="body1" key={index}>
                                     {step.line}
                                 </TypoElement>
