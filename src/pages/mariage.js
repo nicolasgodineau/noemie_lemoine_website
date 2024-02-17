@@ -9,6 +9,7 @@ import Layout from '../components/layout.js'
 
 import AllData from '../languages/fr.json'
 import Mariage2Page from "./mariage2.js";
+import Mariage3Page from "./mariage3.js";
 
 const TypoElement = ({ variant, children }) => (
     <Typography variant={variant} sx={{
@@ -87,6 +88,7 @@ function MariagePage() {
                 </Grid>
             </Container>
             <Mariage2Page />
+            <Mariage3Page />
         </Layout>
     )
 }
