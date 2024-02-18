@@ -41,11 +41,9 @@ function Mariage6Page() {
         }}>
             <Container disableGutters sx={{
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
             }}>
-                <Grid item xs={5} sx={{
-                    width: "40%"
+                <Container disableGutters maxWidth="xs" sx={{
+                    marginLeft: "0"
                 }}>
                     <StaticImage
                         src="../images/mariage/img_mariage_7.webp"
@@ -56,8 +54,8 @@ function Mariage6Page() {
                             flexGrow: 1,
                         }}
                     />
-                </Grid>
-                <Container disableGutters sx={{ width: "40%", height: "100%", display: "flex", flexDirection: "column", }}>
+                </Container>
+                <Container disableGutters sx={{ width: "40%", height: "100%", display: "flex", flexDirection: "column", marginRight: "0" }}>
                     <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "start", marginBottom: "3rem" }}>
                         <TypoElementTitle variant="h4">
                             {t("mariage.MakeupHairdressingPackage.label")}
@@ -96,7 +94,6 @@ function Mariage6Page() {
                     </Box>
                 </Container>
             </Container>
-
         </Container>
     )
 }
