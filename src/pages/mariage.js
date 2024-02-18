@@ -3,7 +3,10 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
-import { Grid, Typography, Container, Box } from '@mui/material';
+import { Container, Box } from '@mui/material';
+
+import TypoElement from "../components/TypoElement";
+import TypoElementTitle from "../components/TypoElementTitle";
 
 import Layout from '../components/layout.js'
 
@@ -13,21 +16,6 @@ import Mariage3Page from "./mariage3.js";
 import Mariage4Page from "./mariage4.js";
 import Mariage5Page from "./mariage5.js";
 
-const TypoElement = ({ variant, children }) => (
-    <Typography variant={variant} sx={{
-        fontFamily: "Simonetta",
-    }}>
-        {children}
-    </Typography>
-);
-const TypoElementTitle = ({ variant, children }) => (
-    <Typography variant={variant} sx={{
-        paddingY: "3rem",
-        fontFamily: "Bodoni Moda Variable",
-    }}>
-        {children}
-    </Typography>
-);
 
 function MariagePage() {
     const { t } = useTranslation()
@@ -48,16 +36,14 @@ function MariagePage() {
                 alignItems: "center",
                 justifyContent: "center",
             }}>
-                {/* Utilisation de la grille de MUI pour diviser la page en 12 colonnes avec une gouttière de 20 */}
-                <Grid container spacing={2} sx={{
-                    marginTop: "3vmax"
+                <Container disableGutters sx={{
+                    display: "flex",
                 }}>
-                    {/* Les 7 colonnes de gauche pour le texte */}
-                    <Grid item xs={7} sx={{ paddingLeft: "0", display: "flex", flexDirection: "column", justifyContent: "center", }}>
-                        <TypoElementTitle variant="h4">
+                    <Container disableGutters sx={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-evenly", paddingLeft: "0", paddingRight: "3rem" }}>
+                        <TypoElementTitle variant="h4" sx={{ marginBottom: '3rem' }}>
                             {t("mariage.title")}
                         </TypoElementTitle>
-                        <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly", flexGrow: "1" }}>
+                        <Box sx={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", paddingRight: "5rem" }}>
                             <TypoElement variant="body1">
                                 {t("mariage.paragraph")}
                             </TypoElement>
@@ -75,23 +61,19 @@ function MariagePage() {
                                 </Box>
                             ))}
                         </Box>
-                    </Grid>
-                    {/* Les 5 colonnes de droite pour l'image */}
-                    <Grid item xs={5} sx={{
-
-
+                    </Container>
+                    <Container disableGutters maxWidth="xs" sx={{
                     }}>
                         <StaticImage
                             src="../images/mariage/img_mariage_1.webp"
                             alt="image d'illustration"
                             style={{
-                                height: '100%', width: '100%',
+                                height: '100%',
                                 borderRadius: "200px 0px 0px 0px",
-                                flexGrow: 1,
                             }}
                         />
-                    </Grid>
-                </Grid>
+                    </Container>
+                </Container>
             </Container>
             <Mariage2Page />
             <Mariage3Page />

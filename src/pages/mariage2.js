@@ -2,27 +2,12 @@ import React from "react"
 
 import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
-import { Typography, Container, Box } from '@mui/material';
+import { Container, Box } from '@mui/material';
+
+import TypoElement from "../components/TypoElement";
+import TypoElementTitle from "../components/TypoElementTitle";
 
 import AllData from '../languages/fr.json'
-
-const TypoElement = ({ variant, children, sx }) => (
-    <Typography variant={variant} sx={{
-        fontFamily: "Simonetta",
-        ...sx,// Propagation des styles supplémentaires
-    }}>
-        {children}
-    </Typography>
-);
-const TypoElementTitle = ({ variant, children, sx }) => (
-    <Typography variant={variant} sx={{
-        paddingY: "0rem",
-        fontFamily: "Bodoni Moda Variable",
-        ...sx,// Propagation des styles supplémentaires
-    }}>
-        {children}
-    </Typography>
-);
 
 function Mariage2Page() {
     const { t } = useTranslation()
@@ -38,10 +23,10 @@ function Mariage2Page() {
             justifyContent: "center",
         }}>
             <Container disableGutters sx={{
+                height: "666px",
                 display: "flex",
             }}>
                 <Container disableGutters maxWidth="xs" sx={{
-                    height: "666px",
                     marginLeft: "0"
                 }}>
                     <StaticImage
@@ -56,7 +41,7 @@ function Mariage2Page() {
                         }}
                     />
                 </Container>
-                <Container disableGutters sx={{ width: "40%", height: "100%", display: "flex", flexDirection: "column", marginRight: "0" }}>
+                <Container disableGutters maxWidth="xs" sx={{ height: "100%", display: "flex", flexDirection: "column", marginRight: "0" }}>
                     <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "start", marginBottom: "3rem" }}>
                         <TypoElementTitle variant="h4" sx={{ alignSelf: 'start' }}>
                             {t("mariage.MakeupPackage.label")}

@@ -38,10 +38,10 @@ function Mariage4Page() {
             justifyContent: "center",
         }}>
             <Container disableGutters sx={{
+                height: "666px",
                 display: "flex",
             }}>
                 <Container disableGutters maxWidth="xs" sx={{
-                    height: "666px",
                     marginLeft: "0"
                 }}>
                     <StaticImage
@@ -53,7 +53,7 @@ function Mariage4Page() {
                         }}
                     />
                 </Container>
-                <Container disableGutters sx={{ width: "40%", height: "100%", display: "flex", flexDirection: "column", marginRight: "0" }}>
+                <Container disableGutters maxWidth="xs" sx={{ height: "100%", display: "flex", flexDirection: "column", marginRight: "0" }}>
                     <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "start", marginBottom: "3rem" }}>
                         <TypoElementTitle variant="h4">
                             {t("mariage.MakeupHairdressingPackage.label")}
