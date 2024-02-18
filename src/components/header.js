@@ -26,7 +26,7 @@ const Header = ({ color, colorText }) => {
   const links = [
     { to: "/#portfolio", name: "Portfolio" },
     { to: "/mariage", name: "Mariage" },
-    { to: "/page2", name: "À propos" },
+    { to: "/about", name: "À propos" },
     { to: "/contact", name: "Contact" },
   ]
 
