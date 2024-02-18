@@ -8,7 +8,6 @@ import { Container, Box } from "@mui/material"
 function Portfolio4Page() {
     const theme = useTheme()
     // simplification des appels de couleurs
-    const { secondary: { main: colorDark } } = theme.palette;
     const { primary: { main: colorLight } } = theme.palette;
 
     return (

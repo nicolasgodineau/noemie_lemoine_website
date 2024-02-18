@@ -12,7 +12,6 @@ import Mariage2Page from "./mariage2.js";
 import Mariage3Page from "./mariage3.js";
 import Mariage4Page from "./mariage4.js";
 import Mariage5Page from "./mariage5.js";
-import Mariage6Page from "./mariage6.js";
 
 const TypoElement = ({ variant, children }) => (
     <Typography variant={variant} sx={{

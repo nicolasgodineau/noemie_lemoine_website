@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -11,7 +10,6 @@ import FormControl from '@mui/material/FormControl';
 import Layout from '../components/layout.js'
 
 export default function Contact() {
-    const { t } = useTranslation()
     const theme = useTheme()
     // simplification des appels de couleurs
     const { secondary: { main: colorDark } } = theme.palette;

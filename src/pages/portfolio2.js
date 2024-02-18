@@ -9,7 +9,6 @@ function Portfolio2Page() {
     const theme = useTheme()
     // simplification des appels de couleurs
     const { secondary: { main: colorDark } } = theme.palette;
-    const { primary: { main: colorLight } } = theme.palette;
 
     return (
         <Container maxWidth={false}
