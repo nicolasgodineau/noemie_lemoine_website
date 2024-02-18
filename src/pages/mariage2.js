@@ -17,7 +17,7 @@ const TypoElement = ({ variant, children, sx }) => (
 );
 const TypoElementTitle = ({ variant, children, sx }) => (
     <Typography variant={variant} sx={{
-        paddingY: "3rem",
+        paddingY: "0rem",
         fontFamily: "Bodoni Moda Variable",
         ...sx,// Propagation des styles supplémentaires
     }}>
@@ -39,26 +39,32 @@ function Mariage2Page() {
             alignItems: "center",
             justifyContent: "center",
         }}>
-            <Grid container spacing={2} sx={{
+            <Container disableGutters sx={{
+                display: "flex",
             }}>
-                <Grid item xs={5} sx={{
+                <Container disableGutters maxWidth="xs" sx={{
+                    height: "666px",
+                    marginLeft: "0"
                 }}>
                     <StaticImage
                         src="../images/mariage/img_mariage_3.webp"
                         alt="image d'illustration"
                         style={{
-                            height: '100%', width: '100%',
-                            borderRadius: "0px 0px 300px 0px",
-                            flexGrow: 1,
+                            height: "100%",
+                            borderRadius: "0px 300px 0px 0px",
+                        }}
+                        imgStyle={{
+                            objectPosition: "right"
                         }}
                     />
-                </Grid>
-                {/* Les 7 colonnes de gauche pour le texte */}
-                <Grid item xs={7} sx={{ paddingLeft: "0", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", }}>
-                    <TypoElementTitle variant="h4">
-                        {t("mariage.MakeupPackage.label")}
-                    </TypoElementTitle>
-                    <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly", flexGrow: "1" }}>
+                </Container>
+                <Container disableGutters sx={{ width: "40%", height: "100%", display: "flex", flexDirection: "column", marginRight: "0" }}>
+                    <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "start", marginBottom: "3rem" }}>
+                        <TypoElementTitle variant="h4" sx={{ alignSelf: 'start' }}>
+                            {t("mariage.MakeupPackage.label")}
+                        </TypoElementTitle>
+                    </Box>
+                    <Box sx={{ flexGrow: "1", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>
                         <Box>
                             <TypoElement variant="h5" sx={{ marginBottom: '1rem' }}>
                                 {t("mariage.MakeupPackage.included")}
@@ -82,9 +88,10 @@ function Mariage2Page() {
                                 </TypoElement>
                             ))}
                         </Box>
+                        <TypoElement variant="h6" />
                     </Box>
-                </Grid>
-            </Grid>
+                </Container>
+            </Container>
         </Container>
     )
 }

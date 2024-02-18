@@ -43,7 +43,11 @@ function MariagePage() {
     return (
         <Layout headerColor={colorLight} headerColorText={colorDark}>
             <Container component="section" maxWidth="lg" sx={{
-                height: "calc(100vh - 150px)",
+                height: "calc(100vh - 200px)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
             }}>
                 {/* Utilisation de la grille de MUI pour diviser la page en 12 colonnes avec une gouttière de 20 */}
                 <Grid container spacing={2} sx={{
@@ -94,7 +98,6 @@ function MariagePage() {
             <Mariage3Page />
             <Mariage4Page />
             <Mariage5Page />
-            <Mariage6Page />
         </Layout>
     )
 }

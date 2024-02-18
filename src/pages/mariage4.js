@@ -39,68 +39,61 @@ function Mariage4Page() {
             alignItems: "center",
             justifyContent: "center",
         }}>
-            <Grid container spacing={2}>
-                {/* Les 5 premières colonnes pour l'image */}
-                <Grid item xs={5}>
+            <Container disableGutters sx={{
+                display: "flex",
+            }}>
+                <Container disableGutters maxWidth="xs" sx={{
+                    height: "666px",
+                    marginLeft: "0"
+                }}>
                     <StaticImage
                         src="../images/mariage/img_mariage_7.webp"
                         alt="image d'illustration"
                         style={{
-                            height: '100%', width: '100%',
+                            height: '100%',
                             borderRadius: "0px 300px 0px 0px",
-                            flexGrow: 1,
                         }}
                     />
-                </Grid>
-
-                {/* Colonnes 6 et 7 vides */}
-                <Grid item xs={1}></Grid>
-                <Grid item xs={1}></Grid>
-
-                {/* Colonnes 8-9-10-11 pour un container avec un enfant texte */}
-                <Grid item xs={4} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
-                    <Container sx={{ width: "133%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                        <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", flexGrow: "1" }}>
-                            <TypoElementTitle variant="h4">
-                                {t("mariage.MakeupHairdressingPackage.label")}
-                            </TypoElementTitle>
-                            <TypoElementTitle variant="h4" sx={{ alignSelf: 'end' }}>
-                                {t("mariage.MakeupHairdressingPackage.label2")}
-                            </TypoElementTitle>
-                        </Box>
-                        <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly", flexGrow: "1" }}>
-                            <Box>
-                                <TypoElement variant="h5" sx={{ marginBottom: '1rem' }}>
-                                    {t("mariage.MakeupHairdressingPackage.included")}
-                                </TypoElement>
-                                {mariageData.MakeupHairdressingPackage.stepsIncluded.map((step, index) => (
-                                    <TypoElement variant="body1" key={index}>
-                                        {step.line}
-                                    </TypoElement>
-                                ))}
-                            </Box>
-                            <Box>
-                                <TypoElement variant="h5" sx={{ marginBottom: "1rem" }}>
-                                    {t("mariage.MakeupHairdressingPackage.free")}
-                                </TypoElement>
-                                <TypoElement variant="h6">
-                                    {t("mariage.MakeupHairdressingPackage.titleFree")}
-                                </TypoElement>
-                                {mariageData.MakeupHairdressingPackage.stepsFree.map((step, index) => (
-                                    <TypoElement variant="body1" key={index}>
-                                        {step.line}
-                                    </TypoElement>
-                                ))}
-                            </Box>
-                            <TypoElement variant="h6" sx={{}}>
-                                {t("mariage.MakeupHairdressingPackage.caution")}
+                </Container>
+                <Container disableGutters sx={{ width: "40%", height: "100%", display: "flex", flexDirection: "column", marginRight: "0" }}>
+                    <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "start", marginBottom: "3rem" }}>
+                        <TypoElementTitle variant="h4">
+                            {t("mariage.MakeupHairdressingPackage.label")}
+                        </TypoElementTitle>
+                        <TypoElementTitle variant="h4" sx={{ alignSelf: 'end' }}>
+                            {t("mariage.MakeupHairdressingPackage.label2")}
+                        </TypoElementTitle>
+                    </Box>
+                    <Box sx={{ flexGrow: "1", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>
+                        <Box>
+                            <TypoElement variant="h5" sx={{ marginBottom: '1rem' }}>
+                                {t("mariage.MakeupHairdressingPackage.included")}
                             </TypoElement>
+                            {mariageData.MakeupHairdressingPackage.stepsIncluded.map((step, index) => (
+                                <TypoElement variant="body1" key={index}>
+                                    {step.line}
+                                </TypoElement>
+                            ))}
                         </Box>
-                    </Container>
-                </Grid>
-
-            </Grid>
-
+                        <Box>
+                            <TypoElement variant="h5" sx={{ marginBottom: "1rem" }}>
+                                {t("mariage.MakeupHairdressingPackage.free")}
+                            </TypoElement>
+                            <TypoElement variant="h6">
+                                {t("mariage.MakeupHairdressingPackage.titleFree")}
+                            </TypoElement>
+                            {mariageData.MakeupHairdressingPackage.stepsFree.map((step, index) => (
+                                <TypoElement variant="body1" key={index}>
+                                    {step.line}
+                                </TypoElement>
+                            ))}
+                        </Box>
+                        <TypoElement variant="h6" sx={{}}>
+                            {t("mariage.MakeupHairdressingPackage.caution")}
+                        </TypoElement>
+                    </Box>
+                </Container>
+            </Container>
         </Container>
     )
 }
