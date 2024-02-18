@@ -54,8 +54,8 @@ function Mariage4Page() {
                 </Grid>
 
                 {/* Colonnes 6 et 7 vides */}
-                {/*                 <Grid item xs={1}></Grid>
-                <Grid item xs={1}></Grid> */}
+                <Grid item xs={1}></Grid>
+                <Grid item xs={1}></Grid>
 
                 {/* Colonnes 8-9-10-11 pour un container avec un enfant texte */}
                 <Grid item xs={4} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
