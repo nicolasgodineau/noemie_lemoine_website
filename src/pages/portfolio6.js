@@ -25,17 +25,19 @@ function Portfolio6Page() {
                 height: "100svh",
                 display: "flex",
                 justifyContent: "space-between",
-
                 backgroundColor: colorLight,
             }}>
-            <Box sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignSelf: "flex-end",
-                marginBottom: "10vmin",
-                paddingX: "3rem",
-                zIndex: "100"
-            }}>
+            <Container
+                maxWidth="lg"
+                disableGutters
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignSelf: "flex-end",
+                    marginBottom: "10vmin",
+                    paddingX: "3rem",
+                    zIndex: "100"
+                }}>
                 <Box sx={{
                     maxWidth: "260px",
                 }}>
@@ -69,8 +71,9 @@ function Portfolio6Page() {
                         {t(paragraph.line)}
                     </Typography>
                 ))}
-            </Box>
+            </Container>
             <Box sx={{
+                width: "50%",
                 position: "absolute",
                 right: "0",
                 display: "flex",
@@ -82,7 +85,8 @@ function Portfolio6Page() {
                     alt="image d'illustration"
                     style={{
                         width: "400px",
-                        height: "660px",
+                        height: "60%",
+
                         alignSelf: "start",
                         borderRadius: "0px 0px 0px 200px",
                     }}
@@ -93,7 +97,8 @@ function Portfolio6Page() {
                     alt="image d'illustration"
                     style={{
                         width: "470px",
-                        minHeight: "865px",
+                        height: "90%",
+                        /*                             minHeight: "865px", */
                         borderRadius: "0px 200px 0px 0px",
                     }}
                 />

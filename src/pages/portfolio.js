@@ -32,7 +32,6 @@ function PortfolioPage() {
                 maxWidth="lg"
                 disableGutters
                 sx={{
-                    maxWidth: "xl",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "flex-end",
@@ -53,28 +52,32 @@ function PortfolioPage() {
                 <StaticImage
                     src="../images/portfolio/img_portfolio_1.webp"
                     alt="image d'illustration"
+                    objectFit="contain"
                     style={{
                         width: "425px",
-                        height: "577px",
+                        height: "100%",
                         borderRadius: "0px 0px 0px 200px",
                     }}
                 />
-                <StaticImage
+                {<StaticImage
                     src="../images/portfolio/img_portfolio_2.webp"
                     alt="image d'illustration"
+                    objectFit="contain"
                     style={{
-                        height: "450px",
+                        height: "80%",
                         width: "323px ",
                         borderRadius: "0px 200px 0px 0px",
                     }}
-                />
+                />}
             </Container>
-            <Container maxWidth="lg" disableGutters sx={{
-                width: "100%",
-                display: "flex",
-                flexDirection: "column",
-                marginTop: "2rem",
-            }}>
+            <Container
+                maxWidth="lg"
+                disableGutters
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    marginTop: "2rem",
+                }}>
                 {portfolioData.paragraph1.map((paragraph, pIndex) => (
                     <Typography key={pIndex} paragraph sx={{
                         maxWidth: "unset",

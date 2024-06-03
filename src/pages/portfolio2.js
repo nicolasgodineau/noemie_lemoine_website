@@ -11,7 +11,8 @@ function Portfolio2Page() {
     const { secondary: { main: colorDark } } = theme.palette;
 
     return (
-        <Container maxWidth={false}
+        <Container
+            maxWidth={false}
             sx={{
                 height: "100svh",
                 display: "flex",
@@ -24,18 +25,17 @@ function Portfolio2Page() {
                 maxWidth="lg"
                 disableGutters
                 sx={{
-
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
-                    gap: "1rem",
+                    gap: "2vmin"
                 }}
             >
                 <StaticImage
                     src="../images/portfolio/img_portfolio_3.webp"
                     alt="image d'illustration"
+                    objectFit="contain"
                     style={{
-                        width: "270px",
+                        width: "33%",
                         height: "463px",
                     }}
                 />
@@ -44,7 +44,7 @@ function Portfolio2Page() {
                     alt="image d'illustration"
                     style={{
                         width: "auto",
-                        maxWidth: "340px",
+                        maxWidth: "33%",
                         height: "100vh",
                         maxHeight: "800px",
                     }}
@@ -52,8 +52,9 @@ function Portfolio2Page() {
                 <StaticImage
                     src="../images/portfolio/img_portfolio_4.webp"
                     alt="image d'illustration"
+                    objectFit="contain"
                     style={{
-                        width: "270px",
+                        width: "33%",
                         height: "463px",
                     }}
                 />

@@ -12,42 +12,18 @@ function Portfolio4Page() {
 
     return (
         <Container
-            maxWidth={false}
-            disableGutters
+            maxWidth="lg"
             sx={{
                 height: "100svh",
                 display: "flex",
-                justifyContent: "space-between",
+                justifyContent: "end",
                 backgroundColor: colorLight,
             }}>
-            <Box sx={{
-                margin: "auto"
-            }}>
-                <StaticImage
-                    src="../images/portfolio/img_portfolio_7.webp"
-                    alt="image d'illustration"
-                    style={{
-                        width: "420px",
-                        height: "570px",
-                        display: "flex",
-                        flexDirection: "column",
-                        borderRadius: "0px 200px 0px 0px",
-                    }}
-                />
-            </Box>
             <StaticImage
-                src="../images/portfolio/img_portfolio_8.webp"
+                src="../images/portfolio/Group3.png"
                 alt="image d'illustration"
-                width={520}
-                style={{
-                    width: "auto",
-                    maxWidth: "520px",
-                    maxHeight: "100vh",
-                    height: "100vh",
-                    borderRadius: "0px 0px 0px 350px",
-                }}
+                objectFit="contain"
             />
-
         </Container>
     )
 }

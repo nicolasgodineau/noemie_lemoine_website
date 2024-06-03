@@ -12,29 +12,29 @@ function Portfolio5Page() {
     return (
         <Container
             maxWidth={false}
-            disableGutters
             sx={{
                 height: "100svh",
                 display: "flex",
-                gap: "5rem",
                 alignItems: "center",
-                justifyContent: "center",
+                justifyContent: "space-evenly",
                 backgroundColor: colorDark,
             }}>
             <StaticImage
                 src="../images/portfolio/img_portfolio_10.webp"
                 alt="image d'illustration"
+                objectFit="contain"
                 style={{
-                    height: "100vh",
+                    height: "100%",
+                    maxHeight: "1000px",
                     width: "auto"
                 }}
             />
             <StaticImage
                 src="../images/portfolio/img_portfolio_9.webp"
                 alt="image d'illustration"
+                objectFit="contain"
                 style={{
-                    width: "430px",
-                    height: "600px"
+                    width: "33%",
                 }}
             />
         </Container>
