@@ -11,9 +11,9 @@
     "@fontsource-variable/cinzel": "^5.0.8",
     "@fontsource/gowun-batang": "^5.0.11",
     "@fontsource/simonetta": "^5.0.18",
-    "@mui/icons-material": "^5.15.9",
-    "@mui/material": "^5.15.9",
-    "@mui/x-date-pickers": "^6.19.4",
+    "@mui/icons-material": "^5.15.7",
+    "@mui/material": "^5.15.7",
+    "@mui/x-date-pickers": "^6.19.3",
     "gatsby": "^5.13.3",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
@@ -27,7 +27,7 @@
     "react-native-datefield": "^0.3.6"
   },
   "devDependencies": {
-    "@netlify/plugin-lighthouse": "^5.0.0",
+
     "prettier": "^2.8.8"
   },
   "keywords": [
