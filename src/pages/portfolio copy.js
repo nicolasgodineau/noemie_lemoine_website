@@ -2,8 +2,9 @@ import React from "react"
 
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
+import Typography from "@mui/material/Typography"
 import { StaticImage } from "gatsby-plugin-image"
-import { Container, Grid, Typography, Box } from '@mui/material';
+import { Container } from "@mui/material"
 
 import AllData from '../languages/fr.json'
 
@@ -20,53 +21,63 @@ function PortfolioPage() {
         <Container id="portfolio"
             maxWidth={false}
             sx={{
-/*                 height: "100svh",
- */                display: "flex",
+                height: "100svh",
+                display: "flex",
                 flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
                 backgroundColor: colorLight
             }}>
-            <StaticImage
-                src="../images/portfolio/img_portfolio_2.webp"
-                alt="image d'illustration"
-                objectFit="cover"
-                style={{
-                    width: "70%",
-
-                    borderRadius: "0px 0px 0px 200px",
-                    alignSelf: "flex-end"
+            <Container
+                maxWidth="lg"
+                disableGutters
+                sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-end",
+                    gap: "4rem",
                 }}
-            />
-            <Box sx={{
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: "1%"
-            }}>
-                {<StaticImage
-                    src="../images/portfolio/img_portfolio_1.webp"
-                    alt="image d'illustration"
-                    objectFit="cover"
-                    style={{
-                        width: "60%",
-                        borderRadius: "0px 200px 0px 0px",
-                    }}
-                />}
+            >
                 <Typography
-                    variant="h6"
+                    variant="h4"
                     sx={{
-                        width: "50%",
                         fontFamily: "Bodoni Moda Variable",
                         letterSpacing: "1.6px",
                         alignSelf: "end",
+                        flexGrow: 1,
                     }}
                 >
                     {t("portfolio.title")}
                 </Typography>
-            </Box>
-            <Box sx={{
-                paddingTop: "5rem"
-            }}>
+                <StaticImage
+                    src="../images/portfolio/img_portfolio_1.webp"
+                    alt="image d'illustration"
+                    objectFit="contain"
+                    style={{
+                        width: "425px",
+                        height: "100%",
+                        borderRadius: "0px 0px 0px 200px",
+                    }}
+                />
+                {<StaticImage
+                    src="../images/portfolio/img_portfolio_2.webp"
+                    alt="image d'illustration"
+                    objectFit="contain"
+                    style={{
+                        height: "80%",
+                        width: "323px ",
+                        borderRadius: "0px 200px 0px 0px",
+                    }}
+                />}
+            </Container>
+            <Container
+                maxWidth="lg"
+                disableGutters
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    marginTop: "2rem",
+                }}>
                 {portfolioData.paragraph1.map((paragraph, pIndex) => (
                     <Typography key={pIndex} paragraph sx={{
                         maxWidth: "unset",
@@ -87,7 +98,7 @@ function PortfolioPage() {
                         {t(paragraph.line)}
                     </Typography>
                 ))}
-            </Box>
+            </Container>
         </Container>
     )
 }

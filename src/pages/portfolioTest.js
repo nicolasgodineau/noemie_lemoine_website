@@ -133,7 +133,7 @@ function PortfolioTestPage() {
                 }}
             >
                 <Container
-                    maxWidth="xl"
+                    maxWidth="lg"
                     disableGutters
                     sx={{
                         display: "flex",
@@ -187,7 +187,7 @@ function PortfolioTestPage() {
                 }}
             >
                 <Container
-                    maxWidth="xl"
+                    maxWidth="lg"
                     disableGutters
                     sx={{
                         display: "flex",
@@ -261,7 +261,7 @@ function PortfolioTestPage() {
                 }}
             >
                 <Container
-                    maxWidth="xl"
+                    maxWidth="lg"
                     disableGutters
                     sx={{
                         display: "flex",
@@ -350,7 +350,7 @@ function PortfolioTestPage() {
                     backgroundColor: colorLight,
                 }}>
                 <Container
-                    maxWidth="xl"
+                    maxWidth="lg"
                     disableGutters
                     sx={{
                         display: "flex",

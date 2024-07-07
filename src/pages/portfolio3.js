@@ -19,7 +19,7 @@ function Portfolio3Page() {
 
     return (
         <Container
-            maxWidth={false}
+            maxWidth="lg"
             sx={{
                 height: "100svh",
                 display: "flex",
@@ -30,16 +30,18 @@ function Portfolio3Page() {
                 src="../images/portfolio/img_portfolio_6.webp"
                 alt="image d'illustration"
                 style={{
-                    width: "50%",
+                    height: "100%",
+                    maxHeight: "100svh",
+                    width: "auto",
                     borderRadius: "0px 0px 350px 0px",
                 }}
             />
+
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
                 alignSelf: "flex-end",
                 marginBottom: "10vmin",
-                paddingX: "3rem"
             }}>
                 <Typography
                     variant="h4"
