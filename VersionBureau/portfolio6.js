@@ -62,7 +62,7 @@ function Portfolio6Page() {
                     </Typography>
                 </Box>
                 {portfolioData.paragraph1.map((paragraph, pIndex) => (
-                    <Typography key={pIndex} paragraph variant="h6" sx={{
+                    <Typography key={pIndex} paragraph variant="body1" sx={{
                         marginTop: "2rem",
                         fontFamily: "Simonetta",
                         textTransform: "none",

@@ -55,7 +55,7 @@ function Portfolio3Page() {
                     {t("portfolio3.title")}
                 </Typography>
                 {portfolioData.paragraph1.map((paragraph, pIndex) => (
-                    <Typography key={pIndex} paragraph variant="h6" sx={{
+                    <Typography key={pIndex} paragraph variant="body1" sx={{
                         maxWidth: "unset",
                         marginTop: "2rem",
                         fontFamily: "Simonetta",

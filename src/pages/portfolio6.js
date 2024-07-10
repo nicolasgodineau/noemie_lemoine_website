@@ -63,8 +63,9 @@ function PortfolioPage6() {
                     justifyContent: "center",
                     marginRight: "1rem"
                 }}>
+                    P6
                     <Typography
-                        variant="h6"
+                        variant="h4"
                         sx={{
                             width: "100%",
                             fontFamily: "Bodoni Moda Variable",
@@ -75,7 +76,7 @@ function PortfolioPage6() {
                         {t("portfolio6.title1")}
                     </Typography>
                     <Typography
-                        variant="h6"
+                        variant="h4"
                         sx={{
                             width: "100%",
                             fontFamily: "Bodoni Moda Variable",

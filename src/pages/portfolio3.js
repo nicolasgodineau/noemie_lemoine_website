@@ -42,18 +42,19 @@ function PortfolioPage3() {
                 marginY: "1rem",
                 marginX: "1rem"
             }}>
+                P3
                 <Typography
                     variant="h4"
                     sx={{
                         fontFamily: "Bodoni Moda Variable",
-                        letterSpacing: "3px",
+                        letterSpacing: "1.6px",
                         alignSelf: "end",
                     }}
                 >
                     {t("portfolio3.title")}
                 </Typography>
                 {portfolioData.paragraph1.map((paragraph, pIndex) => (
-                    <Typography key={pIndex} paragraph variant="h6" sx={{
+                    <Typography key={pIndex} paragraph variant="body1" sx={{
                         maxWidth: "unset",
                         marginTop: "2rem",
                         fontFamily: "Simonetta",

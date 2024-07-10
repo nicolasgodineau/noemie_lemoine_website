@@ -52,7 +52,7 @@ function PortfolioPage() {
                     }}
                 />}
                 <Typography
-                    variant="h6"
+                    variant="h4"
                     sx={{
                         width: "50%",
                         fontFamily: "Bodoni Moda Variable",
@@ -67,20 +67,22 @@ function PortfolioPage() {
                 paddingTop: "5rem"
             }}>
                 {portfolioData.paragraph1.map((paragraph, pIndex) => (
-                    <Typography key={pIndex} paragraph sx={{
+                    <Typography key={pIndex} paragraph variant="body1" sx={{
                         maxWidth: "unset",
                         marginBottom: 0,
-                        fontFamily: "Gowun Batang",
+                        fontFamily: "Simonetta",
+                        letterSpacing: "1.6px",
                         textTransform: "none",
                     }}>
                         {t(paragraph.line)}
                     </Typography>
                 ))}
                 {portfolioData.paragraph2.map((paragraph, pIndex) => (
-                    <Typography key={pIndex} paragraph sx={{
+                    <Typography key={pIndex} paragraph variant="body1" sx={{
                         maxWidth: "unset",
                         marginTop: "2rem",
-                        fontFamily: "Gowun Batang",
+                        fontFamily: "Simonetta",
+                        letterSpacing: "1.6px",
                         textTransform: "none",
                     }}>
                         {t(paragraph.line)}
