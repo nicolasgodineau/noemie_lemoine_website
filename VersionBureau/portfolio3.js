@@ -2,12 +2,13 @@ import React from "react"
 
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
+import Typography from "@mui/material/Typography"
 import { StaticImage } from "gatsby-plugin-image"
-import { Container, Typography, Box } from '@mui/material';
+import { Container, Box } from "@mui/material"
 
 import AllData from '../languages/fr.json'
 
-function PortfolioPage3() {
+function Portfolio3Page() {
     const { t } = useTranslation()
     const theme = useTheme()
     // simplification des appels de couleurs
@@ -18,27 +19,29 @@ function PortfolioPage3() {
 
     return (
         <Container
-            maxWidth={false}
+            maxWidth="lg"
             sx={{
-/*                 height: "100svh",
- */                display: "flex",
-                flexDirection: "column",
-                backgroundColor: colorLight
+                height: "100svh",
+                display: "flex",
+                justifyContent: "space-between",
+                backgroundColor: colorLight,
             }}>
             <StaticImage
                 src="../images/portfolio/img_portfolio_6.webp"
                 alt="image d'illustration"
-                objectFit="cover"
                 style={{
+                    height: "100%",
+                    maxHeight: "100svh",
+                    width: "auto",
                     borderRadius: "0px 0px 350px 0px",
                 }}
             />
+
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "space-between",
-                marginY: "1rem"
+                alignSelf: "flex-end",
+                marginBottom: "10vmin",
             }}>
                 <Typography
                     variant="h4"
@@ -46,6 +49,7 @@ function PortfolioPage3() {
                         fontFamily: "Bodoni Moda Variable",
                         letterSpacing: "3px",
                         alignSelf: "end",
+                        flexGrow: 1,
                     }}
                 >
                     {t("portfolio3.title")}
@@ -67,4 +71,4 @@ function PortfolioPage3() {
     )
 }
 
-export default PortfolioPage3
+export default Portfolio3Page

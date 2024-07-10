@@ -1,44 +1,38 @@
 import React from "react"
 
+import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
-import { Container } from "@mui/material"
+import { Container, Typography, Box } from '@mui/material';
 
-function Portfolio5Page() {
+import AllData from '../languages/fr.json'
+
+function PortfolioPage5() {
+    const { t } = useTranslation()
     const theme = useTheme()
     // simplification des appels de couleurs
     const { secondary: { main: colorDark } } = theme.palette;
+
+    const portfolioData = AllData.portfolio
+
 
     return (
         <Container
             maxWidth={false}
             sx={{
-                height: "100svh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-evenly",
+/*                 height: "100svh",
+ */                display: "flex",
+                flexDirection: "column",
                 backgroundColor: colorDark,
+                paddingBottom: "2rem"
             }}>
             <StaticImage
-                src="../images/portfolio/img_portfolio_10.webp"
+                src="../images/portfolio/Group6.png"
                 alt="image d'illustration"
-                objectFit="contain"
-                style={{
-                    height: "100%",
-                    maxHeight: "1000px",
-                    width: "auto"
-                }}
-            />
-            <StaticImage
-                src="../images/portfolio/img_portfolio_9.webp"
-                alt="image d'illustration"
-                objectFit="contain"
-                style={{
-                    width: "33%",
-                }}
+                objectFit="cover"
             />
         </Container>
     )
 }
 
-export default Portfolio5Page
+export default PortfolioPage5

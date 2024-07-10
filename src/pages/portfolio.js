@@ -3,7 +3,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
-import { Container, Grid, Typography, Box } from '@mui/material';
+import { Container, Typography, Box } from '@mui/material';
 
 import AllData from '../languages/fr.json'
 
@@ -31,7 +31,6 @@ function PortfolioPage() {
                 objectFit="cover"
                 style={{
                     width: "70%",
-
                     borderRadius: "0px 0px 0px 200px",
                     alignSelf: "flex-end"
                 }}

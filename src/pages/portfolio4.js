@@ -1,31 +1,52 @@
 import React from "react"
 
-
+import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
-import { Container, Box } from "@mui/material"
+import { Container, Typography, Box } from '@mui/material';
 
-function Portfolio4Page() {
+import AllData from '../languages/fr.json'
+
+function PortfolioPage4() {
+    const { t } = useTranslation()
     const theme = useTheme()
     // simplification des appels de couleurs
     const { primary: { main: colorLight } } = theme.palette;
 
+    const portfolioData = AllData.portfolio3
+
+
     return (
         <Container
-            maxWidth="lg"
+            maxWidth={false}
             sx={{
-                height: "100svh",
-                display: "flex",
-                justifyContent: "end",
-                backgroundColor: colorLight,
+/*                 height: "100svh",
+ */                display: "flex",
+                flexDirection: "column",
+                gap: "2rem",
+                backgroundColor: colorLight
             }}>
             <StaticImage
-                src="../images/portfolio/Group3.png"
+                src="../images/portfolio/img_portfolio_7.webp"
                 alt="image d'illustration"
-                objectFit="contain"
+                objectFit="cover"
+                style={{
+                    width: "70%",
+                    marginTop: "2rem",
+                    borderRadius: "0px 200px 0px 0px",
+                }}
             />
+            <StaticImage
+                src="../images/portfolio/img_portfolio_8.webp"
+                alt="image d'illustration"
+                objectFit="cover"
+                style={{
+                    borderRadius: "0px 0px 0px 200px",
+                }}
+            />
+
         </Container>
     )
 }
 
-export default Portfolio4Page
+export default PortfolioPage4

@@ -9,6 +9,10 @@ import { Box, Container, Typography } from "@mui/material";
 import PortfolioPage from "./portfolio.js";
 import BackToTopButton from "../components/BackToTopButton.js";
 import AllData from '../languages/fr.json';
+import PortfolioPage2 from "./portfolio2.js";
+import PortfolioPage3 from "./portfolio3.js";
+import PortfolioPage4 from "./portfolio4.js";
+import PortfolioPage5 from "./portfolio5.js";
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -86,6 +90,10 @@ const IndexPage = () => {
         </Box>
       </Container>
       <PortfolioPage />
+      <PortfolioPage2 />
+      <PortfolioPage3 />
+      <PortfolioPage4 />
+      <PortfolioPage5 />
       <BackToTopButton />
     </Layout>
   )

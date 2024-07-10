@@ -8,12 +8,6 @@ import Seo from "../components/seo"
 import { Box, Container, Typography } from "@mui/material"
 
 import PortfolioPage from "./portfolio.js"
-import Portfolio2Page from "./portfolio2.js"
-import Portfolio3Page from "./portfolio3.js"
-import Portfolio4Page from "./portfolio4.js"
-import Portfolio5Page from "./portfolio5.js"
-import Portfolio6Page from "./portfolio6.js"
-import Portfolio7Page from "./portfolio7.js"
 import BackToTopButton from "../components/BackToTopButton.js"
 
 const IndexPage = () => {
@@ -109,12 +103,6 @@ const IndexPage = () => {
         </Box>
       </Container>
       <PortfolioPage />
-      <Portfolio2Page />
-      <Portfolio3Page />
-      <Portfolio4Page />
-      <Portfolio5Page />
-      <Portfolio6Page />
-      <Portfolio7Page />
       <BackToTopButton />
     </Layout>
   )
