@@ -64,7 +64,7 @@ function PortfolioPage() {
                 </Typography>
             </Box>
             <Box sx={{
-                paddingTop: "5rem"
+                paddingY: "2rem"
             }}>
                 {portfolioData.paragraph1.map((paragraph, pIndex) => (
                     <Typography key={pIndex} paragraph variant="body1" sx={{
