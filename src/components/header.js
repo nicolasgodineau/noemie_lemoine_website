@@ -25,7 +25,6 @@ const Header = ({ color, colorText }) => {
     <Container
       maxWidth={false}
       sx={{
-        position: "fixed",
         width: "100%",
         display: "flex",
         flexDirection: "column",
