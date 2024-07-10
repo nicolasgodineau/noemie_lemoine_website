@@ -7,7 +7,7 @@ import { Container, Typography, Box } from '@mui/material';
 
 import AllData from '../languages/fr.json'
 
-function PortfolioPage5() {
+function PortfolioPage7() {
     const { t } = useTranslation()
     const theme = useTheme()
     // simplification des appels de couleurs
@@ -25,10 +25,9 @@ function PortfolioPage5() {
  */                display: "flex",
                 flexDirection: "column",
                 backgroundColor: colorDark,
-                paddingBottom: "2rem"
             }}>
             <StaticImage
-                src="../images/portfolio/Group6.png"
+                src="../images/portfolio/img_portfolio_13.webp"
                 alt="image d'illustration"
                 objectFit="cover"
             />
@@ -36,4 +35,4 @@ function PortfolioPage5() {
     )
 }
 
-export default PortfolioPage5
+export default PortfolioPage7

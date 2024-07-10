@@ -13,6 +13,8 @@ import PortfolioPage2 from "./portfolio2.js";
 import PortfolioPage3 from "./portfolio3.js";
 import PortfolioPage4 from "./portfolio4.js";
 import PortfolioPage5 from "./portfolio5.js";
+import PortfolioPage6 from "./portfolio6.js";
+import PortfolioPage7 from "./portfolio7.js";
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -94,6 +96,8 @@ const IndexPage = () => {
       <PortfolioPage3 />
       <PortfolioPage4 />
       <PortfolioPage5 />
+      <PortfolioPage6 />
+      <PortfolioPage7 />
       <BackToTopButton />
     </Layout>
   )

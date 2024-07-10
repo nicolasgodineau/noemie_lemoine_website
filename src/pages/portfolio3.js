@@ -19,6 +19,7 @@ function PortfolioPage3() {
     return (
         <Container
             maxWidth={false}
+            disableGutters
             sx={{
 /*                 height: "100svh",
  */                display: "flex",
@@ -38,7 +39,8 @@ function PortfolioPage3() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "space-between",
-                marginY: "1rem"
+                marginY: "1rem",
+                marginX: "1rem"
             }}>
                 <Typography
                     variant="h4"
