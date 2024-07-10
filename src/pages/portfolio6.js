@@ -63,7 +63,6 @@ function PortfolioPage6() {
                     justifyContent: "center",
                     marginRight: "1rem"
                 }}>
-                    P6
                     <Typography
                         variant="h4"
                         sx={{
