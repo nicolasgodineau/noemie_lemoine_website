@@ -1,7 +1,7 @@
 import React from "react"
 
 import { useTranslation } from "react-i18next"
-import { useTheme, useMediaQuery } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
