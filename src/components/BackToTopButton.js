@@ -28,7 +28,7 @@ const BackToTopButton = () => {
         <Button
             sx={{ position: 'fixed', bottom: '2rem', right: '2rem', display: isVisible ? 'block' : 'none' }}
             onClick={scrollToTop}
-            color="info"
+            color="primary"
             variant="text"
         >
             <ArrowCircleUpIcon fontSize="large" />

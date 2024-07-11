@@ -19,7 +19,7 @@ const HeaderLink = ({ to, children, colorText, theme }) => (
 )
 
 // Composant principal du header
-const Header = ({ color, colorText }) => {
+const MenuDesktop = ({ color, colorText }) => {
   const theme = useTheme()
 
   // Liste des liens du header avec leurs destinations et noms
@@ -79,4 +79,4 @@ const Header = ({ color, colorText }) => {
   )
 }
 
-export default Header
+export default MenuDesktop
