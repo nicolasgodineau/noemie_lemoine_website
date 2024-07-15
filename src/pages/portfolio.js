@@ -6,6 +6,13 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
 import AllData from '../languages/fr.json'
+import PortfolioPage2 from "../sections/portfolio/portfolio2.js";
+import PortfolioPage3 from "../sections/portfolio/portfolio3.js";
+import PortfolioPage4 from "../sections/portfolio/portfolio4.js";
+import PortfolioPage5 from "../sections/portfolio/portfolio5.js";
+import PortfolioPage6 from "../sections/portfolio/portfolio6.js";
+import PortfolioPage7 from "../sections/portfolio/portfolio7.js";
+import Portfolio1Page from "../sections/portfolio/portfolio1.js";
 
 function PortfolioPage() {
     const { t } = useTranslation()
@@ -21,106 +28,23 @@ function PortfolioPage() {
 
     return (
         <Container id="portfolio"
-            maxWidth={isLgUp ? "xl" : false}
+            maxWidth={false}
             sx={{
                 backgroundColor: colorLight,
                 [theme.breakpoints.up('lg')]: {
-                    height: "100svh",
+                    /* height: "100svh", */
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-evenly",
                 }
             }}>
-            <Box sx={{
-                width: "100%",
-                display: "flex",
-                flexDirection: "column",
-                [theme.breakpoints.up('lg')]: {
-                    flexDirection: "row-reverse",
-                }
-            }}>
-                <Box sx={{
-                    width: "70%",
-                    alignSelf: "flex-end",
-                    [theme.breakpoints.up('lg')]: {
-                        width: "25%",
-                        alignSelf: "center",
-                    }
-                }}>
-                    <StaticImage
-                        src="../images/portfolio/img_portfolio_2.webp"
-                        alt="image d'illustration"
-                        objectFit="cover"
-                        imgStyle={{
-                            borderRadius: "0px 0px 0px 200px",
-                        }}
-                    />
-                </Box>
-                <Box sx={{
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: "1%",
-                    [theme.breakpoints.up('lg')]: {
-                        width: "75%",
-                        flexDirection: "row-reverse",
-                        gap: "0%",
-                        marginRight: "10%"
-                    }
-                }}>
-                    <Box sx={{
-                        width: "60%",
-                    }}>
-                        {<StaticImage
-                            src="../images/portfolio/img_portfolio_1.webp"
-                            alt="image d'illustration"
-                            objectFit="cover"
-                            imgStyle={{
-                                borderRadius: "0px 200px 0px 0px",
-                            }}
-                        />}
-                    </Box>
-                    <Typography
-                        variant="h4"
-                        sx={{
-                            width: "50%",
-                            fontFamily: "Bodoni Moda Variable",
-                            letterSpacing: "1.6px",
-                            alignSelf: "end",
-                        }}
-                    >
-                        {t("portfolio.title")}
-                    </Typography>
-                </Box>
-            </Box>
-            <Box sx={{
-                paddingY: "2rem"
-            }}>
-                {portfolioData.paragraph1.map((paragraph, pIndex) => (
-                    <Typography key={pIndex} paragraph variant="body1" sx={{
-                        maxWidth: "unset",
-                        marginBottom: 0,
-                        fontFamily: "Simonetta",
-                        letterSpacing: "1.6px",
-                        textTransform: "none",
-                    }}>
-                        {t(paragraph.line)}
-                    </Typography>
-                ))}
-                {portfolioData.paragraph2.map((paragraph, pIndex) => (
-                    <Typography key={pIndex} paragraph variant="body1" sx={{
-                        maxWidth: "unset",
-                        marginTop: "2rem",
-                        fontFamily: "Simonetta",
-                        letterSpacing: "1.6px",
-                        textTransform: "none",
-                    }}>
-                        {t(paragraph.line)}
-                    </Typography>
-                ))}
-            </Box>
+            <Portfolio1Page />
+            <PortfolioPage2 />
+            <PortfolioPage3 />
+            <PortfolioPage4 />
+            <PortfolioPage5 />
+            <PortfolioPage6 />
+            <PortfolioPage7 />
         </Container>
     )
 }

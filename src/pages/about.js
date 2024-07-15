@@ -7,7 +7,7 @@ import { Container, Box } from "@mui/material"
 
 import TypoElement from "../components/TypoElement";
 
-import Layout from '../components/layout.js'
+import Layout from '../components/Layout/layout.js'
 
 import AllData from '../languages/fr.json'
 

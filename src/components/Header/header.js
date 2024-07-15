@@ -9,8 +9,8 @@ import { Container } from "@mui/material";
 
 import MenuIcon from '@mui/icons-material/Menu';
 
-import MenuMobile from "./menuMobile.js";
-import MenuDesktop from "./menuDesktop.js";
+import MenuMobile from "../Menu/menuMobile.js";
+import MenuDesktop from "../Menu/menuDesktop.js";
 
 // Composant principal du header
 const Header = ({ color, colorText }) => {

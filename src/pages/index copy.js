@@ -3,12 +3,12 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout/layout.js"
 import Seo from "../components/seo"
 import { Box, Container, Typography } from "@mui/material"
 
-import PortfolioPage from "./portfolio.js"
-import BackToTopButton from "../components/BackToTopButton.js"
+import PortfolioPage from "../sections/portfolio/portfolio1.js"
+import BackToTopButton from "../components/BackToTopButton/BackToTopButton.js";
 
 const IndexPage = () => {
   const { t } = useTranslation()

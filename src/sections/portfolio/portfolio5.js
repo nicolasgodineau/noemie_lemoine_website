@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
-import AllData from '../languages/fr.json'
+import AllData from '../../languages/fr.json'
 
 function PortfolioPage5() {
     const { t } = useTranslation()
@@ -24,11 +24,12 @@ function PortfolioPage5() {
 /*                 height: "100svh",
  */                display: "flex",
                 flexDirection: "column",
+                justifyContent: "center",
                 backgroundColor: colorDark,
                 paddingBottom: "2rem"
             }}>
             <StaticImage
-                src="../images/portfolio/Group6.png"
+                src="../../images/portfolio/Group6.png"
                 alt="image d'illustration"
                 objectFit="cover"
             />

@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
-import AllData from '../languages/fr.json'
+import AllData from '../../languages/fr.json'
 
 function PortfolioPage4() {
     const { t } = useTranslation()
@@ -27,7 +27,7 @@ function PortfolioPage4() {
                 backgroundColor: colorLight
             }}>
             <StaticImage
-                src="../images/portfolio/img_portfolio_7.webp"
+                src="../../images/portfolio/img_portfolio_7.webp"
                 alt="image d'illustration"
                 objectFit="cover"
                 style={{
@@ -37,7 +37,7 @@ function PortfolioPage4() {
                 }}
             />
             <StaticImage
-                src="../images/portfolio/img_portfolio_8.webp"
+                src="../im../ages/portfolio/img_portfolio_8.webp"
                 alt="image d'illustration"
                 objectFit="cover"
                 style={{

@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from '@mui/material';
 
-import TypoElement from "../components/TypoElement";
-import TypoElementTitle from "../components/TypoElementTitle";
+import TypoElement from "../../components/TypoElement";
+import TypoElementTitle from "../../components/TypoElementTitle";
 
-import AllData from '../languages/fr.json'
+import AllData from '../../languages/fr.json'
 
 function Mariage2Page() {
     const { t } = useTranslation()

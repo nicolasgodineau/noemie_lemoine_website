@@ -3,18 +3,18 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout/layout.js";
 import Seo from "../components/seo";
 import { Box, Container, Typography } from "@mui/material";
-import PortfolioPage from "./portfolio.js";
-import BackToTopButton from "../components/BackToTopButton.js";
+import PortfolioPage from "../pages/portfolio.js";
+import BackToTopButton from "../components/BackToTopButton/BackToTopButton.js";
 import AllData from '../languages/fr.json';
-import PortfolioPage2 from "./portfolio2.js";
-import PortfolioPage3 from "./portfolio3.js";
-import PortfolioPage4 from "./portfolio4.js";
-import PortfolioPage5 from "./portfolio5.js";
-import PortfolioPage6 from "./portfolio6.js";
-import PortfolioPage7 from "./portfolio7.js";
+import PortfolioPage2 from "../sections/portfolio/portfolio2.js";
+import PortfolioPage3 from "../sections/portfolio/portfolio3.js";
+import PortfolioPage4 from "../sections/portfolio/portfolio4.js";
+import PortfolioPage5 from "../sections/portfolio/portfolio5.js";
+import PortfolioPage6 from "../sections/portfolio/portfolio6.js";
+import PortfolioPage7 from "../sections/portfolio/portfolio7.js";
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -92,12 +92,6 @@ const IndexPage = () => {
         </Box>
       </Container>
       <PortfolioPage />
-      <PortfolioPage2 />
-      <PortfolioPage3 />
-      <PortfolioPage4 />
-      <PortfolioPage5 />
-      <PortfolioPage6 />
-      <PortfolioPage7 />
       <BackToTopButton />
     </Layout>
   )

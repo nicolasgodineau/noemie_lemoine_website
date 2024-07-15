@@ -2,10 +2,11 @@ import React from "react"
 
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
-import AllData from '../languages/fr.json'
+import AllData from '../../languages/fr.json'
 
 function PortfolioPage3() {
     const { t } = useTranslation()
@@ -15,25 +16,36 @@ function PortfolioPage3() {
 
     const portfolioData = AllData.portfolio3
 
+    const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
+
 
     return (
         <Container
             maxWidth={false}
             disableGutters
             sx={{
-/*                 height: "100svh",
- */                display: "flex",
+                display: "flex",
                 flexDirection: "column",
-                backgroundColor: colorLight
+                backgroundColor: colorLight,
+                [theme.breakpoints.up('lg')]: {
+                    /* height: "100svh", */
+                }
             }}>
-            <StaticImage
-                src="../images/portfolio/img_portfolio_6.webp"
-                alt="image d'illustration"
-                objectFit="cover"
-                style={{
-                    borderRadius: "0px 0px 350px 0px",
+            <Box
+                sx={{
+                    maxHeight: "100svh",
+                    width: "50%",
                 }}
-            />
+            >
+                <StaticImage
+                    src="../../images/portfolio/img_portfolio_6.webp"
+                    alt="image d'illustration"
+                    objectFit="cover"
+                    style={{
+                        borderRadius: "0px 0px 350px 0px",
+                    }}
+                />
+            </Box>
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",

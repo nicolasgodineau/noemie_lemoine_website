@@ -6,7 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from '@mui/material';
 
-import AllData from '../languages/fr.json'
+import AllData from '../../languages/fr.json'
 
 function PortfolioPage2() {
     const { t } = useTranslation()
@@ -30,7 +30,7 @@ function PortfolioPage2() {
                 <Container
                     maxWidth="lg"
                     sx={{
-                        height: "100svh",
+                        /* height: "100svh", */
                         display: "flex",
                         flexDirection: "row",
                         flexWrap: "nowrap",
@@ -44,7 +44,7 @@ function PortfolioPage2() {
                         }}
                     >
                         <StaticImage
-                            src="../images/portfolio/img_portfolio_3.webp"
+                            src="../../images/portfolio/img_portfolio_3.webp"
                             alt="image d'illustration 2"
                             objectFit="cover"
                         />
@@ -55,7 +55,7 @@ function PortfolioPage2() {
                         }}
                     >
                         <StaticImage
-                            src="../images/portfolio/img_portfolio_5.webp"
+                            src="../../images/portfolio/img_portfolio_5.webp"
                             alt="image d'illustration 2"
                             objectFit="cover"
                             style={{
@@ -71,7 +71,7 @@ function PortfolioPage2() {
                         }}
                     >
                         <StaticImage
-                            src="../images/portfolio/img_portfolio_4.webp"
+                            src="../../images/portfolio/img_portfolio_4.webp"
                             alt="image d'illustration 2"
                             objectFit="cover"
                         />
@@ -81,10 +81,15 @@ function PortfolioPage2() {
                 <Box
                     sx={{
                         width: "100%",
+                        display: "flex",
+                        flexDirection: "row",
+                        flexWrap: "nowrap",
+                        justifyContent: "center",
+                        alignItems: "center",
                     }}
                 >
                     <StaticImage
-                        src="../images/portfolio/Portfolio 2 V. Tel.png"
+                        src="../../images/portfolio/Portfolio 2 V. Tel.png"
                         alt="image d'illustration"
                         objectFit="cover"
                         imgStyle={{
