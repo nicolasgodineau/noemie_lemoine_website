@@ -5,14 +5,14 @@ import { useTheme } from "@mui/material/styles";
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
-import AllData from '../languages/fr.json'
-import PortfolioPage2 from "../sections/portfolio/portfolio2.js";
-import PortfolioPage3 from "../sections/portfolio/portfolio3.js";
-import PortfolioPage4 from "../sections/portfolio/portfolio4.js";
-import PortfolioPage5 from "../sections/portfolio/portfolio5.js";
-import PortfolioPage6 from "../sections/portfolio/portfolio6.js";
-import PortfolioPage7 from "../sections/portfolio/portfolio7.js";
-import Portfolio1Page from "../sections/portfolio/portfolio1.js";
+import AllData from '@languages/fr.json'
+import PortfolioPage2 from "@sections/portfolio/portfolio2.js";
+import PortfolioPage3 from "@sections/portfolio/portfolio3.js";
+import PortfolioPage4 from "@sections/portfolio/portfolio4.js";
+import PortfolioPage5 from "@sections/portfolio/portfolio5.js";
+import PortfolioPage6 from "@sections/portfolio/portfolio6.js";
+import PortfolioPage7 from "@sections/portfolio/portfolio7.js";
+import Portfolio1Page from "@sections/portfolio/portfolio1.js";
 
 function PortfolioPage() {
     const { t } = useTranslation()

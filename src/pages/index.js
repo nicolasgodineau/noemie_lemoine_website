@@ -3,18 +3,12 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 
-import Layout from "../components/Layout/layout.js";
-import Seo from "../components/seo";
+/* import Layout from "../components/Layout/layout.js"; */
+import Layout from '@components/Layout/layout.js'
+import Seo from "@components/seo";
 import { Box, Container, Typography } from "@mui/material";
-import PortfolioPage from "../pages/portfolio.js";
-import BackToTopButton from "../components/BackToTopButton/BackToTopButton.js";
-import AllData from '../languages/fr.json';
-import PortfolioPage2 from "../sections/portfolio/portfolio2.js";
-import PortfolioPage3 from "../sections/portfolio/portfolio3.js";
-import PortfolioPage4 from "../sections/portfolio/portfolio4.js";
-import PortfolioPage5 from "../sections/portfolio/portfolio5.js";
-import PortfolioPage6 from "../sections/portfolio/portfolio6.js";
-import PortfolioPage7 from "../sections/portfolio/portfolio7.js";
+import PortfolioPage from "@pages/portfolio.js";
+import BackToTopButton from "@components/BackToTopButton/BackToTopButton.js";
 
 const IndexPage = () => {
   const { t } = useTranslation();

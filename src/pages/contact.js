@@ -7,7 +7,7 @@ import { Container, Button, TextField, Box } from '@mui/material'
 
 import FormControl from '@mui/material/FormControl';
 
-import Layout from '../components/Layout/layout.js'
+import Layout from '@components/Layout/layout.js'
 
 export default function Contact() {
     const theme = useTheme()

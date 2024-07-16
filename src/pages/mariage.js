@@ -5,17 +5,14 @@ import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from '@mui/material';
 
-import TypoElement from "../components/TypoElement.js";
-import TypoElementTitle from "../components/TypoElementTitle.js";
+import Layout from '@components/Layout/layout.js'
 
-import Layout from '../components/Layout/layout.js'
-
-import AllData from '../languages/fr.json'
-import Mariage2Page from "../sections/mariage/mariage2.js";
-import Mariage3Page from "../sections/mariage/mariage3.js";
-import Mariage4Page from "../sections/mariage/mariage4.js";
-import Mariage5Page from "../sections/mariage/mariage5.js";
-import Mariage1Page from "../sections/mariage/mariage1.js";
+import AllData from '@languages/fr.json'
+import Mariage2Page from "@sections/mariage/mariage2.js";
+import Mariage3Page from "@sections/mariage/mariage3.js";
+import Mariage4Page from "@sections/mariage/mariage4.js";
+import Mariage5Page from "@sections/mariage/mariage5.js";
+import Mariage1Page from "@sections/mariage/mariage1.js";
 
 
 function MariagePage() {

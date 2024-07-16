@@ -6,7 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from '@mui/material';
 
-import AllData from '../../languages/fr.json'
+import AllData from '@languages/fr.json'
 
 function PortfolioPage2() {
     const { t } = useTranslation()

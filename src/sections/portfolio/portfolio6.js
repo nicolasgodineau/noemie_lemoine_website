@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
-import AllData from '../../languages/fr.json'
+import AllData from '@languages/fr.json'
 
 function PortfolioPage6() {
     const { t } = useTranslation()

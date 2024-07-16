@@ -5,11 +5,11 @@ import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from '@mui/material';
 
-import TypoElement from "../../components/TypoElement.js";
-import TypoElementTitle from "../../components/TypoElementTitle.js";
+import TypoElement from "@components//TypoElement.js";
+import TypoElementTitle from "@components//TypoElementTitle.js";
 
 
-import AllData from '../../languages/fr.json'
+import AllData from '@languages/fr.json'
 
 
 function Mariage1Page() {

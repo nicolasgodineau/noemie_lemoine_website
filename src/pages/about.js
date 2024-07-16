@@ -5,11 +5,11 @@ import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from "@mui/material"
 
-import TypoElement from "../components/TypoElement";
+import TypoElement from "@components/TypoElement";
 
-import Layout from '../components/Layout/layout.js'
+import Layout from '@components/Layout/layout.js'
 
-import AllData from '../languages/fr.json'
+import AllData from '@languages/fr.json'
 
 function AboutPage() {
     const theme = useTheme()
