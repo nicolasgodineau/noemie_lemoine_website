@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components";
 
 import { Container } from "@mui/material";
 import theme from "../../../theme.js";
-import Header from "@components/header/header.js";
+import Header from "@components/Header/header.js";
 
 const GlobalStyle = createGlobalStyle`
   * {
