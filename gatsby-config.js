@@ -63,6 +63,7 @@ module.exports = {
           "@sections": "src/sections",
           "@templates": "src/templates",
           "@languages": "src/languages",
+          "@themes": "/theme.js"
         },
         extensions: [
           "js",

@@ -1,29 +1,24 @@
 import React from "react"
 
-import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from '@mui/material';
 
-import AllData from '@languages/fr.json'
-
-function PortfolioPage2() {
-    const { t } = useTranslation()
+function Portfolio2Section({ color }) {
     const theme = useTheme()
-    // simplification des appels de couleurs
-    const { secondary: { main: colorDark } } = theme.palette;
 
     const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
 
 
     return (
-        <Container
+        <Container component="section"
             maxWidth={false}
             sx={{
-                backgroundColor: colorDark,
+                backgroundColor: color,
                 [theme.breakpoints.up('lg')]: {
                     height: "100svh",
+                    display: "flex",
                 }
             }}>
             {isMdUp ? (
@@ -103,4 +98,4 @@ function PortfolioPage2() {
     )
 }
 
-export default PortfolioPage2
+export default Portfolio2Section

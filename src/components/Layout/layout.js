@@ -1,27 +1,39 @@
-import React from "react"
-import './layout.css';
+import React from "react";
+import { ThemeProvider } from "@mui/material/styles";
+import { createGlobalStyle } from "styled-components";
 
-import { ThemeProvider } from "@mui/material/styles"
-import theme from "../../../theme.js"
+import { Container } from "@mui/material";
+import theme from "../../../theme.js";
+import Header from "@components/header/header.js";
 
-import Header from "@components/header/header.js"
-import { Container } from "@mui/material"
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    overflow: "hidden",
+
+  }
+  html {
+    box-sizing: border-box;
+  }
+`;
 
 const Layout = ({ children, headerColor, headerColorText }) => {
-
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Header color={headerColor} colorText={headerColorText} />
       <Container component="main" maxWidth={false} disableGutters>
         {children}
       </Container>
 
-      {/*       <footer>
-        © {new Date().getFullYear()} &middot; Noëmie Lemoine 
-        {` `}
-      </footer> */}
-    </ThemeProvider>
-  )
-}
+      {/* <footer>
+          © {new Date().getFullYear()} &middot; Noëmie Lemoine
+          {` `}
+        </footer> */}
 
-export default Layout
+    </ThemeProvider>
+  );
+};
+
+export default Layout;

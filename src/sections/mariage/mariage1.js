@@ -23,13 +23,16 @@ function Mariage1Page() {
 
 
     return (
-        <Container component="section" maxWidth="lg" sx={{
-            height: "calc(100vh - 200px)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-        }}>
+        <Container
+            component="section"
+            maxWidth="lg"
+            sx={{
+
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+            }}>
             <Container disableGutters sx={{
                 display: "flex",
             }}>

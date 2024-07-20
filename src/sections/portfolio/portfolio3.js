@@ -8,11 +8,9 @@ import { Container, Typography, Box } from '@mui/material';
 
 import AllData from '@languages/fr.json'
 
-function PortfolioPage3() {
+function Portfolio3Section({ color }) {
     const { t } = useTranslation()
     const theme = useTheme()
-    // simplification des appels de couleurs
-    const { primary: { main: colorLight } } = theme.palette;
 
     const portfolioData = AllData.portfolio3
 
@@ -20,27 +18,27 @@ function PortfolioPage3() {
 
 
     return (
-        <Container
+        <Container component="section"
             maxWidth={false}
             disableGutters
             sx={{
                 display: "flex",
-                flexDirection: "column",
-                backgroundColor: colorLight,
+                flexDirection: "row",
+                backgroundColor: color,
                 [theme.breakpoints.up('lg')]: {
-                    /* height: "100svh", */
+                    height: "100svh",
+                    overflow: "hidden"
                 }
             }}>
             <Box
                 sx={{
-                    maxHeight: "100svh",
+                    height: "auto",
                     width: "50%",
                 }}
             >
                 <StaticImage
                     src="../../images/portfolio/img_portfolio_6.webp"
                     alt="image d'illustration"
-                    objectFit="cover"
                     style={{
                         borderRadius: "0px 0px 350px 0px",
                     }}
@@ -52,7 +50,11 @@ function PortfolioPage3() {
                 alignItems: "center",
                 justifyContent: "space-between",
                 marginY: "1rem",
-                marginX: "1rem"
+                marginX: "1rem",
+                [theme.breakpoints.up('lg')]: {
+                    justifyContent: "flex-end",
+
+                }
             }}>
                 <Typography
                     variant="h4"
@@ -81,4 +83,4 @@ function PortfolioPage3() {
     )
 }
 
-export default PortfolioPage3
+export default Portfolio3Section

@@ -11,9 +11,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import MenuMobile from "@components/menu/menuMobile.js";
 import MenuDesktop from "@components/menu/menuDesktop.js";
+import Menu from "@components/menu/menu.js";
 
 // Composant principal du header
 const Header = ({ color, colorText }) => {
+  console.log('color:', color)
   const theme = useTheme();
 
   const [open, setOpen] = useState(false);
@@ -26,48 +28,20 @@ const Header = ({ color, colorText }) => {
 
 
   return (
-    // Conteneur principal du header avec la couleur de fond
-    <>
-      {/* Version bureau */}
-      {isMdUp ? (
-        <Container
-          maxWidth={false}
-          disableGutters
-          sx={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "left",
-            backgroundColor: color,
-            zIndex: "9999"
-          }}
-        >
-          <MenuDesktop color={color} colorText={colorText} onClose={toggleDrawer(false)} />
-        </Container>
-      ) : (
-        /* Version mobile */
-        <Container
-          maxWidth={false}
-          sx={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "left",
-            backgroundColor: color,
-            zIndex: "9999"
-          }}
-        >
-          <div>
-            <Button onClick={toggleDrawer(true)}><MenuIcon />
-            </Button>
-            <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
-              <MenuMobile color={color} colorText={colorText} onClose={toggleDrawer(false)} />
-            </Drawer>
-          </div>
-        </Container>
-      )}
-
-    </>
+    <Container
+      component="header"
+      maxWidth={false}
+      disableGutters
+      sx={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "left",
+        backgroundColor: color,
+      }}
+    >
+      <Menu color={color} colorText={colorText} onClose={toggleDrawer(false)} />
+    </Container>
   );
 };
 

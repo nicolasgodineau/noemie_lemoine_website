@@ -1,17 +1,13 @@
 import React from "react"
 
 import { useTranslation } from "react-i18next"
-import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
 import AllData from '@languages/fr.json'
 
-function PortfolioPage6() {
+function Portfolio6Section({ color }) {
     const { t } = useTranslation()
-    const theme = useTheme()
-    // simplification des appels de couleurs
-    const { primary: { main: colorLight } } = theme.palette;
 
     const portfolioData = AllData.portfolio6
 
@@ -23,7 +19,7 @@ function PortfolioPage6() {
 /*                 height: "100svh",
  */                display: "flex",
                 flexDirection: "column",
-                backgroundColor: colorLight,
+                backgroundColor: color,
                 paddingBottom: "2rem"
             }}>
             <StaticImage
@@ -103,4 +99,4 @@ function PortfolioPage6() {
     )
 }
 
-export default PortfolioPage6
+export default Portfolio6Section

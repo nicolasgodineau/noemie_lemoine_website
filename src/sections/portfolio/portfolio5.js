@@ -1,20 +1,9 @@
 import React from "react"
 
-import { useTranslation } from "react-i18next"
-import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
-import { Container, Typography, Box } from '@mui/material';
+import { Container } from '@mui/material';
 
-import AllData from '@languages/fr.json'
-
-function PortfolioPage5() {
-    const { t } = useTranslation()
-    const theme = useTheme()
-    // simplification des appels de couleurs
-    const { secondary: { main: colorDark } } = theme.palette;
-
-    const portfolioData = AllData.portfolio
-
+function Portfolio5Section({ color }) {
 
     return (
         <Container
@@ -25,7 +14,7 @@ function PortfolioPage5() {
  */                display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                backgroundColor: colorDark,
+                backgroundColor: color,
                 paddingBottom: "2rem"
             }}>
             <StaticImage
@@ -37,4 +26,4 @@ function PortfolioPage5() {
     )
 }
 
-export default PortfolioPage5
+export default Portfolio5Section
