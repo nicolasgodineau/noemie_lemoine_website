@@ -13,9 +13,7 @@ import MenuMobile from "@components/menu/menuMobile.js";
 import MenuDesktop from "@components/menu/menuDesktop.js";
 import Menu from "@components/menu/menu.js";
 
-// Composant principal du header
 const Header = ({ color, colorText }) => {
-  console.log('color:', color)
   const theme = useTheme();
 
   const [open, setOpen] = useState(false);

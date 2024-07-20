@@ -20,6 +20,7 @@ function Portfolio1Section({ color }) {
             maxWidth={false}
             sx={{
                 backgroundColor: color,
+                overflow: "hidden",
                 [theme.breakpoints.up('lg')]: {
                     height: "100svh",
                     display: "flex",

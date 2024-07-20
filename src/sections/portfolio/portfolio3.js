@@ -23,17 +23,21 @@ function Portfolio3Section({ color }) {
             disableGutters
             sx={{
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: "column",
                 backgroundColor: color,
+                overflow: "hidden",
                 [theme.breakpoints.up('lg')]: {
                     height: "100svh",
+                    flexDirection: "row",
                     overflow: "hidden"
                 }
             }}>
             <Box
                 sx={{
-                    height: "auto",
-                    width: "50%",
+                    [theme.breakpoints.up('lg')]: {
+                        height: "auto",
+                        width: "50%",
+                    }
                 }}
             >
                 <StaticImage
