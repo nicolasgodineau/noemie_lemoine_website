@@ -4,8 +4,9 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import { Container } from "@mui/material";
+import Menu from "../menu/menu.js";
 
-import Menu from "@components/menu/menu.js";
+
 
 const Header = ({ color, colorText }) => {
   const theme = useTheme();
@@ -33,6 +34,7 @@ const Header = ({ color, colorText }) => {
       }}
     >
       <Menu color={color} colorText={colorText} onClose={toggleDrawer(false)} />
+
     </Container>
   );
 };
