@@ -8,12 +8,13 @@ import { Container, Box } from '@mui/material';
 function Portfolio2Section({ color }) {
     const theme = useTheme()
 
-    const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
+    const isMobile = useMediaQuery(theme.breakpoints.up('lg'));
 
 
     return (
         <Container component="section"
             maxWidth={false}
+            disableGutters={isMobile ? "false" : "true"}
             sx={{
                 backgroundColor: color,
                 overflow: "hidden",
@@ -22,78 +23,108 @@ function Portfolio2Section({ color }) {
                     display: "flex",
                 }
             }}>
-            {isMdUp ? (
-                <Container
-                    maxWidth="lg"
-                    sx={{
-                        /* height: "100svh", */
-                        display: "flex",
-                        flexDirection: "row",
-                        flexWrap: "nowrap",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        gap: "2vmin"
-                    }}>
-                    <Box
+            {isMobile ? /* Version bureau */
+                (
+                    <Container
+                        maxWidth="lg"
                         sx={{
-                            width: "33%",
-                        }}
-                    >
-                        <StaticImage
-                            src="../../images/portfolio/img_portfolio_3.webp"
-                            alt="image d'illustration 2"
-                            objectFit="cover"
-                        />
-                    </Box>
-                    <Box
-                        sx={{
-                            width: "33%",
-                        }}
-                    >
-                        <StaticImage
-                            src="../../images/portfolio/img_portfolio_5.webp"
-                            alt="image d'illustration 2"
-                            objectFit="cover"
-                            style={{
-                                height: "100vh",
-                                maxHeight: "800px",
+                            /* height: "100svh", */
+                            display: "flex",
+                            flexDirection: "row",
+                            flexWrap: "nowrap",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            gap: "2vmin"
+                        }}>
+                        <Box
+                            sx={{
+                                width: "33%",
                             }}
-                        />
-                    </Box>
-                    <Box
+                        >
+                            <StaticImage
+                                src="../../images/portfolio/img_portfolio_3.webp"
+                                alt="image d'illustration 2"
+                                objectFit="cover"
+                            />
+                        </Box>
+                        <Box
+                            sx={{
+                                width: "33%",
+                            }}
+                        >
+                            <StaticImage
+                                src="../../images/portfolio/img_portfolio_5.webp"
+                                alt="image d'illustration 2"
+                                objectFit="cover"
+                                style={{
+                                    height: "100vh",
+                                    maxHeight: "800px",
+                                }}
+                            />
+                        </Box>
+                        <Box
+                            sx={{
+                                width: "33%",
+
+                            }}
+                        >
+                            <StaticImage
+                                src="../../images/portfolio/img_portfolio_4.webp"
+                                alt="image d'illustration 2"
+                                objectFit="cover"
+                            />
+                        </Box>
+                    </Container>
+                ) : /* Version mobile */
+                (
+                    <Container
+                        disableGutters
                         sx={{
-                            width: "33%",
+                            width: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                            flexWrap: "nowrap",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            position: "relative",
 
                         }}
                     >
                         <StaticImage
-                            src="../../images/portfolio/img_portfolio_4.webp"
-                            alt="image d'illustration 2"
+                            src="../../images/portfolio/img_portfolio_5.webp"
+                            alt="image d'illustration"
                             objectFit="cover"
+                            style={{ marginBottom: "40%" }}
                         />
-                    </Box>
-                </Container>
-            ) : (
-                <Box
-                    sx={{
-                        width: "100%",
-                        display: "flex",
-                        flexDirection: "row",
-                        flexWrap: "nowrap",
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                >
-                    <StaticImage
-                        src="../../images/portfolio/Portfolio 2 V. Tel.png"
-                        alt="image d'illustration"
-                        objectFit="cover"
-                        imgStyle={{
-                            borderRadius: "0px 0px 0px 200px",
-                        }}
-                    />
-                </Box>
-            )}
+                        <Box
+                            sx={{
+                                position: "absolute",
+                                bottom: "0",
+                                height: "50%",
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                flexWrap: "nowrap",
+                                justifyContent: "space-around",
+                                alignItems: "center",
+                                zIndex: "100"
+                            }}
+                        >
+                            <StaticImage
+                                src="../../images/portfolio/img_portfolio_4.webp"
+                                alt="image d'illustration"
+                                objectFit="contain"
+                                style={{ width: "40%", height: "80%", alignSelf: "flex-start" }}
+                            />
+                            <StaticImage
+                                src="../../images/portfolio/img_portfolio_3.webp"
+                                alt="image d'illustration"
+                                objectFit="contain"
+                                style={{ width: "40%", height: "80%", alignSelf: "flex-end" }}
+                            />
+                        </Box>
+                    </Container>
+                )}
 
         </Container>
     )
