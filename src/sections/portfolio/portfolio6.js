@@ -134,7 +134,6 @@ function Portfolio6Section({ color }) {
                                 [theme.breakpoints.up('lg')]: {
                                     textAlign: "start",
                                     marginLeft: "2rem",
-                                    fontSize: "1.5rem"
                                 }
                             }}>
                                 {t(paragraph.line)}
