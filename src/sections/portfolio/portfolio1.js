@@ -17,6 +17,7 @@ function Portfolio1Section({ color }) {
 
     return (
         <Container component="section"
+            id="portfolio"
             maxWidth={false}
             sx={{
                 backgroundColor: color,
