@@ -38,6 +38,7 @@ function Portfolio5Section({ color }) {
                         gap: "3rem",
                         marginY: "1rem",
                         [theme.breakpoints.up('lg')]: {
+                            height: '100%',
                             width: '100%',
                             flexDirection: "row",
                             justifyContent: "flex-end",
@@ -61,7 +62,7 @@ function Portfolio5Section({ color }) {
                     </Box>
                     <Box
                         sx={{
-                            height: '50%',
+                            height: '70%',
                             display: "flex",
                             flexDirection: "row",
                         }}>

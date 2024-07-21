@@ -9,7 +9,7 @@ function Portfolio7Section({ color }) {
     const theme = useTheme()
 
     return (
-        <Container id="portfolio"
+        <Container component="section"
             maxWidth={false}
             disableGutters
             sx={{
