@@ -1,10 +1,22 @@
-import React from "react"
-import { useTheme } from "@mui/material/styles"
-import { Box, Container } from "@mui/material"
-import ButtonMenu from "../buttonMenu/buttonMenu.js"
+import React, { useState } from "react";
+
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Container, Drawer, Button } from "@mui/material"
+import MenuIcon from '@mui/icons-material/Menu';
+
+import MenuMobile from "@components/menu/menuMobile.js";
+import MenuDesktop from "@components/menu/menuDesktop.js";
 
 const Menu = ({ color, colorText, onClose }) => {
     const theme = useTheme();
+
+    const [open, setOpen] = useState(false);
+
+    const toggleDrawer = (newOpen) => () => {
+        setOpen(newOpen);
+    };
+
     const links = [
         { to: "/#portfolio", name: "Portfolio" },
         { to: "/mariage", name: "Mariage" },
@@ -12,45 +24,36 @@ const Menu = ({ color, colorText, onClose }) => {
         { to: "/contact", name: "Contact" },
     ]
 
+    const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+
     return (
         <Container
             component="menu"
             maxWidth="xl"
-            /*             onClick={onClose}  */// Ferme le menu lorsqu'on clique n'importe où dans le conteneur
             sx={{
                 display: "flex",
                 justifyContent: "space-between",
             }}
-            onClick={onClose}
+            onClick={onClose} /* Ferme le menu lorsqu'on clique n'importe où dans le conteneur */
         >
-            {/* Première colonne avec les 2 liens */}
-            <Box sx={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                gap: "1rem"
-            }}>
-                {links.slice(0, 2).map((link, index) => (
-                    <ButtonMenu
-                        key={index}
-                        to={link.to}
-                        colorText={colorText}
-                        theme={theme}
+            {isMobile ? (
+                // Code to render if isMobile is true (version mobile)
+                <>
+                    <Button onClick={toggleDrawer(true)}><MenuIcon /></Button>
+                    <Drawer
+                        anchor="top" // Définir le tiroir pour qu'il s'ouvre du haut
+                        open={open}
+                        onClose={toggleDrawer(false)}
                     >
-                        {link.name}
-                    </ButtonMenu>
-                ))}
-            </Box>
-            {links.slice(2).map((link, index) => (
-                <ButtonMenu
-                    key={index}
-                    to={link.to}
-                    colorText={colorText}
-                    theme={theme}
-                >
-                    {link.name}
-                </ButtonMenu>
-            ))}
+                        <MenuMobile links={links} color={color} colorText={colorText} onClose={toggleDrawer(false)} />
+                    </Drawer>
+                </>
+            ) : (
+                // Code to render if isMobile is false (version bureau)
+                <>
+                    <MenuDesktop links={links} color={color} colorText={colorText} />
+                </>
+            )}
         </Container>
     );
 };
