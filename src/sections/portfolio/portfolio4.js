@@ -7,7 +7,6 @@ import { Box, Container } from '@mui/material';
 function Portfolio4Section({ color }) {
 
     const theme = useTheme()
-    const isLgUp = (theme.breakpoints.up('md'));
 
     return (
         <Container component="section"
@@ -22,7 +21,7 @@ function Portfolio4Section({ color }) {
                 }
             }}>
             <Container
-                maxWidth={isLgUp ? "xl" : "xl"}
+                maxWidth="xl"
                 sx={{
                     display: "flex",
                     flexDirection: "column",

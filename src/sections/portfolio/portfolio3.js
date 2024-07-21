@@ -2,7 +2,6 @@ import React from "react"
 
 import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
-import useMediaQuery from "@mui/material/useMediaQuery";
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
@@ -43,6 +42,7 @@ function Portfolio3Section({ color }) {
             >
                 <Box
                     sx={{
+                        maxWidth: "70%",
                         [theme.breakpoints.up('lg')]: {
                             height: "auto",
                             width: "50%",
@@ -93,7 +93,7 @@ function Portfolio3Section({ color }) {
                     ))}
                 </Box>
             </Container>
-        </Container>
+        </Container >
     )
 }
 
