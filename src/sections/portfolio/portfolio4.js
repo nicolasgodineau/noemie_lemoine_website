@@ -37,7 +37,7 @@ function Portfolio4Section({ color }) {
                 }}>
                 <Box sx={{ /* width: '50%', height: '75%', alignSelf: "end" */alignSelf: "end" }}>
                     <StaticImage
-                        src="../../images/portfolio/IMG_4744 copie 1.png"
+                        src="../../images/portfolio/img_portfolio_8.webp"
                         alt="Image de gauche"
                         objectFit="none"
                         style={{
