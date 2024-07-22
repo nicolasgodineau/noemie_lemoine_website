@@ -1,7 +1,8 @@
 import React from "react"
 
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTranslation } from "react-i18next"
-import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from "@mui/material"
 
@@ -12,51 +13,80 @@ import Layout from '@layouts/layout.js'
 import AllData from '@languages'
 
 function AboutPage() {
-    const theme = useTheme()
     const { t } = useTranslation()
+    const theme = useTheme()
+
+    const isMobile = useMediaQuery(theme.breakpoints.up('lg'));
 
     const aboutData = AllData.about
 
     return (
         <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight}>
-            <Container maxWidth={false}
+            <Container component="section"
+                maxWidth={false}
                 sx={{
-                    height: "100svh",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    minHeight: "100svh",
+                    width: '100%',
                     backgroundColor: theme.palette.colorDark,
+                    overflow: "hidden",
+                    [theme.breakpoints.up('lg')]: {
+                        height: "100svh",
+                        display: "flex",
+                    }
                 }}>
-                <StaticImage
-                    src="../../images/portfolio/img_portfolio_5.webp"
-                    alt="image d'illustration"
-                    objectFit="cover"
-                    style={{ marginBottom: "40%" }}
-                />
                 <Container
-                    maxWidth="lg"
                     disableGutters
-                    sx={{
-                        height: "calc(100vh - 100px)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: "1rem",
-                    }}
                 >
-                    <Container maxWidth="sm" disableGutters sx={{
-                        height: "100%",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "start",
-                        gap: "3rem",
-                        color: theme.palette.colorLight,
-                        marginTop: "3rem"
-                    }}>
+                    <Box /* Zone des deux images */
+                        sx={{
+                            height: '50svh',
+                            display: "flex",
+                            gap: "1rem",
+                            [theme.breakpoints.up('lg')]: {
+                                height: '100%',
+                                width: '100%',
+                                display: "flex",
+                                flexWrap: "nowrap",
+                                flexDirection: "row-reverse",
+                            }
+                        }}>
+                        <StaticImage /* image droite */
+                            src="../images/about/img_about_2.webp"
+                            alt="image d'illustration"
+                            objectFit="cover"
+                            style={{
+                                width: '30%',
+                                height: "60%",
+                                alignSelf: "flex-end",
+                                borderRadius: "100px 0px 0px 0px",
+                            }}
+                        />
+                        <StaticImage /* image gauche */
+                            src="../images/about/img_about_1.webp"
+                            alt="image d'illustration"
+                            objectFit="cover"
+                            style={{
+                                width: "70%",
+                                height: "80%",
+                                borderRadius: "0px 0px 200px 0px",
+                            }}
+                        />
+                    </Box>
+                    <Container component="aside"
+                        maxWidth="sm"
+                        disableGutters
+                        sx={{
+                            width: '80%',
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "end",
+                            gap: "2rem",
+                            marginY: "3rem",
+                            color: theme.palette.colorLight,
+                        }}>
                         {aboutData.paragraph.map((step, index) => (
                             <Box key={index}>
-                                <TypoElement variant="body1" >
+                                <TypoElement variant="body1" sx={{ textAlign: 'end' }}>
                                     {step.line}
                                 </TypoElement>
                             </Box>
@@ -64,31 +94,6 @@ function AboutPage() {
                         <TypoElement variant="h5">
                             {t("name")}
                         </TypoElement>
-                    </Container>
-                    <Container disableGutters maxWidth="xs" sx={{
-                        position: "relative",
-                    }}>
-                        <StaticImage
-                            src="../../images/portfolio/img_portfolio_5.webp"
-                            alt="image d'illustration"
-                            style={{
-                                height: "80%",
-                                borderRadius: "0px 150px 0px 0px",
-                            }}
-                        />
-                        <StaticImage
-                            src="../images/about/img_about_2.webp"
-                            alt="image d'illustration"
-                            style={{
-                                position: "absolute",
-                                bottom: "100px",
-                                left: "-200px",
-                                height: "240px",
-                                width: "290px",
-                                borderRadius: "150px 0px 0px 0px",
-                                zIndex: "100"
-                            }}
-                        />
                     </Container>
                 </Container>
             </Container>
