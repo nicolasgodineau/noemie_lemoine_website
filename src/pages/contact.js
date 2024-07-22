@@ -7,20 +7,17 @@ import { Container, Button, TextField, Box } from '@mui/material'
 
 import FormControl from '@mui/material/FormControl';
 
-import Layout from '@components/Layout/layout.js'
+import Layout from '@layouts'
 
 export default function Contact() {
     const theme = useTheme()
-    // simplification des appels de couleurs
-    const { secondary: { main: colorDark } } = theme.palette;
-    const { primary: { main: colorLight } } = theme.palette;
 
     const handleSubmit = (e) => {
         e.preventDefault();
     };
 
     return (
-        <Layout headerColor={colorDark} headerColorText={colorLight}>
+        <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight}>
             <Container maxWidth={false}
                 sx={{
                     height: "100svh",
@@ -28,7 +25,7 @@ export default function Contact() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: "#111010",
+                    backgroundColor: theme.palette.colorDark,
                 }}>
                 <Container maxWidth="lg"
                     disableGutters sx={{
@@ -50,7 +47,7 @@ export default function Contact() {
                                 fullWidth
                                 InputLabelProps={{
                                     sx: {
-                                        color: colorLight,
+                                        color: theme.palette.colorLight,
                                     }
                                 }}
                             />
@@ -61,7 +58,7 @@ export default function Contact() {
                                 variant="standard"
                                 InputLabelProps={{
                                     sx: {
-                                        color: colorLight,
+                                        color: theme.palette.colorLight,
                                     }
                                 }}
                             />
@@ -73,7 +70,7 @@ export default function Contact() {
                                 variant="standard"
                                 InputLabelProps={{
                                     sx: {
-                                        color: colorLight,
+                                        color: theme.palette.colorLight,
                                     }
                                 }}
                             />
@@ -84,7 +81,7 @@ export default function Contact() {
                                 variant="standard"
                                 InputLabelProps={{
                                     sx: {
-                                        color: colorLight,
+                                        color: theme.palette.colorLight,
                                     }
                                 }}
                             />
@@ -142,7 +139,7 @@ export default function Contact() {
                         />
                         <Button type="submit" variant="contained" color="primary" sx={{
                             backgroundColor: "#EDEAE4",
-                            color: "#111010"
+                            color: theme.palette.colorDark
                         }}>
                             Envoyer
                         </Button>

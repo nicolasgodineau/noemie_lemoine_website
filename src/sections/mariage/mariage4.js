@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { Typography, Container, Box } from '@mui/material';
 
-import AllData from '@languages/fr.json'
+import AllData from '@languages'
 
 const TypoElement = ({ variant, children, sx }) => (
     <Typography variant={variant} sx={{

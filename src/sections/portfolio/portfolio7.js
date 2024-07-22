@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import { StaticImage } from "gatsby-plugin-image"
 import { Container } from '@mui/material';
 
-function Portfolio7Section({ color }) {
+function Portfolio7Section() {
 
     const theme = useTheme()
 
@@ -13,7 +13,7 @@ function Portfolio7Section({ color }) {
             maxWidth={false}
             disableGutters
             sx={{
-                backgroundColor: color,
+                backgroundColor: theme.palette.colorDark,
                 overflow: "hidden",
                 [theme.breakpoints.up('lg')]: {
                     height: "100svh",

@@ -7,21 +7,18 @@ import { Container, Box } from "@mui/material"
 
 import TypoElement from "@components/TypoElement";
 
-import Layout from '@components/Layout/layout.js'
+import Layout from '@layouts'
 
-import AllData from '@languages/fr.json'
+import AllData from '@languages'
 
 function AboutPage() {
     const theme = useTheme()
     const { t } = useTranslation()
-    // simplification des appels de couleurs
-    const { secondary: { main: colorDark } } = theme.palette;
-    const { primary: { main: colorLight } } = theme.palette;
 
     const aboutData = AllData.about
 
     return (
-        <Layout headerColor={colorDark} headerColorText={colorLight}>
+        <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight}>
             <Container maxWidth={false}
                 sx={{
                     height: "100svh",
@@ -29,7 +26,7 @@ function AboutPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: colorDark,
+                    backgroundColor: theme.palette.colorDark,
                 }}>
 
                 <Container
@@ -49,7 +46,7 @@ function AboutPage() {
                         flexDirection: "column",
                         alignItems: "start",
                         gap: "3rem",
-                        color: colorLight,
+                        color: theme.palette.colorLight,
                         marginTop: "3rem"
                     }}>
                         {aboutData.paragraph.map((step, index) => (

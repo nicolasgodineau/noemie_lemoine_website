@@ -6,9 +6,9 @@ import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
-import AllData from '@languages/fr.json'
+import AllData from '@languages'
 
-function Portfolio6Section({ color }) {
+function Portfolio6Section() {
     const { t } = useTranslation()
     const theme = useTheme()
 
@@ -24,7 +24,7 @@ function Portfolio6Section({ color }) {
                 display: "flex",
                 flexDirection: "column",
                 paddingBottom: "2rem",
-                backgroundColor: color,
+                backgroundColor: theme.palette.colorLight,
                 overflow: "hidden",
                 [theme.breakpoints.up('lg')]: {
                     height: "100svh",

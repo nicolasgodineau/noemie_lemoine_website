@@ -5,7 +5,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from '@mui/material';
 
-function Portfolio2Section({ color }) {
+function Portfolio2Section() {
     const theme = useTheme()
 
     const isMobile = useMediaQuery(theme.breakpoints.up('lg'));
@@ -16,7 +16,7 @@ function Portfolio2Section({ color }) {
             maxWidth={false}
             disableGutters={isMobile ? "false" : "true"}
             sx={{
-                backgroundColor: color,
+                backgroundColor: theme.palette.colorDark,
                 overflow: "hidden",
                 [theme.breakpoints.up('lg')]: {
                     height: "100svh",

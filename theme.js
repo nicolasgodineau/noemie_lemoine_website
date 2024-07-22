@@ -13,6 +13,8 @@ let theme = createTheme({
       primary: '#EDEAE4',
       secondary: '#111010',
     },
+    colorDark: '#111010',
+    colorLight: '#EDEAE4',
   },
   typography: {
     fontFamily: "Cinzel Variable, sans-serif", // Police par défaut

@@ -9,7 +9,7 @@ import TypoElement from "@components//TypoElement.js";
 import TypoElementTitle from "@components//TypoElementTitle.js";
 
 
-import AllData from '@languages/fr.json'
+import AllData from '@languages'
 
 
 function Mariage1Page() {

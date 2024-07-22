@@ -58,15 +58,15 @@ module.exports = {
         alias: {
           "@src": "src",
           "@components": "src/components",
-          "@layouts": "src/layouts",
+          "@layouts": "src/components/layout/layout.js",
           "@pages": "src/pages",
           "@sections": "src/sections",
           "@templates": "src/templates",
-          "@languages": "src/languages",
+          "@languages": "src/languages/fr.json",
           "@themes": "/theme.js"
         },
         extensions: [
-          "js",
+          "js", "json"
         ],
       }
     }

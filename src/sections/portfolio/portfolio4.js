@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import { StaticImage } from "gatsby-plugin-image"
 import { Box, Container } from '@mui/material';
 
-function Portfolio4Section({ color }) {
+function Portfolio4Section() {
 
     const theme = useTheme()
 
@@ -12,7 +12,7 @@ function Portfolio4Section({ color }) {
         <Container component="section"
             maxWidth={false}
             sx={{
-                backgroundColor: color,
+                backgroundColor: theme.palette.colorLight,
                 overflow: "hidden",
                 [theme.breakpoints.up('lg')]: {
                     height: "100svh",

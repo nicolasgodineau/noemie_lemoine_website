@@ -5,7 +5,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { Container, Box } from '@mui/material';
 import { StaticImage } from "gatsby-plugin-image"
 
-function Portfolio5Section({ color }) {
+function Portfolio5Section() {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.up('lg'));
@@ -18,7 +18,7 @@ function Portfolio5Section({ color }) {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                backgroundColor: color,
+                backgroundColor: theme.palette.colorDark,
                 paddingBottom: "2rem",
                 overflow: "hidden",
                 [theme.breakpoints.up('lg')]: {

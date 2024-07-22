@@ -7,7 +7,7 @@ import { Container, Box } from '@mui/material';
 import TypoElement from "@components//TypoElement.js";
 import TypoElementTitle from "@components//TypoElementTitle.js";
 
-import AllData from '@languages/fr.json'
+import AllData from '@languages'
 
 function Mariage2Page() {
     const { t } = useTranslation()

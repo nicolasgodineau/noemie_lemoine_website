@@ -3,8 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 
-/* import Layout from "../components/Layout/layout.js"; */
-import Layout from '@components/Layout/layout.js'
+import Layout from '@layouts'
 import Seo from "@components/seo";
 import { Box, Container, Typography } from "@mui/material";
 import PortfolioPage from "@pages/portfolio.js";
@@ -30,22 +29,11 @@ const IndexPage = () => {
 
   useEffect(() => {
     const currentBreakpoint = Object.keys(breakpoints).find(key => breakpoints[key]);
-
     console.log('Current breakpoint:', currentBreakpoint);
   }, [breakpoints]);
 
-  // Simplification des appels de couleurs
-  const { secondary: { main: colorDark }, primary: { main: colorLight } } = theme.palette;
-
-  const dataForLettres = {
-    name: "Noëmie",
-    lastName: "Lemoine",
-  }
-
-  const { name, lastName } = dataForLettres;
-
   return (
-    <Layout headerColor={colorDark} headerColorText={colorLight}>
+    <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight}>
       <Container
         maxWidth={false}
         sx={{
@@ -55,8 +43,8 @@ const IndexPage = () => {
           alignItems: "center",
           justifyContent: "center",
           gap: "48px",
-          backgroundColor: colorDark,
-          color: colorLight
+          backgroundColor: theme.palette.colorDark,
+          color: theme.palette.colorLight
         }}>
         <Typography
           variant="h6"
@@ -76,12 +64,12 @@ const IndexPage = () => {
           <Typography
             variant="h1"
             sx={{ letterSpacing: "10px" }}>
-            {t(name)}
+            {t("name")}
           </Typography>
           <Typography
             variant="h1"
             sx={{ letterSpacing: "10px" }}>
-            {t(lastName)}
+            {t("lastName")}
           </Typography>
         </Box>
       </Container>

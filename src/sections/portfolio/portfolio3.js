@@ -5,9 +5,9 @@ import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Typography, Box } from '@mui/material';
 
-import AllData from '@languages/fr.json'
+import AllData from '@languages'
 
-function Portfolio3Section({ color }) {
+function Portfolio3Section() {
     const { t } = useTranslation()
     const theme = useTheme()
 
@@ -21,7 +21,7 @@ function Portfolio3Section({ color }) {
             maxWidth={false}
             disableGutters
             sx={{
-                backgroundColor: color,
+                backgroundColor: theme.palette.colorLight,
                 overflow: "hidden",
             }}
         >
@@ -31,7 +31,7 @@ function Portfolio3Section({ color }) {
                 sx={{
                     display: "flex",
                     flexDirection: "column",
-                    backgroundColor: color,
+                    backgroundColor: theme.palette.colorLight,
                     overflow: "hidden",
                     [theme.breakpoints.up('lg')]: {
                         height: "100svh",
