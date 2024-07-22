@@ -6,7 +6,7 @@ import Portfolio3Section from "@sections/portfolio/portfolio3.js";
 import Portfolio4Section from "@sections/portfolio/portfolio4.js";
 import Portfolio5Section from "@sections/portfolio/portfolio5.js";
 import Portfolio6Section from "@sections/portfolio/portfolio6.js";
-import Portfolio7Section from "../sections/portfolio/portfolio7.js";
+import Portfolio7Section from "@sections/portfolio/portfolio7.js";
 
 
 function PortfolioPage() {
