@@ -2,7 +2,7 @@ import React from "react"
 
 import { useTheme } from "@mui/material/styles"
 
-import Layout from '@layouts'
+import Layout from '@layouts/layout.js'
 
 import Mariage2Page from "@sections/mariage/mariage2.js";
 import Mariage3Page from "@sections/mariage/mariage3.js";

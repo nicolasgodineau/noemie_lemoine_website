@@ -3,7 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { createGlobalStyle } from "styled-components";
 
 import { Container } from "@mui/material";
-import theme from "../../../theme.js";
+import theme from "../../theme.js";
 import Header from "@components/header/header.js";
 
 const GlobalStyle = createGlobalStyle`

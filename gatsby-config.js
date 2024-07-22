@@ -58,7 +58,7 @@ module.exports = {
         alias: {
           "@src": "src",
           "@components": "src/components",
-          "@layouts": "src/components/layout/layout.js",
+          "@layouts": "src/layout",
           "@pages": "src/pages",
           "@sections": "src/sections",
           "@templates": "src/templates",
