@@ -25,14 +25,10 @@ function AboutPage() {
             <Container component="section"
                 maxWidth={false}
                 sx={{
-                    width: '100%',
-
-                    /* Retire la hauteur du menu pour eviter une barre de scroll */
                     backgroundColor: theme.palette.colorDark,
                     color: theme.palette.colorLight,
                     overflow: "hidden",
                     [theme.breakpoints.up('lg')]: {
-
                         display: "flex",
                         alignItems: "center"
                     }
@@ -41,8 +37,8 @@ function AboutPage() {
                     (
                         <Container
                             maxWidth="xl"
-                            disableGutters
                             sx={{
+                                height: "calc(100svh - 96px)",
                                 display: "flex",
                                 flexDirection: "row",
                             }}
@@ -51,35 +47,35 @@ function AboutPage() {
                                 maxWidth="sm2"
                                 disableGutters
                                 sx={{
+                                    height: "100%",
                                     width: '80%',
                                     display: "flex",
                                     flexDirection: "column",
                                     alignItems: "end",
-                                    gap: "2rem",
-                                    margin: "3rem",
+                                    gap: "1rem",
+                                    paddingY: "2rem",
+                                    paddingRight: "2rem"
                                 }}>
                                 <Box
                                     sx={{
-                                        position: "relative",
                                         height: "50%",
                                         width: '100%',
                                         display: "flex",
                                         flexDirection: "row-reverse",
-                                        marginTop: "3rem",
                                     }}
                                 >
                                     <Box /* Zone image */
                                         sx={{
-                                            height: "100%",
+                                            height: "90%",
                                             width: '60%',
                                         }}
                                     >
                                         <StaticImage /* image droite */
                                             src="../images/about/img_about_2.webp"
                                             alt="image d'illustration"
-                                            objectFit="cover"
+                                            objectFit="contain"
                                             style={{
-                                                height: "90%",
+                                                height: "100%",
                                                 width: '100%',
                                                 borderRadius: "250px 0px 0px 0px",
                                             }}
@@ -106,7 +102,7 @@ function AboutPage() {
                                     sx={{
                                         display: "flex",
                                         flexDirection: "column",
-                                        gap: "2rem",
+                                        gap: "1rem",
                                     }}
                                 >
                                     {aboutData.paragraph.slice(1).map((step, index) => (
@@ -124,10 +120,10 @@ function AboutPage() {
                             <Box  /* droite */
                                 sx={{
                                     width: "70%",
-                                    height: "80%",
+                                    height: "50%",
                                     [theme.breakpoints.up('lg')]: {
-                                        width: '60%',
-                                        height: "auto"
+                                        width: 'auto',
+                                        height: "90%",
                                     }
                                 }}
                             >
