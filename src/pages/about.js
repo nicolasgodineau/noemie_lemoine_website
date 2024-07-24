@@ -21,7 +21,7 @@ function AboutPage() {
     const aboutData = AllData.about
 
     return (
-        <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight}>
+        <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight} backgroundColor={theme.palette.colorDark}>
             <Container component="section"
                 maxWidth={false}
                 sx={{

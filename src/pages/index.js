@@ -33,7 +33,7 @@ const IndexPage = () => {
   }, [breakpoints]);
 
   return (
-    <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight}>
+    <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight} backgroundColor={theme.palette.colorDark}>
       <Container
         maxWidth={false}
         sx={{

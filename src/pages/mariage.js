@@ -15,7 +15,7 @@ function MariagePage() {
     const theme = useTheme()
 
     return (
-        <Layout headerColor={theme.palette.colorLight} headerColorText={theme.palette.colorDark}>
+        <Layout headerColor={theme.palette.colorLight} headerColorText={theme.palette.colorDark} backgroundColor={theme.palette.colorLight}>
             <Mariage1Page />
             <Mariage2Page />
             <Mariage3Page />

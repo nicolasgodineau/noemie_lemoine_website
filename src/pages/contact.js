@@ -17,11 +17,10 @@ function ContactPage() {
     };
 
     return (
-        <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight}>
+        <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight} backgroundColor={theme.palette.colorDark}>
             <Container component="section"
                 maxWidth={false}
                 sx={{
-                    height: "100svh",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
@@ -29,6 +28,10 @@ function ContactPage() {
                     backgroundColor: theme.palette.colorDark,
                     color: theme.palette.colorLight,
                     overflow: "hidden",
+                    [theme.breakpoints.up('lg')]: {
+                        /*  height: "100svh", */
+
+                    }
                 }}>
                 <Container
                     maxWidth="xl"
