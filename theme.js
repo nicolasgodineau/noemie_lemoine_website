@@ -3,18 +3,21 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles"
 let theme = createTheme({
   palette: {
     mode: 'light',
-    primary: {
-      main: '#EDEAE4', // couleur clair
+    primary: { /* couleur foncé */
+      light: '#403f3f',
+      main: '#111010',
+      dark: '#0b0b0b',
+      contrastText: '#EDEAE4',
     },
-    secondary: {
-      main: '#111010', // couleur foncé
-    },
-    text: {
-      primary: '#EDEAE4',
-      secondary: '#111010',
+    secondary: { /* couleur clair */
+      light: '#f0eee9',
+      main: '#EDEAE4',
+      dark: '#a5a39f',
+      contrastText: '#111010',
     },
     colorDark: '#111010',
     colorLight: '#EDEAE4',
+
   },
   typography: {
     fontFamily: "Cinzel Variable, sans-serif", // Police par défaut
