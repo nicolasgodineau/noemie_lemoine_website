@@ -1,12 +1,12 @@
-import React from "react"
+import React, { useEffect } from 'react';
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
-import { Container, Box } from "@mui/material"
+import { Container, Button, TextField, Box } from '@mui/material'
 
-import TypoElement from "@components/TypoElement";
+import FormControl from '@mui/material/FormControl';
 
 import Layout from '@layouts/layout.js'
 
@@ -16,15 +16,23 @@ function ContactPage() {
     const { t } = useTranslation()
     const theme = useTheme()
 
-    const isMobile = useMediaQuery(theme.breakpoints.up('lg'));
+    useEffect(() => {
+        // Force re-render or re-apply styles if needed
+    }, [theme]);
 
-    const aboutData = AllData.about
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
 
     return (
         <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight} backgroundColor={theme.palette.colorDark}>
             <Container component="section"
                 maxWidth={false}
                 sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
                     backgroundColor: theme.palette.colorDark,
                     color: theme.palette.colorLight,
                     overflow: "hidden",
@@ -33,195 +41,241 @@ function ContactPage() {
                         alignItems: "center"
                     }
                 }}>
-                {isMobile ? /* Version bureau */
-                    (
-                        <Container
-                            maxWidth="xl"
-                            sx={{
-                                height: "calc(100svh - 96px)",
-                                display: "flex",
-                                flexDirection: "row",
-                            }}
-                        >
-                            <Container component="aside" /* Zone texte ( paragraphe 1) + image */
-                                maxWidth="sm2"
-                                disableGutters
-                                sx={{
-                                    height: "100%",
-                                    width: '80%',
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "end",
-                                    gap: "1rem",
-                                    paddingY: "2rem",
-                                    paddingRight: "2rem"
-                                }}>
-                                <Box
-                                    sx={{
-                                        height: "50%",
-                                        width: '100%',
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                    }}
-                                >
-                                    <Box /* Zone image */
-                                        sx={{
-                                            height: "90%",
-                                            width: '60%',
-                                        }}
-                                    >
-                                        <StaticImage /* image droite */
-                                            src="../images/about/img_about_2.webp"
-                                            alt="image d'illustration"
-                                            objectFit="contain"
-                                            style={{
-                                                height: "100%",
-                                                width: '100%',
-                                                borderRadius: "250px 0px 0px 0px",
-                                            }}
-                                        />
-                                    </Box>
-                                    {aboutData.paragraph.slice(0, 1).map((step, index) => (
-                                        <Box key={index} sx={{
-                                            width: '70%',
-                                            alignSelf: "flex-end"
-                                        }}>
-                                            <TypoElement variant="body1"
-                                                sx={{
-                                                    textAlign: 'end',
-                                                    [theme.breakpoints.up('lg')]: {
-                                                        textAlign: 'start',
-                                                    }
-                                                }}>
-                                                {step.line}
-                                            </TypoElement>
-                                        </Box>
-                                    ))}
-                                </Box>
-                                <Box /* Zone texte (autres paragraphes) */
-                                    sx={{
-                                        display: "flex",
-                                        flexDirection: "column",
-                                        gap: "1rem",
-                                    }}
-                                >
-                                    {aboutData.paragraph.slice(1).map((step, index) => (
-                                        <Box key={index}>
-                                            <TypoElement variant="body1">
-                                                {step.line}
-                                            </TypoElement>
-                                        </Box>
-                                    ))}
-                                    <TypoElement variant="h5">
-                                        {t("name")}
-                                    </TypoElement>
-                                </Box>
-                            </Container>
-                            <Box  /* droite */
-                                sx={{
-                                    width: "70%",
-                                    height: "50%",
-                                    [theme.breakpoints.up('lg')]: {
-                                        width: 'auto',
-                                        height: "90%",
+                <Container
+                    maxWidth="xl"
+                    disableGutters
+                    sx={{
+                        height: "90%",
+                        display: "flex",
+                        alignItems: "center",
+                        flexDirection: "column-reverse",
+                        justifyContent: "space-around",
+                        gap: "2rem",
+                        [theme.breakpoints.up('lg')]: {
+                            flexDirection: "row",
+
+                            alignItems: "flex-end",
+                        }
+                    }}>
+                    <Box component="form"
+                        autoComplete="off"
+                        onSubmit={handleSubmit}
+                        sx={{
+                            height: "auto",
+                            width: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                            [theme.breakpoints.up('lg')]: {
+                                alignItems: "flex-start",
+                                paddingY: "2rem",
+                                paddingX: "8px"
+                            }
+
+                        }}>
+                        <FormControl>
+                            <TextField
+                                label="Nom"
+                                variant="standard"
+                                color="primary"
+                                InputLabelProps={{
+                                    sx: {
+                                        color: theme.palette.colorLight,
                                     }
                                 }}
-                            >
-                                <StaticImage /* image droite */
-                                    src="../images/about/img_about_1.webp"
-                                    alt="image d'illustration"
-                                    objectFit="cover"
-                                    style={{
-                                        height: "100%",
-                                        width: '100%',
-                                        borderRadius: "0px 0px 300px 0px",
-                                    }}
-                                />
-                            </Box>
-                        </Container>
-                    )
-                    :
-                    ( /* Version mobile */
-                        <Box
+                                sx={{
+                                    input: {
+                                        color: theme.palette.colorLight,
+                                    },
+                                    '.MuiInputLabel-root.Mui-focused': {
+                                        color: theme.palette.secondary.dark
+                                    },
+                                }}
+                            />
+                        </FormControl>
+                        <FormControl>
+                            <TextField
+                                label="Prénom"
+                                variant="standard"
+                                color="primary"
+                                InputLabelProps={{
+                                    sx: {
+                                        color: theme.palette.colorLight,
+                                    }
+                                }}
+                                sx={{
+                                    input: {
+                                        color: theme.palette.colorLight,
+                                    },
+                                    '.MuiInputLabel-root.Mui-focused': {
+                                        color: theme.palette.secondary.dark
+                                    },
+                                }}
+                            />
+                        </FormControl>
+                        <FormControl>
+                            <TextField
+                                label="Email"
+                                type="email"
+                                variant="standard"
+                                color="primary"
+                                InputLabelProps={{
+                                    sx: {
+                                        color: theme.palette.colorLight,
+                                    }
+                                }}
+                                sx={{
+                                    input: {
+                                        color: theme.palette.colorLight,
+                                    },
+                                    '.MuiInputLabel-root.Mui-focused': {
+                                        color: theme.palette.secondary.dark
+                                    },
+                                }}
+                            />
+                        </FormControl>
+                        <FormControl>
+                            <TextField
+                                label="Téléphone"
+                                variant="standard"
+                                color="primary"
+                                InputLabelProps={{
+                                    sx: {
+                                        color: theme.palette.colorLight,
+                                    }
+                                }}
+                                sx={{
+                                    input: {
+                                        color: theme.palette.colorLight,
+                                    },
+                                    '.MuiInputLabel-root.Mui-focused': {
+                                        color: theme.palette.secondary.dark
+                                    },
+                                }}
+                            />
+                        </FormControl>
+                        {/*                     <FormControl>
+                        <TextField
+                            label="Date de l'évènement"
+                            type="date"
+                            variant="standard"
+                            format='DD-MM-YYYY'
+                            InputLabelProps={{
+                                shrink: true,
+                                sx: {
+                                    color: "#EDEAE4",
+                                }
+                            }}
+
+                        />
+                    </FormControl>
+                    <FormControl components={['DateField']}>
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DatePicker
+                                label="Date de l'évènement"
+                                variant="standard"
+                                size="medium"
+                                format='DD-MM-YYYY'
+                                slotProps={{
+                                    textField: {
+                                        variant: 'filled',
+                                    },
+                                    sx: {
+                                        color: "#EDEAE4",
+                                    }
+                                }}
+                                InputLabelProps={{
+                                    shrink: true,
+                                    sx: {
+                                        color: "#EDEAE4",
+                                    }
+                                }}
+                            />
+                        </LocalizationProvider>
+                    </FormControl> */}
+                        <TextField
+                            fullWidth
+                            multiline
+                            label="Message"
+                            rows={4}
+                            variant="standard"
+                            color="secondary"
+                            InputLabelProps={{
+                                sx: {
+                                    color: theme.palette.colorLight,
+                                }
+                            }}
                             sx={{
-                                display: "flex",
-                                flexDirection: "column",
-                                overflow: "hidden",
+                                input: {
+                                    color: theme.palette.colorLight,
+                                },
+                                '.css-66dh3a-MuiInputBase-input-MuiInput-input': {
+                                    color: theme.palette.colorLight,
+                                },
+                                '.MuiInputLabel-root.Mui-focused': {
+                                    color: theme.palette.secondary.dark
+                                },
+                            }}
+                        />
+                        <Button type="submit"
+                            variant="contained"
+                            size="medium"
+                            color="secondary">
+                            Envoyer
+                        </Button>
+                    </Box>
+
+                    <Box /* Zone image */
+                        sx={{
+                            height: "50%",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            position: "relative",
+                            [theme.breakpoints.up('lg')]: {
+                                maxWidth: "50%",
+                            }
+                        }}>
+                        <Box /* gauche */
+                            sx={{
+                                position: "absolute",
+                                width: "50%",
+                                marginTop: "20%",
+                                left: "0",
+                                bottom: "3rem",
+                                zIndex: "100"
                             }}
                         >
-                            <Box /* Zone des deux images */
-                                sx={{
-                                    height: '50svh',
-                                    display: "flex",
-                                    gap: "1rem",
-                                }}>
-                                <Box /* droite */
-                                    sx={{
-                                        width: '30%',
-                                        height: "60%",
-                                        display: "flex",
-                                        alignSelf: "flex-end",
-                                    }}
-                                >
-                                    <StaticImage /* image droite */
-                                        src="../images/about/img_about_2.webp"
-                                        alt="image d'illustration"
-                                        objectFit="cover"
-                                        style={{
-                                            borderRadius: "100px 0px 0px 0px",
-                                        }}
-                                    />
-                                </Box>
-                                <Box  /* gauche */
-                                    sx={{
-                                        width: "70%",
-                                        height: "80%",
-                                    }}
-                                >
-                                    <StaticImage /* image gauche */
-                                        src="../images/about/img_about_1.webp"
-                                        alt="image d'illustration"
-                                        objectFit="cover"
-                                        style={{
-                                            height: "100%",
-                                            width: '100%',
-                                            borderRadius: "0px 0px 200px 0px",
-                                        }}
-                                    />
-                                </Box>
-                            </Box>
-                            <Container component="aside" /* Zone texte */
-                                maxWidth="sm2"
-                                disableGutters
-                                sx={{
-                                    width: '80%',
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "end",
-                                    gap: "2rem",
-                                    margin: "3rem",
-                                }}>
-                                {aboutData.paragraph.map((step, index) => (
-                                    <Box key={index}>
-                                        <TypoElement variant="body1"
-                                            sx=
-                                            {{
-                                                textAlign: 'end',
-                                                [theme.breakpoints.up('lg')]: {
-                                                    textAlign: 'start',
-                                                }
-                                            }}>
-                                            {step.line}
-                                        </TypoElement>
-                                    </Box>
-                                ))}
-                                <TypoElement variant="h5">
-                                    {t("name")}
-                                </TypoElement>
-                            </Container>
-                        </Box>
-                    )}
+                            <StaticImage /* Image gauche */
+                                src="../images/contact/img_contact_1.webp"
+                                alt="image d'illustration"
+                                style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    borderRadius: "100px 0px 0px 0px",
 
+                                }}
+                            />
+                        </Box>
+                        <Box /* droite */
+                            sx={{
+                                width: "70%",
+                                height: "100%",
+                                alignSelf: "flex-end",
+                            }}
+                        >
+                            <StaticImage /* Image droite */
+                                src="../images/contact/img_contact_2.webp"
+                                alt="image d'illustration"
+                                style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    borderRadius: "0px 100px 0px 0px",
+                                }}
+                            />
+                        </Box>
+
+                    </Box>
+                </Container>
             </Container>
         </Layout>
     )
