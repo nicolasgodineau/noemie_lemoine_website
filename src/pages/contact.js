@@ -32,20 +32,23 @@ function ContactPage() {
                     backgroundColor: theme.palette.colorDark,
                     color: theme.palette.colorLight,
                     overflow: "hidden",
-                    [theme.breakpoints.up('lg')]: {
-                        /*  height: "100svh", */
 
-                    }
                 }}>
                 <Container
                     maxWidth="xl"
+                    disableGutters
                     sx={{
                         height: "90%",
                         display: "flex",
                         alignItems: "center",
                         flexDirection: "column-reverse",
                         justifyContent: "space-around",
-                        gap: "2rem"
+                        gap: "2rem",
+                        [theme.breakpoints.up('lg')]: {
+                            flexDirection: "row",
+
+                            alignItems: "flex-end",
+                        }
                     }}>
                     <Box component="form"
                         autoComplete="off"
@@ -55,6 +58,12 @@ function ContactPage() {
                             width: "100%",
                             display: "flex",
                             flexDirection: "column",
+                            [theme.breakpoints.up('lg')]: {
+                                alignItems: "flex-start",
+                                paddingY: "2rem",
+                                paddingX: "8px"
+                            }
+
                         }}>
                         <FormControl>
                             <TextField
@@ -202,41 +211,62 @@ function ContactPage() {
                         />
                         <Button type="submit"
                             variant="contained"
+                            size="medium"
                             color="secondary">
                             Envoyer
                         </Button>
                     </Box>
+
                     <Box /* Zone image */
                         sx={{
                             height: "50%",
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
-                            position: "relative"
+                            position: "relative",
+                            [theme.breakpoints.up('lg')]: {
+                                maxWidth: "50%",
+                            }
                         }}>
-                        <StaticImage /* Image gauche */
-                            src="../images/contact/img_contact_1.webp"
-                            alt="image d'illustration"
-                            style={{
+                        <Box /* gauche */
+                            sx={{
                                 position: "absolute",
                                 width: "50%",
-                                height: "auto",
-                                borderRadius: "100px 0px 0px 0px",
                                 marginTop: "20%",
                                 left: "0",
+                                bottom: "3rem",
                                 zIndex: "100"
                             }}
-                        />
-                        <StaticImage /* Image droite */
-                            src="../images/contact/img_contact_2.webp"
-                            alt="image d'illustration"
-                            style={{
+                        >
+                            <StaticImage /* Image gauche */
+                                src="../images/contact/img_contact_1.webp"
+                                alt="image d'illustration"
+                                style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    borderRadius: "100px 0px 0px 0px",
+
+                                }}
+                            />
+                        </Box>
+                        <Box /* droite */
+                            sx={{
                                 width: "70%",
                                 height: "100%",
-                                marginLeft: "200px",
-                                borderRadius: "0px 100px 0px 0px",
+                                alignSelf: "flex-end",
                             }}
-                        />
+                        >
+                            <StaticImage /* Image droite */
+                                src="../images/contact/img_contact_2.webp"
+                                alt="image d'illustration"
+                                style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    borderRadius: "0px 100px 0px 0px",
+                                }}
+                            />
+                        </Box>
+
                     </Box>
                 </Container>
             </Container>
