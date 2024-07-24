@@ -9,7 +9,7 @@ import FormControl from '@mui/material/FormControl';
 
 import Layout from '@layouts/layout.js'
 
-export default function Contact() {
+function ContactPage() {
     const theme = useTheme()
 
     const handleSubmit = (e) => {
@@ -190,3 +190,4 @@ export default function Contact() {
         </Layout>
     )
 }
+export default ContactPage
