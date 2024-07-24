@@ -18,28 +18,37 @@ export default function Contact() {
 
     return (
         <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight}>
-            <Container maxWidth={false}
+            <Container component="section"
+                maxWidth={false}
                 sx={{
                     height: "100svh",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    justifyContent: "center",
+                    justifyContent: "flex-start",
                     backgroundColor: theme.palette.colorDark,
+                    color: theme.palette.colorLight,
+                    overflow: "hidden",
                 }}>
-                <Container maxWidth="lg"
-                    disableGutters sx={{
+                <Container
+                    maxWidth="xl"
+                    sx={{
+                        height: "90%",
                         display: "flex",
                         alignItems: "center",
+                        flexDirection: "column-reverse",
                         justifyContent: "space-around",
                         gap: "2rem"
                     }}>
-                    <Box component="form" autoComplete="off" onSubmit={handleSubmit} sx={{
-                        width: "30ch",
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "1rem",
-                    }}>
+                    <Box component="form"
+                        autoComplete="off"
+                        onSubmit={handleSubmit}
+                        sx={{
+                            height: "auto",
+                            width: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                        }}>
                         <FormControl>
                             <TextField
                                 label="Nom"
@@ -144,33 +153,35 @@ export default function Contact() {
                             Envoyer
                         </Button>
                     </Box>
-                    <Box sx={{
-                        height: "100%", display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        position: "relative"
-                    }}>
-                        <StaticImage
+                    <Box /* Zone image */
+                        sx={{
+                            height: "50%",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            position: "relative"
+                        }}>
+                        <StaticImage /* Image gauche */
                             src="../images/contact/img_contact_1.webp"
                             alt="image d'illustration"
                             style={{
                                 position: "absolute",
-                                width: "270px",
-                                height: "360px",
-                                borderRadius: "200px 0px 0px 0px",
+                                width: "50%",
+                                height: "auto",
+                                borderRadius: "100px 0px 0px 0px",
                                 marginTop: "20%",
                                 left: "0",
                                 zIndex: "100"
                             }}
                         />
-                        <StaticImage
+                        <StaticImage /* Image droite */
                             src="../images/contact/img_contact_2.webp"
                             alt="image d'illustration"
                             style={{
-                                width: "427px",
-                                height: "580px",
+                                width: "70%",
+                                height: "100%",
                                 marginLeft: "200px",
-                                borderRadius: "0px 200px 0px 0px",
+                                borderRadius: "0px 100px 0px 0px",
                             }}
                         />
                     </Box>
