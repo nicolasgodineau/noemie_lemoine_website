@@ -39,10 +39,11 @@ const Menu = ({ color, colorText, onClose }) => {
             {isMobile ? (
                 // Code to render if isMobile is true (version mobile)
                 <>
-                    <Button onClick={toggleDrawer(true)}><MenuIcon /></Button>
+                    <Button onClick={toggleDrawer(true)}><MenuIcon color="secondary" /></Button>
                     <Drawer
                         anchor="top" // Définir le tiroir pour qu'il s'ouvre du haut
                         open={open}
+
                         onClose={toggleDrawer(false)}
                     >
                         <MenuMobile links={links} color={color} colorText={colorText} onClose={toggleDrawer(false)} />
