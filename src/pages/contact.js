@@ -27,6 +27,7 @@ function ContactPage() {
                     alignItems: "center",
                     justifyContent: "flex-start",
                     backgroundColor: theme.palette.colorDark,
+                    color: theme.palette.colorLight,
                     overflow: "hidden",
                     [theme.breakpoints.up('lg')]: {
                         /*  height: "100svh", */
@@ -57,11 +58,18 @@ function ContactPage() {
                                 label="Nom"
                                 variant="standard"
                                 color="primary"
-                                fullWidth
                                 InputLabelProps={{
                                     sx: {
-                                        color: theme.palette.primary,
+                                        color: theme.palette.colorLight,
                                     }
+                                }}
+                                sx={{
+                                    input: {
+                                        color: theme.palette.colorLight,
+                                    },
+                                    '.MuiInputLabel-root.Mui-focused': {
+                                        color: theme.palette.secondary.dark
+                                    },
                                 }}
                             />
                         </FormControl>
@@ -74,6 +82,14 @@ function ContactPage() {
                                     sx: {
                                         color: theme.palette.colorLight,
                                     }
+                                }}
+                                sx={{
+                                    input: {
+                                        color: theme.palette.colorLight,
+                                    },
+                                    '.MuiInputLabel-root.Mui-focused': {
+                                        color: theme.palette.secondary.dark
+                                    },
                                 }}
                             />
                         </FormControl>
@@ -88,6 +104,14 @@ function ContactPage() {
                                         color: theme.palette.colorLight,
                                     }
                                 }}
+                                sx={{
+                                    input: {
+                                        color: theme.palette.colorLight,
+                                    },
+                                    '.MuiInputLabel-root.Mui-focused': {
+                                        color: theme.palette.secondary.dark
+                                    },
+                                }}
                             />
                         </FormControl>
                         <FormControl>
@@ -99,6 +123,14 @@ function ContactPage() {
                                     sx: {
                                         color: theme.palette.colorLight,
                                     }
+                                }}
+                                sx={{
+                                    input: {
+                                        color: theme.palette.colorLight,
+                                    },
+                                    '.MuiInputLabel-root.Mui-focused': {
+                                        color: theme.palette.secondary.dark
+                                    },
                                 }}
                             />
                         </FormControl>
@@ -142,16 +174,27 @@ function ContactPage() {
                         </LocalizationProvider>
                     </FormControl> */}
                         <TextField
-                            label="Message"
+                            fullWidth
                             multiline
+                            label="Message"
                             rows={4}
                             variant="standard"
-                            color="primary"
-                            fullWidth
+                            color="secondary"
                             InputLabelProps={{
                                 sx: {
                                     color: theme.palette.colorLight,
                                 }
+                            }}
+                            sx={{
+                                input: {
+                                    color: theme.palette.colorLight,
+                                },
+                                '.css-66dh3a-MuiInputBase-input-MuiInput-input': {
+                                    color: theme.palette.colorLight,
+                                },
+                                '.MuiInputLabel-root.Mui-focused': {
+                                    color: theme.palette.secondary.dark
+                                },
                             }}
                         />
                         <Button type="submit"
