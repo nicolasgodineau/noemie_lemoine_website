@@ -7,6 +7,10 @@ import theme from "../../theme.js";
 import Header from "@components/header/header.js";
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --color-light: "#EDEAE4";
+    --secondary-dark: "#a5a39f";
+  }
   * {
     margin: 0;
     padding: 0;
@@ -20,6 +24,17 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     background-color: ${(props) => props.backgroundColor || "#EDEAE4"}; // couleur par défaut (colorLight)
   }
+.input-label {
+  color: var(--color-light);
+}
+
+.input-label-focused {
+  color: var(--secondary-dark);
+}
+
+.input-field {
+  color: var(--color-light);
+}
 `;
 
 const Layout = ({ children, headerColor, headerColorText, backgroundColor }) => {

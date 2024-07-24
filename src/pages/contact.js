@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
 import { useTheme } from "@mui/material/styles"
 import { StaticImage } from "gatsby-plugin-image"
@@ -11,7 +11,10 @@ import Layout from '@layouts/layout.js'
 
 function ContactPage() {
     const theme = useTheme()
-    console.log('theme:', theme)
+
+    useEffect(() => {
+        // Force re-render or re-apply styles if needed
+    }, [theme]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
