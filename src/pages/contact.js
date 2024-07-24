@@ -11,6 +11,7 @@ import Layout from '@layouts/layout.js'
 
 function ContactPage() {
     const theme = useTheme()
+    console.log('theme:', theme)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,7 +27,6 @@ function ContactPage() {
                     alignItems: "center",
                     justifyContent: "flex-start",
                     backgroundColor: theme.palette.colorDark,
-                    color: theme.palette.colorLight,
                     overflow: "hidden",
                     [theme.breakpoints.up('lg')]: {
                         /*  height: "100svh", */
@@ -56,10 +56,11 @@ function ContactPage() {
                             <TextField
                                 label="Nom"
                                 variant="standard"
+                                color="primary"
                                 fullWidth
                                 InputLabelProps={{
                                     sx: {
-                                        color: theme.palette.colorLight,
+                                        color: theme.palette.primary,
                                     }
                                 }}
                             />
@@ -68,6 +69,7 @@ function ContactPage() {
                             <TextField
                                 label="Prénom"
                                 variant="standard"
+                                color="primary"
                                 InputLabelProps={{
                                     sx: {
                                         color: theme.palette.colorLight,
@@ -80,6 +82,7 @@ function ContactPage() {
                                 label="Email"
                                 type="email"
                                 variant="standard"
+                                color="primary"
                                 InputLabelProps={{
                                     sx: {
                                         color: theme.palette.colorLight,
@@ -91,6 +94,7 @@ function ContactPage() {
                             <TextField
                                 label="Téléphone"
                                 variant="standard"
+                                color="primary"
                                 InputLabelProps={{
                                     sx: {
                                         color: theme.palette.colorLight,
@@ -142,17 +146,17 @@ function ContactPage() {
                             multiline
                             rows={4}
                             variant="standard"
+                            color="primary"
                             fullWidth
                             InputLabelProps={{
                                 sx: {
-                                    color: "#EDEAE4",
+                                    color: theme.palette.colorLight,
                                 }
                             }}
                         />
-                        <Button type="submit" variant="contained" color="primary" sx={{
-                            backgroundColor: "#EDEAE4",
-                            color: theme.palette.colorDark
-                        }}>
+                        <Button type="submit"
+                            variant="contained"
+                            color="secondary">
                             Envoyer
                         </Button>
                     </Box>

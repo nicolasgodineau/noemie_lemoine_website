@@ -43,7 +43,6 @@ const Menu = ({ color, colorText, onClose }) => {
                     <Drawer
                         anchor="top" // Définir le tiroir pour qu'il s'ouvre du haut
                         open={open}
-
                         onClose={toggleDrawer(false)}
                     >
                         <MenuMobile links={links} color={color} colorText={colorText} onClose={toggleDrawer(false)} />

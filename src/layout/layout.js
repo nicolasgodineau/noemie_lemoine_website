@@ -15,9 +15,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    minHeight: 100vh;
+    min-height: 100vh;
     display: flex;
-    flexDirection: column;
+    flex-direction: column;
     background-color: ${(props) => props.backgroundColor || "#EDEAE4"}; // couleur par défaut (colorLight)
   }
 `;
