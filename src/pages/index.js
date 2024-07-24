@@ -66,6 +66,13 @@ const IndexPage = () => {
             sx={{ letterSpacing: "10px" }}>
             {t("name")}
           </Typography>
+          <Box
+            sx={{
+              height: '2px',
+              width: "120%",
+              backgroundColor: theme.palette.colorLight,
+            }}
+          />
           <Typography
             variant="h1"
             sx={{ letterSpacing: "10px" }}>
