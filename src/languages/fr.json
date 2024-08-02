@@ -56,7 +56,7 @@
       }
     ],
 
-    "MakeupPackage": {
+    "mariageForfait1": {
       "label": "Forfaits maquillage",
       "included": "Inclus",
       "stepsIncluded": [
@@ -93,7 +93,7 @@
         }
       ]
     },
-    "MakeupHairdressingPackage": {
+    "mariageForfait2": {
       "label": "Forfaits maquillage",
       "label2": "& coiffure",
       "included": "Inclus",

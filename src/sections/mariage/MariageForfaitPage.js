@@ -9,16 +9,23 @@ import { Container, Box } from "@mui/material"
 import TypoElement from "@components//TypoElement.js"
 import TypoElementTitle from "@components//TypoElementTitle.js"
 
-import AllData from "@languages"
 
-function Mariage2Page() {
+
+function MariageForfaitPage({ data, direction, forfait }) {
     const { t } = useTranslation()
     const theme = useTheme()
 
     const isMobile = useMediaQuery(theme.breakpoints.up("lg"))
     const isLgUp = theme.breakpoints.up("md")
 
-    const mariageData = AllData.mariage
+    const borderRadius =
+        direction === 'column'
+            ? isMobile
+                ? '0px 0px 300px 0px'
+                : '0px 0px 200px 0px'
+            : isMobile
+                ? '0px 300px 0px 0px'
+                : '0px 200px 0px 0px';
 
     return (
         <Container
@@ -39,7 +46,7 @@ function Mariage2Page() {
                 maxWidth={isLgUp ? "xl" : false}
                 sx={{
                     display: "flex",
-                    flexDirection: "column",
+                    flexDirection: direction,
                     gap: "2rem",
                     [theme.breakpoints.up("lg")]: {
                         height: "calc(100svh - 96px)",
@@ -54,16 +61,32 @@ function Mariage2Page() {
                         height: '100%',
                         width: '100%',
                     }}>
-                    <StaticImage
-                        src="../../images/mariage/img_mariage_3.webp"
-                        alt="image d'illustration"
-                        objectFit="cover"
-                        style={{
-                            height: "100%",
-                            width: '100%',
-                            borderRadius: isMobile ? '0px 0px 300px 0px' : '0px 0px 200px 0px',
-                        }}
-                    />
+                    {forfait === 'forfait1' && (
+                        <StaticImage
+                            src="../../images/mariage/img_mariage_3.webp"
+                            alt="image d'illustration"
+                            objectFit="cover"
+                            objectPosition="left"
+                            style={{
+                                height: '100%',
+                                width: '100%',
+                                borderRadius: borderRadius,
+                            }}
+                        />
+                    )}
+                    {forfait === 'forfait2' && (
+                        <StaticImage
+                            src="../../images/mariage/img_mariage_7.webp"
+                            alt="image d'illustration"
+                            objectFit="cover"
+                            objectPosition="left"
+                            style={{
+                                height: '100%',
+                                width: '100%',
+                                borderRadius: borderRadius,
+                            }}
+                        />
+                    )}
                 </Box>
                 <Box  /* zone texte */
                     sx={{
@@ -88,7 +111,7 @@ function Mariage2Page() {
                             }
                         }}>
                         <TypoElementTitle variant="h4" sx={{}}>
-                            {t("mariage.MakeupPackage.label")}
+                            {t("mariage.mariageForfait1.label")}
                         </TypoElementTitle>
                         <Box
                             sx={{
@@ -99,9 +122,9 @@ function Mariage2Page() {
                         >
                             <Box>
                                 <TypoElement variant="h5" sx={{ marginBottom: "1rem" }}>
-                                    {t("mariage.MakeupPackage.included")}
+                                    {t("mariage.mariageForfait1.included")}
                                 </TypoElement>
-                                {mariageData.MakeupPackage.stepsIncluded.map((step, index) => (
+                                {data.stepsIncluded.map((step, index) => (
                                     <TypoElement variant="body1" key={index}>
                                         {step.line}
                                     </TypoElement>
@@ -109,12 +132,12 @@ function Mariage2Page() {
                             </Box>
                             <Box>
                                 <TypoElement variant="h5" sx={{ marginBottom: "1rem" }}>
-                                    {t("mariage.MakeupPackage.free")}
+                                    {t("mariage.mariageForfait1.free")}
                                 </TypoElement>
                                 <TypoElement variant="h6">
-                                    {t("mariage.MakeupPackage.titleFree")}
+                                    {t("mariage.mariageForfait1.titleFree")}
                                 </TypoElement>
-                                {mariageData.MakeupPackage.stepsFree.map((step, index) => (
+                                {data.stepsFree.map((step, index) => (
                                     <TypoElement variant="body1" key={index}>
                                         {step.line}
                                     </TypoElement>
@@ -128,4 +151,4 @@ function Mariage2Page() {
     )
 }
 
-export default Mariage2Page
+export default MariageForfaitPage
