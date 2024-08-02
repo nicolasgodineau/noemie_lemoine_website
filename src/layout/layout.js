@@ -45,9 +45,6 @@ const Layout = ({ children, headerColor, headerColorText, backgroundColor }) => 
       <Container component="main" maxWidth={false} disableGutters>
         {children}
       </Container>
-      <footer>
-        © {new Date().getFullYear()} &middot; Noëmie Lemoine
-      </footer>
     </ThemeProvider>
   );
 };

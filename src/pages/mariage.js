@@ -17,10 +17,10 @@ function MariagePage() {
     return (
         <Layout headerColor={theme.palette.colorLight} headerColorText={theme.palette.colorDark} backgroundColor={theme.palette.colorLight}>
             <Mariage1Page />
-            <Mariage2Page />
+            {/*             <Mariage2Page />
             <Mariage3Page />
             <Mariage4Page />
-            <Mariage5Page />
+            <Mariage5Page /> */}
         </Layout>
     )
 }

@@ -15,32 +15,59 @@ import AllData from '@languages'
 function Mariage1Page() {
     const { t } = useTranslation()
     const theme = useTheme()
-    // simplification des appels de couleurs
-    const { secondary: { main: colorDark } } = theme.palette;
-    const { primary: { main: colorLight } } = theme.palette;
+
+    const isLgUp = (theme.breakpoints.up('md'));
 
     const mariageData = AllData.mariage
 
 
     return (
-        <Container
-            component="section"
-            maxWidth="lg"
+        <Container component="section"
+            maxWidth={false}
             sx={{
-
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
+                backgroundColor: theme.palette.colorLight,
+                overflow: "hidden",
+                [theme.breakpoints.up('lg')]: {
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-evenly",
+                }
             }}>
-            <Container disableGutters sx={{
-                display: "flex",
-            }}>
-                <Container disableGutters sx={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-evenly", paddingLeft: "0", paddingRight: "3rem" }}>
-                    <TypoElementTitle variant="h4" sx={{ marginBottom: '3rem' }}>
+            <Container
+                maxWidth={isLgUp ? "xl" : false}
+                sx={{
+                    display: "flex",
+                    flexDirection: "column-reverse",
+                    gap: "2rem",
+                    [theme.breakpoints.up('lg')]: {
+                        height: "calc(100svh - 96px)",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                    }
+                }}>
+                <Box
+                    sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-evenly",
+                        gap: "3rem",
+                        textAlign: "end",
+                        [theme.breakpoints.up('lg')]: {
+                            justifyContent: "center",
+                            textAlign: "start",
+                            paddingY: "2rem",
+                        }
+                    }}>
+                    <TypoElementTitle variant="h4" sx={{}}>
                         {t("mariage.title")}
                     </TypoElementTitle>
-                    <Box sx={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", paddingRight: "5rem" }}>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            gap: "2rem",
+                        }}>
                         <TypoElement variant="body1">
                             {t("mariage.paragraph")}
                         </TypoElement>
@@ -58,14 +85,21 @@ function Mariage1Page() {
                             </Box>
                         ))}
                     </Box>
-                </Container>
-                <Container disableGutters maxWidth="xs" sx={{
-                }}>
+                </Box>
+                <Container
+                    disableGutters
+                    maxWidth="xs"
+                    sx={{
+                        height: '100%',
+                    }}>
                     <StaticImage
-                        src="../images/mariage/img_mariage_1.webp"
+                        src="../../images/mariage/img_mariage_1.webp"
                         alt="image d'illustration"
+                        objectFit="cover"
+                        objectPosition="left"
                         style={{
-                            height: '100%',
+                            height: "100%",
+                            width: '100%',
                             borderRadius: "200px 0px 0px 0px",
                         }}
                     />
