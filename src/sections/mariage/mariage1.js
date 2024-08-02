@@ -1,7 +1,8 @@
 import React from "react"
 
-import { useTranslation } from "react-i18next"
 import { useTheme } from "@mui/material/styles"
+import useMediaQuery from "@mui/material/useMediaQuery"
+import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from '@mui/material';
 
@@ -16,6 +17,7 @@ function Mariage1Page() {
     const { t } = useTranslation()
     const theme = useTheme()
 
+    const isMobile = useMediaQuery(theme.breakpoints.up("lg"))
     const isLgUp = (theme.breakpoints.up('md'));
 
     const mariageData = AllData.mariage
@@ -27,6 +29,7 @@ function Mariage1Page() {
             sx={{
                 backgroundColor: theme.palette.colorLight,
                 overflow: "hidden",
+                paddingY: "2rem",
                 [theme.breakpoints.up('lg')]: {
                     display: "flex",
                     flexDirection: "column",
@@ -61,36 +64,46 @@ function Mariage1Page() {
                     <TypoElementTitle variant="h4" sx={{}}>
                         {t("mariage.title")}
                     </TypoElementTitle>
-                    <Box
-                        sx={{
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "center",
-                            gap: "2rem",
-                        }}>
-                        <TypoElement variant="body1">
-                            {t("mariage.paragraph")}
-                        </TypoElement>
-                        <TypoElement variant="body1">
-                            {t("mariage.line")}
-                        </TypoElement>
-                        {mariageData.steps.map((step, index) => (
-                            <Box key={index}>
-                                <TypoElement variant="h6">
-                                    {step.title}
-                                </TypoElement>
-                                <TypoElement variant="body1">
-                                    {step.line}
-                                </TypoElement>
-                            </Box>
-                        ))}
+                    <Box sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        [theme.breakpoints.up('lg')]: {
+                            width: '65ch',
+                            justifyContent: "space-evenly",
+                            alignItems: "center",
+                        }
+                    }}>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                                gap: "2rem",
+                            }}>
+                            <TypoElement variant="body1">
+                                {t("mariage.paragraph")}
+                            </TypoElement>
+                            <TypoElement variant="body1">
+                                {t("mariage.line")}
+                            </TypoElement>
+                            {mariageData.steps.map((step, index) => (
+                                <Box key={index}>
+                                    <TypoElement variant="h5">
+                                        {step.title}
+                                    </TypoElement>
+                                    <TypoElement variant="body1">
+                                        {step.line}
+                                    </TypoElement>
+                                </Box>
+                            ))}
+                        </Box>
                     </Box>
                 </Box>
-                <Container
-                    disableGutters
-                    maxWidth="xs"
+                <Box
                     sx={{
+                        maxWidth: `${theme.breakpoints.values.xs}px`,
                         height: '100%',
+                        width: '100%',
                     }}>
                     <StaticImage
                         src="../../images/mariage/img_mariage_1.webp"
@@ -100,10 +113,10 @@ function Mariage1Page() {
                         style={{
                             height: "100%",
                             width: '100%',
-                            borderRadius: "200px 0px 0px 0px",
+                            borderRadius: isMobile ? '200px 0px 0px 0px' : '0px 0px 0px 250px',
                         }}
                     />
-                </Container>
+                </Box>
             </Container>
         </Container>
     )
