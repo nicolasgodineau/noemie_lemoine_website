@@ -80,6 +80,7 @@ function MariageGalleryPage({ imageKeys }) {
                             sx={{
                                 minHeight: "300px",
                                 minWidth: "200px",
+                                maxHeight: "720px",
                                 height: "400px",
                                 width: "70%",
                                 [theme.breakpoints.up("lg")]: {

@@ -41,6 +41,7 @@ function MariageForfaitPage({ data, direction, forfait }) {
                 sx={{
                     display: "flex",
                     flexDirection: direction,
+                    alignItems: "center",
                     gap: "2rem",
                     paddingX: 0,
                     [theme.breakpoints.up("lg")]: {
@@ -53,6 +54,7 @@ function MariageForfaitPage({ data, direction, forfait }) {
                 <Box /* zone image */
                     sx={{
                         maxWidth: `${theme.breakpoints.values.xs}px`,
+                        maxHeight: "720px",
                         height: '100%',
                         width: '100%',
                     }}>

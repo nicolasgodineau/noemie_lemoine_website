@@ -42,6 +42,7 @@ function Mariage1Page() {
                 sx={{
                     display: "flex",
                     flexDirection: "column-reverse",
+                    alignItems: "center",
                     gap: "2rem",
                     [theme.breakpoints.up('lg')]: {
                         height: "calc(100svh - 96px)",
@@ -103,6 +104,7 @@ function Mariage1Page() {
                 <Box
                     sx={{
                         maxWidth: `${theme.breakpoints.values.xs}px`,
+                        maxHeight: "720px",
                         height: '100%',
                         width: '100%',
                     }}>

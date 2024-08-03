@@ -41,17 +41,16 @@ function AboutPage() {
                                 height: "calc(100svh - 96px)",
                                 display: "flex",
                                 flexDirection: "row",
+                                alignItems: "center",
                             }}
                         >
                             <Container component="aside" /* Zone texte ( paragraphe 1) + image */
                                 maxWidth="sm2"
                                 disableGutters
                                 sx={{
-                                    height: "100%",
-                                    width: '80%',
                                     display: "flex",
                                     flexDirection: "column",
-                                    alignItems: "end",
+                                    alignItems: "center",
                                     gap: "1rem",
                                     paddingY: "2rem",
                                     paddingRight: "2rem"
@@ -62,15 +61,17 @@ function AboutPage() {
                                         width: '100%',
                                         display: "flex",
                                         flexDirection: "row-reverse",
+                                        gap: "1rem",
                                     }}
                                 >
                                     <Box /* Zone image */
                                         sx={{
+                                            maxHeight: "720px",
                                             height: "90%",
                                             width: '60%',
                                         }}
                                     >
-                                        <StaticImage /* image droite */
+                                        <StaticImage /* image gauche */
                                             src="../images/about/img_about_2.webp"
                                             alt="image d'illustration"
                                             objectFit="contain"
@@ -122,6 +123,7 @@ function AboutPage() {
                                     width: "70%",
                                     height: "50%",
                                     [theme.breakpoints.up('lg')]: {
+                                        maxHeight: "720px",
                                         width: 'auto',
                                         height: "90%",
                                     }
