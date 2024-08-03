@@ -17,7 +17,7 @@ function MariagePage() {
 
     // Tableaux d'identifiants pour les images à utiliser dans les composants MariageGalleryPage
     const firstImageKeys = ['img_mariage_4', 'img_mariage_5', 'img_mariage_6'];
-    const secondImageKeys = ['img_mariage_7', 'img_mariage_8', 'img_mariage_9'];
+    const secondImageKeys = ['img_mariage_8', 'img_mariage_9', 'img_mariage_10'];
 
     return (
         <Layout headerColor={theme.palette.colorLight} headerColorText={theme.palette.colorDark} backgroundColor={theme.palette.colorLight}>
