@@ -30,6 +30,7 @@ function Mariage1Page() {
                 backgroundColor: theme.palette.colorLight,
                 overflow: "hidden",
                 paddingY: "2rem",
+                paddingX: 0,
                 [theme.breakpoints.up('lg')]: {
                     display: "flex",
                     flexDirection: "column",

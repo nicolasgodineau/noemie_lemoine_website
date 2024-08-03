@@ -39,19 +39,24 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: `Noëmie Lemoine - Make-up Artist - France`,
-        short_name: `Noëmie Lemoine`,
-        start_url: `/`,
-        background_color: `#EDEAE4`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
+    /*     `gatsby-plugin-sharp`,
+        {
+          resolve: `gatsby-plugin-manifest`,
+          options: {
+            name: `Noëmie Lemoine - Make-up Artist - France`,
+            short_name: `Noëmie Lemoine`,
+            start_url: `/`,
+            background_color: `#EDEAE4`,
+            display: `minimal-ui`,
+            icon: `src/images/gatsby-icon.png`,
+          },
+        }, */
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {

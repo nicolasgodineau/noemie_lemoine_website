@@ -5,10 +5,7 @@ import { useTheme } from "@mui/material/styles"
 import Layout from '@layouts/layout.js'
 
 import MariageForfaitPage from "@sections/mariage/MariageForfaitPage.js";
-
-import Mariage3Page from "@sections/mariage/mariage3.js";
-import Mariage4Page from "@sections/mariage/mariage4.js";
-import Mariage5Page from "@sections/mariage/mariage5.js";
+import MariageGalleryPage from "@sections/mariage/mariageGalleryPage.js";
 import Mariage1Page from "@sections/mariage/mariage1.js";
 
 import AllData from "@languages"
@@ -18,11 +15,18 @@ function MariagePage() {
     const theme = useTheme()
     const mariageData = AllData.mariage;
 
+    // Tableaux d'identifiants pour les images à utiliser dans les composants MariageGalleryPage
+    const firstImageKeys = ['img_mariage_4', 'img_mariage_5', 'img_mariage_6'];
+    const secondImageKeys = ['img_mariage_7', 'img_mariage_8', 'img_mariage_9'];
+
     return (
         <Layout headerColor={theme.palette.colorLight} headerColorText={theme.palette.colorDark} backgroundColor={theme.palette.colorLight}>
             <Mariage1Page />
             <MariageForfaitPage data={mariageData.mariageForfait1} forfait="forfait1" direction="column" />
+            <MariageGalleryPage imageKeys={firstImageKeys} />
             <MariageForfaitPage data={mariageData.mariageForfait2} forfait="forfait2" direction="column-reverse" />
+            <MariageGalleryPage imageKeys={secondImageKeys} />
+
         </Layout>
     )
 }

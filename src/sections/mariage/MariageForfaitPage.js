@@ -18,14 +18,8 @@ function MariageForfaitPage({ data, direction, forfait }) {
     const isMobile = useMediaQuery(theme.breakpoints.up("lg"))
     const isLgUp = theme.breakpoints.up("md")
 
-    const borderRadius =
-        direction === 'column'
-            ? isMobile
-                ? '0px 0px 300px 0px'
-                : '0px 0px 200px 0px'
-            : isMobile
-                ? '0px 300px 0px 0px'
-                : '0px 200px 0px 0px';
+    const hasLabel2 = data.label2 !== undefined;
+    console.log('hasLabel2:', hasLabel2)
 
     return (
         <Container
@@ -48,6 +42,7 @@ function MariageForfaitPage({ data, direction, forfait }) {
                     display: "flex",
                     flexDirection: direction,
                     gap: "2rem",
+                    paddingX: 0,
                     [theme.breakpoints.up("lg")]: {
                         height: "calc(100svh - 96px)",
                         flexDirection: "row",
@@ -55,9 +50,9 @@ function MariageForfaitPage({ data, direction, forfait }) {
                     },
                 }}
             >
-                <Box
+                <Box /* zone image */
                     sx={{
-                        maxWidth: `${theme.breakpoints.values.sm}px`,
+                        maxWidth: `${theme.breakpoints.values.xs}px`,
                         height: '100%',
                         width: '100%',
                     }}>
@@ -70,7 +65,9 @@ function MariageForfaitPage({ data, direction, forfait }) {
                             style={{
                                 height: '100%',
                                 width: '100%',
-                                borderRadius: borderRadius,
+                                borderRadius: isMobile
+                                    ? '0px 0px 300px 0px' /* version bureau */
+                                    : '0px 0px 200px 0px' /* version mobile */
                             }}
                         />
                     )}
@@ -83,7 +80,9 @@ function MariageForfaitPage({ data, direction, forfait }) {
                             style={{
                                 height: '100%',
                                 width: '100%',
-                                borderRadius: borderRadius,
+                                borderRadius: isMobile
+                                    ? '0px 300px 0px 0px' /* version bureau */
+                                    : '0px 200px 0px 0px', /* version mobile */
                             }}
                         />
                     )}
@@ -110,10 +109,16 @@ function MariageForfaitPage({ data, direction, forfait }) {
                                 textAlign: "start",
                             }
                         }}>
-                        <TypoElementTitle variant="h4" sx={{}}>
-                            {t("mariage.mariageForfait1.label")}
-                        </TypoElementTitle>
-                        <Box
+                        <Box> {/* zone titre */}
+                            <TypoElementTitle variant="h4" sx={{ paddingRight: "4rem", [theme.breakpoints.up('lg')]: { paddingRight: "8rem" } }}>
+                                {t("mariage.mariageForfait1.label")}
+                            </TypoElementTitle>
+                            {/* Afficher label2 uniquement pour forfait 2 */}
+                            {forfait === "forfait2" && <TypoElementTitle variant="h4" sx={{ textAlign: "end" }}>
+                                {t("mariage.mariageForfait2.label2")}
+                            </TypoElementTitle>}
+                        </Box>
+                        <Box /* zone paragraphes */
                             sx={{
                                 display: "flex",
                                 flexDirection: "column",
@@ -143,6 +148,10 @@ function MariageForfaitPage({ data, direction, forfait }) {
                                     </TypoElement>
                                 ))}
                             </Box>
+                            {/* Afficher label2 uniquement pour forfait 2 */}
+                            {forfait === "forfait2" && <TypoElementTitle variant="body2" sx={{}}>
+                                {t("mariage.mariageForfait2.caution")}
+                            </TypoElementTitle>}
                         </Box>
                     </Box>
                 </Box>
