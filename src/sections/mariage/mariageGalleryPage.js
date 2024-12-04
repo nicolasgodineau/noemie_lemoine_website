@@ -43,7 +43,7 @@ function MariageGalleryPage({ imageKeys }) {
             sx={{
                 backgroundColor: theme.palette.colorLight,
                 overflow: "hidden",
-                paddingY: "2rem",
+                paddingY: "3rem",
                 paddingX: 0,
                 [theme.breakpoints.up("lg")]: {
                     display: "flex",

@@ -13,7 +13,7 @@ import TypoElementTitle from "@components//TypoElementTitle.js";
 import AllData from '@languages'
 
 
-function Mariage1Page() {
+function MariagePresentationPage() {
     const { t } = useTranslation()
     const theme = useTheme()
 
@@ -125,4 +125,4 @@ function Mariage1Page() {
     )
 }
 
-export default Mariage1Page
+export default MariagePresentationPage
