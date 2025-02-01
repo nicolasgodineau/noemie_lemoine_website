@@ -7,6 +7,8 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `Noëmie Lemoine - Make-up Artist - France`,
@@ -15,7 +17,6 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -58,21 +59,15 @@ module.exports = {
           },
         }, */
     {
-      resolve: `gatsby-plugin-alias-imports`,
+      resolve: 'gatsby-plugin-alias-imports',
       options: {
         alias: {
-          "@src": "src",
-          "@components": "src/components",
-          "@layouts": "src/layout",
-          "@pages": "src/pages",
-          "@sections": "src/sections",
-          "@templates": "src/templates",
-          "@languages": "src/languages/fr.json",
-          "@themes": "/theme.js"
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@sections': path.resolve(__dirname, 'src/sections'),
+          '@layouts': path.resolve(__dirname, 'src/layout'),
+          '@languages': path.resolve(__dirname, 'src/languages'),
         },
-        extensions: [
-          "js", "json"
-        ],
+        extensions: ['js', 'jsx']
       }
     }
   ],
