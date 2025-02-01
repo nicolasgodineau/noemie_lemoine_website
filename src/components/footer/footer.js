@@ -3,12 +3,13 @@ import { Box, Container, Typography, Link, IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
+import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material/styles";
 
 
 
 const Footer = () => {
+    const { t } = useTranslation();
     const currentYear = new Date().getFullYear();
     const theme = useTheme();
     return (
@@ -31,7 +32,7 @@ const Footer = () => {
                 backgroundColor: theme.palette.colorDark,
             }}>
             <Typography variant="body2" color="colorLight" sx={{ fontFamily: "Simonetta" }}>
-                © {currentYear} Noémie Lemoine. Tous droits réservés.
+                © {currentYear} {t("name")} {t("lastName")}. {t("credits")}
             </Typography>
             <Box sx={{ display: 'flex', gap: '1rem' }}>
                 <IconButton
