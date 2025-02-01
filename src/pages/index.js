@@ -7,7 +7,6 @@ import Layout from '@layouts/layout.js'
 import Seo from "@components/seo";
 import { Box, Container, Typography } from "@mui/material";
 import PortfolioPage from "@pages/portfolio.js";
-import BackToTopButton from "@components/BackToTopButton/BackToTopButton.js";
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -81,7 +80,6 @@ const IndexPage = () => {
         </Box>
       </Container>
       <PortfolioPage />
-      <BackToTopButton />
     </Layout>
   )
 }

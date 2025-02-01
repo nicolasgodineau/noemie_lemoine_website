@@ -5,6 +5,7 @@ import { createGlobalStyle } from "styled-components";
 import { Container } from "@mui/material";
 import theme from "../../theme.js";
 import Header from "@components/header/header.js";
+import BackToTop from '../components/backToTop/backToTop';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -45,6 +46,7 @@ const Layout = ({ children, headerColor, headerColorText, backgroundColor }) => 
       <Container component="main" maxWidth={false} disableGutters>
         {children}
       </Container>
+      <BackToTop />
     </ThemeProvider>
   );
 };

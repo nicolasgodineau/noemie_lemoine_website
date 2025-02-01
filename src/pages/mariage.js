@@ -4,9 +4,9 @@ import { useTheme } from "@mui/material/styles"
 
 import Layout from '@layouts/layout.js'
 
-import MariageForfaitPage from "@sections/mariage/MariageForfaitPage.js";
+import MariageForfaitPage from "@sections/mariage/mariageForfaitPage.js";
 import MariageGalleryPage from "@sections/mariage/mariageGalleryPage.js";
-import Mariage1Page from "@sections/mariage/mariage1.js";
+import MariagePresentationPage from "@sections/mariage/mariagePresentationPage.js";
 
 import AllData from "@languages"
 
@@ -21,12 +21,11 @@ function MariagePage() {
 
     return (
         <Layout headerColor={theme.palette.colorLight} headerColorText={theme.palette.colorDark} backgroundColor={theme.palette.colorLight}>
-            <Mariage1Page />
+            <MariagePresentationPage />
             <MariageForfaitPage data={mariageData.mariageForfait1} forfait="forfait1" direction="column" />
             <MariageGalleryPage imageKeys={firstImageKeys} />
             <MariageForfaitPage data={mariageData.mariageForfait2} forfait="forfait2" direction="column-reverse" />
             <MariageGalleryPage imageKeys={secondImageKeys} />
-
         </Layout>
     )
 }
