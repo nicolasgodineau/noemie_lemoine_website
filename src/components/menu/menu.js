@@ -1,20 +1,23 @@
 import React, { useState } from "react";
-
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Container, Drawer, Button } from "@mui/material"
+import { Container, Box, Button, Drawer, IconButton } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-
-import MenuMobile from "@components/menu/menuMobile.js";
-import MenuDesktop from "@components/menu/menuDesktop.js";
+import ButtonMenu from "@components/buttonMenu/buttonMenu.js";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Menu = ({ color, colorText, onClose }) => {
     const theme = useTheme();
-
     const [open, setOpen] = useState(false);
+    const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen);
+        if (!newOpen) {
+            onClose && onClose();
+        }
     };
 
     const links = [
@@ -22,9 +25,7 @@ const Menu = ({ color, colorText, onClose }) => {
         { to: "/mariage", name: "Mariage" },
         { to: "/about", name: "À propos" },
         { to: "/contact", name: "Contact" },
-    ]
-
-    const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+    ];
 
     return (
         <Container
@@ -33,31 +34,129 @@ const Menu = ({ color, colorText, onClose }) => {
             sx={{
                 display: "flex",
                 justifyContent: "space-between",
+                gap: "2rem",
+                backgroundColor: color,
             }}
-            onClick={onClose} /* Ferme le menu lorsqu'on clique n'importe où dans le conteneur */
         >
             {isMobile ? (
-                // Code to render if isMobile is true (version mobile)
                 <>
-                    <Button onClick={toggleDrawer(true)}><MenuIcon color="primary" /></Button>
+                    <Button onClick={toggleDrawer(true)}>
+                        <MenuIcon sx={{ color: colorText }} />
+                    </Button>
                     <Drawer
-                        anchor="top" // Définir le tiroir pour qu'il s'ouvre du haut
+                        anchor="top"
                         open={open}
                         onClose={toggleDrawer(false)}
+                        PaperProps={{
+                            sx: {
+                                backgroundColor: 'transparent',
+                                boxShadow: 'none',
+                            }
+                        }}
+                        onClick={toggleDrawer(false)}
                     >
-                        <MenuMobile links={links} color={color} colorText={colorText} onClose={toggleDrawer(false)} />
+                        <Box
+                            sx={{
+                                width: "100%",
+                                height: "100vh",
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                gap: "2rem",
+                                backgroundColor: color,
+                            }}
+                        >
+                            {links.map((link, index) => (
+                                <ButtonMenu
+                                    key={index}
+                                    to={link.to}
+                                    colorText={colorText}
+                                    color={color}
+                                >
+                                    {link.name}
+                                </ButtonMenu>
+                            ))}
+                            <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                                <IconButton
+                                    component="a"
+                                    href="https://www.instagram.com/noemielemoine_mua/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    sx={{
+                                        color: colorText,
+                                        '&:hover': {
+                                            color: color,
+                                        },
+                                    }}
+                                >
+                                    <InstagramIcon />
+                                </IconButton>
+                                <IconButton
+                                    component="a"
+                                    href="https://www.facebook.com/noemielemoineMUA/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    sx={{
+                                        color: colorText,
+                                        '&:hover': {
+                                            color: color,
+                                        },
+                                    }}
+                                >
+                                    <FacebookIcon />
+                                </IconButton>
+                                <IconButton
+                                    component="a"
+                                    href="https://www.linkedin.com/in/noëmie-lemoine-a5589065/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    sx={{
+                                        color: colorText,
+                                        '&:hover': {
+                                            color: color,
+                                        },
+                                    }}
+                                >
+                                    <LinkedInIcon />
+                                </IconButton>
+                            </Box>
+                        </Box>
                     </Drawer>
                 </>
             ) : (
-                // Code to render if isMobile is false (version bureau)
                 <>
-                    <MenuDesktop links={links} color={color} colorText={colorText} />
+                    <Box sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        gap: "1rem"
+                    }}>
+                        {links.slice(0, 2).map((link, index) => (
+                            <ButtonMenu
+                                key={index}
+                                to={link.to}
+                                colorText={colorText}
+                                color={color}
+                            >
+                                {link.name}
+                            </ButtonMenu>
+                        ))}
+                    </Box>
+                    {links.slice(2).map((link, index) => (
+                        <ButtonMenu
+                            key={index}
+                            to={link.to}
+                            colorText={colorText}
+                            color={color}
+                        >
+                            {link.name}
+                        </ButtonMenu>
+                    ))}
                 </>
             )}
         </Container>
     );
 };
 
-
-
-export default Menu
+export default Menu;

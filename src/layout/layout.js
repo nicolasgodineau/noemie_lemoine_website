@@ -6,6 +6,7 @@ import { Container } from "@mui/material";
 import theme from "../../theme.js";
 import Header from "@components/header/header.js";
 import BackToTop from '../components/backToTop/backToTop';
+import Footer from "@components/footer/footer.js";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -25,6 +26,11 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     background-color: ${(props) => props.backgroundColor || "#EDEAE4"}; // couleur par défaut (colorLight)
   }
+  #gatsby-focus-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 .input-label {
   color: var(--color-light);
 }
@@ -43,9 +49,19 @@ const Layout = ({ children, headerColor, headerColorText, backgroundColor }) => 
     <ThemeProvider theme={theme}>
       <GlobalStyle backgroundColor={backgroundColor} />
       <Header color={headerColor} colorText={headerColorText} />
-      <Container component="main" maxWidth={false} disableGutters>
+      <Container
+        component="main"
+        maxWidth={false}
+        disableGutters
+        sx={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column'
+        }}
+      >
         {children}
       </Container>
+      <Footer />
       <BackToTop />
     </ThemeProvider>
   );

@@ -2,13 +2,13 @@ import React from "react"
 import { Link } from "gatsby"
 import { Button } from "@mui/material"
 
-const ButtonMenu = ({ to, children, colorText, theme }) => {
+const ButtonMenu = ({ to, children, colorText, color }) => {
 
     return (
         <Link to={to} style={{ cursor: "pointer" }} >
             <Button
                 sx={{
-                    ...theme.button,
+                    backgroundColor: color,
                     color: colorText,
                     cursor: "pointer"
                 }}

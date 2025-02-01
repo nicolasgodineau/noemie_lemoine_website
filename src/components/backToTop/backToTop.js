@@ -5,7 +5,7 @@ import { useTheme } from '@mui/material/styles';
 
 const StyledButton = styled.button`
   position: fixed;
-  bottom: 20px;
+  bottom: 50px;
   right: 20px;
   background-color: ${props => props.theme.palette.secondary.dark};
   color: white;

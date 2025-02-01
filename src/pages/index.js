@@ -7,7 +7,7 @@ import Layout from '@layouts/layout.js'
 import Seo from "@components/seo";
 import { Box, Container, Typography } from "@mui/material";
 import PortfolioPage from "@pages/portfolio.js";
-
+import Header from "@components/header/header.js";
 const IndexPage = () => {
   const { t } = useTranslation();
   const theme = useTheme();
