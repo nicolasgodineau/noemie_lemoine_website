@@ -4,9 +4,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { Container, Box, Button, Drawer, IconButton } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import ButtonMenu from "@components/buttonMenu/buttonMenu.js";
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import SocialLinks from "@components/socialLinks/socialLinks.js";
 
 const Menu = ({ color, colorText, onClose }) => {
     const theme = useTheme();
@@ -77,50 +75,7 @@ const Menu = ({ color, colorText, onClose }) => {
                                     {link.name}
                                 </ButtonMenu>
                             ))}
-                            <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                                <IconButton
-                                    component="a"
-                                    href="https://www.instagram.com/noemielemoine_mua/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    sx={{
-                                        color: colorText,
-                                        '&:hover': {
-                                            color: color,
-                                        },
-                                    }}
-                                >
-                                    <InstagramIcon />
-                                </IconButton>
-                                <IconButton
-                                    component="a"
-                                    href="https://www.facebook.com/noemielemoineMUA/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    sx={{
-                                        color: colorText,
-                                        '&:hover': {
-                                            color: color,
-                                        },
-                                    }}
-                                >
-                                    <FacebookIcon />
-                                </IconButton>
-                                <IconButton
-                                    component="a"
-                                    href="https://www.linkedin.com/in/noëmie-lemoine-a5589065/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    sx={{
-                                        color: colorText,
-                                        '&:hover': {
-                                            color: color,
-                                        },
-                                    }}
-                                >
-                                    <LinkedInIcon />
-                                </IconButton>
-                            </Box>
+                            <SocialLinks color={colorText} hoverColor={color} />
                         </Box>
                     </Drawer>
                 </>
@@ -142,8 +97,9 @@ const Menu = ({ color, colorText, onClose }) => {
                                 {link.name}
                             </ButtonMenu>
                         ))}
+
                     </Box>
-                    {links.slice(2).map((link, index) => (
+                    {links.slice(2, 3).map((link, index) => (
                         <ButtonMenu
                             key={index}
                             to={link.to}
@@ -153,6 +109,22 @@ const Menu = ({ color, colorText, onClose }) => {
                             {link.name}
                         </ButtonMenu>
                     ))}
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', textAlign: 'right', }}>
+
+                        {links.slice(3, 4).map((link, index) => (
+                            <ButtonMenu
+                                key={index}
+                                to={link.to}
+                                colorText={colorText}
+                                color={color}
+                            >
+                                {link.name}
+                            </ButtonMenu>
+                        ))}
+                        <SocialLinks color={colorText} hoverColor={theme.palette.primary.contrastText} />
+
+                    </Box>
+
                 </>
             )}
         </Container>

@@ -61,7 +61,6 @@ const Layout = ({ children, headerColor, headerColorText, backgroundColor }) => 
       >
         {children}
       </Container>
-      <Footer />
       <BackToTop />
     </ThemeProvider>
   );

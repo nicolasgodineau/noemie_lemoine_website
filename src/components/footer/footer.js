@@ -1,10 +1,8 @@
 import React from 'react';
-import { Box, Container, Typography, Link, IconButton } from '@mui/material';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Box, Container, Typography } from '@mui/material';
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material/styles";
+import SocialLinks from "@components/socialLinks/socialLinks.js";
 
 
 
@@ -34,53 +32,10 @@ const Footer = () => {
             <Typography variant="body2" color="colorLight" sx={{ fontFamily: "Simonetta" }}>
                 © {currentYear} {t("name")} {t("lastName")}. {t("credits")}
             </Typography>
-            <Box sx={{ display: 'flex', gap: '1rem' }}>
-                <IconButton
-                    component="a"
-                    href="https://www.instagram.com/noemielemoine_mua/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                        padding: '0',
-                        color: theme.palette.colorLight,
-                        '&:hover': {
-                            color: theme.palette.secondary.main,
-                        },
-                    }}
-                >
-                    <InstagramIcon />
-                </IconButton>
-                <IconButton
-                    component="a"
-                    href="https://www.facebook.com/noemielemoineMUA/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                        padding: '0',
-                        color: theme.palette.colorLight,
-                        '&:hover': {
-                            color: theme.palette.secondary.main,
-                        },
-                    }}
-                >
-                    <FacebookIcon />
-                </IconButton>
-                <IconButton
-                    component="a"
-                    href="https://www.linkedin.com/in/noëmie-lemoine-a5589065/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                        padding: '0',
-                        color: theme.palette.colorLight,
-                        '&:hover': {
-                            color: theme.palette.secondary.main,
-                        },
-                    }}
-                >
-                    <LinkedInIcon />
-                </IconButton>
-            </Box>
+            <SocialLinks
+                color={theme.palette.colorLight}
+                hoverColor={theme.palette.secondary.main}
+            />
             <Box
                 sx={{
                     display: 'flex',

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -12,7 +12,9 @@ import Layout from '@layouts/layout.js'
 
 import AllData from '@languages'
 
-function ContactPage() {
+import ContactForm from "@components/contactForm/contactForm.js";
+
+const ContactPage = () => {
     const { t } = useTranslation()
     const theme = useTheme()
 
@@ -20,21 +22,25 @@ function ContactPage() {
 
     const aboutData = AllData.about
 
-    return (
-        <Layout headerColor={theme.palette.colorDark} headerColorText={theme.palette.colorLight} backgroundColor={theme.palette.colorDark}>
-            <Container component="section"
-                maxWidth={false}
-                sx={{
-                    backgroundColor: theme.palette.colorDark,
-                    color: theme.palette.colorLight,
-                    overflow: "hidden",
-                    [theme.breakpoints.up('lg')]: {
-                        display: "flex",
-                        alignItems: "center"
-                    }
-                }}>
+    useEffect(() => {
+        // Si l'URL contient un hash #contact, scroll vers le formulaire
+        if (window.location.hash === '#contact') {
+            const element = document.getElementById('contact-form');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, []);
 
-            </Container>
+    return (
+        <Layout
+            headerColor={theme.palette.colorLight}
+            headerColorText={theme.palette.colorDark}
+            backgroundColor={theme.palette.colorLight}
+        >
+            <div id="contact-form">
+                <ContactForm />
+            </div>
         </Layout>
     )
 }

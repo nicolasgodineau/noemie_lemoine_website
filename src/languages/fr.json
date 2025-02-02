@@ -22,7 +22,7 @@
     ]
   },
   "portfolio3": {
-    "title": "L’art de co-créer",
+    "title": "L'art de co-créer",
     "paragraph1": [
       {
         "line": "Un immense plaisir découle de la concrétisation réussie d'un projet partagé"
@@ -40,7 +40,7 @@
   },
   "mariage": {
     "title": "Vivez votre mise en beauté comme un moment suspendu dans le temps...",
-    "paragraph": "Depuis maintenant 10 ans, je vous accompagne avec soin à chaque étape de vos préparatifs jusqu’au jour J. Mon rôle est de vous conseiller et de vous guider pour atteindre la mise en beauté parfaite.",
+    "paragraph": "Depuis maintenant 10 ans, je vous accompagne avec soin à chaque étape de vos préparatifs jusqu'au jour J. Mon rôle est de vous conseiller et de vous guider pour atteindre la mise en beauté parfaite.",
     "line": "Cette expérience se divise en trois étapes cruciales :",
     "steps": [
       {
@@ -149,5 +149,24 @@
         "line": "En attendant ce moment propice, je vous invite à plonger dans mon univers."
       }
     ]
+  },
+  "form": {
+    "name": "Prénom",
+    "last_name": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "phone_format": "Veuillez entrer un numéro de téléphone valide (10 chiffres)",
+    "date": "Date de l'événement",
+    "message": "Votre message",
+    "submit": "Envoyer",
+    "success": "Message envoyé avec succès !",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "name_error": "Le prénom doit contenir au moins 2 caractères et uniquement des lettres",
+    "last_name_error": "Le nom doit contenir au moins 2 caractères et uniquement des lettres",
+    "email_error": "Veuillez entrer une adresse email valide",
+    "phone_error": "Le numéro de téléphone doit contenir 10 chiffres",
+    "date_error": "Veuillez sélectionner une date",
+    "message_error": "Le message doit contenir au moins 10 caractères",
+    "validation_error": "Veuillez corriger les erreurs dans le formulaire"
   }
 }
