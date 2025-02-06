@@ -2,13 +2,13 @@ import React from "react"
 
 import { useTheme } from "@mui/material/styles"
 
-import Layout from '../layout/layout.js'
+import Layout from '@layouts/layout.js'
 
 import MariageForfaitPage from "../sections/mariage/mariageForfaitPage.js";
-import MariageGalleryPage from "../sections/mariage/mariageGalleryPage.js";
-import MariagePresentationPage from "../sections/mariage/mariagePresentationPage.js";
+import MariageGalleryPage from "@sections/mariage/mariageGalleryPage.js";
+import MariagePresentationPage from "@sections/mariage/mariagePresentationPage.js";
 
-import AllData from "../languages/fr.json"
+import AllData from "@languages"
 
 
 function MariagePage() {

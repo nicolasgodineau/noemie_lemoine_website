@@ -4,9 +4,9 @@ import { ThemeProvider } from "@mui/material/styles";
 import { createGlobalStyle } from "styled-components";
 import { Container } from "@mui/material";
 import theme from "../../theme.js";
-import Header from "../components/header/header.js";
-import Footer from "../components/footer/footer.js";
-import BackToTop from "../components/backToTop/backToTop.js";
+import Header from "@components/header/header.js";
+import BackToTop from '../components/backToTop/backToTop';
+import Footer from "@components/footer/footer.js";
 
 const GlobalStyle = createGlobalStyle`
   :root {

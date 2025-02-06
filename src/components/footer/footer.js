@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material/styles";
-import SocialLinks from "../socialLinks/socialLinks.js";
+import SocialLinks from "@components/socialLinks/socialLinks.js";
 
 
 

@@ -49,5 +49,23 @@ module.exports = {
             icon: `src/images/gatsby-icon.png`,
           },
         }, */
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@src": "src",
+          "@components": "src/components",
+          "@layouts": "src/layout",
+          "@pages": "src/pages",
+          "@sections": "src/sections",
+          "@templates": "src/templates",
+          "@languages": "src/languages/fr.json",
+          "@themes": "/theme.js"
+        },
+        extensions: [
+          "js", "json"
+        ],
+      }
+    }
   ],
 }

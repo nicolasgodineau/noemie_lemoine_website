@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from '@mui/material'
 
-import ContactFormEmailJS from '../components/contactFormEmailJS/contactFormEmailJS';
-import Layout from '../layout/layout.js'
+import ContactFormEmailJS from '@components/contactFormEmailJS/contactFormEmailJS';
+import Layout from '@layouts/layout.js'
 
 function ContactPage() {
     const { t } = useTranslation()
