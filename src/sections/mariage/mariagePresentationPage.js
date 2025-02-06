@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from '@mui/material';
 
-import TypoElement from "../../components/typoElement.js";
 import TypoElementTitle from "../../components/typoElementTitle.js";
 
 
@@ -63,7 +62,7 @@ function MariagePresentationPage() {
                             paddingY: "2rem",
                         }
                     }}>
-                    <TypoElementTitle variant="h4" sx={{}}>
+                    <TypoElementTitle variant="h4" isTitle={true} sx={{}}>
                         {t("mariage.title")}
                     </TypoElementTitle>
                     <Box sx={{
@@ -82,20 +81,20 @@ function MariagePresentationPage() {
                                 justifyContent: "center",
                                 gap: "2rem",
                             }}>
-                            <TypoElement variant="body1">
+                            <TypoElementTitle variant="body1">
                                 {t("mariage.paragraph")}
-                            </TypoElement>
-                            <TypoElement variant="body1">
+                            </TypoElementTitle>
+                            <TypoElementTitle variant="body1">
                                 {t("mariage.line")}
-                            </TypoElement>
+                            </TypoElementTitle>
                             {mariageData.steps.map((step, index) => (
                                 <Box key={index}>
-                                    <TypoElement variant="h5">
+                                    <TypoElementTitle variant="h5">
                                         {step.title}
-                                    </TypoElement>
-                                    <TypoElement variant="body1">
+                                    </TypoElementTitle>
+                                    <TypoElementTitle variant="body1">
                                         {step.line}
-                                    </TypoElement>
+                                    </TypoElementTitle>
                                 </Box>
                             ))}
                         </Box>

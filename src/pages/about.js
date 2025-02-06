@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from "@mui/material"
 
-import TypoElement from "@components/TypoElement";
+import TypoElementTitle from "@components/typoElementTitle.js";
 
 import Layout from '@layouts/layout.js'
 
@@ -87,7 +87,7 @@ function AboutPage() {
                                             width: '70%',
                                             alignSelf: "flex-end"
                                         }}>
-                                            <TypoElement variant="body1"
+                                            <TypoElementTitle variant="body1"
                                                 sx={{
                                                     textAlign: 'end',
                                                     [theme.breakpoints.up('lg')]: {
@@ -95,7 +95,7 @@ function AboutPage() {
                                                     }
                                                 }}>
                                                 {step.line}
-                                            </TypoElement>
+                                            </TypoElementTitle>
                                         </Box>
                                     ))}
                                 </Box>
@@ -108,14 +108,14 @@ function AboutPage() {
                                 >
                                     {aboutData.paragraph.slice(1).map((step, index) => (
                                         <Box key={index}>
-                                            <TypoElement variant="body1">
+                                            <TypoElementTitle variant="body1">
                                                 {step.line}
-                                            </TypoElement>
+                                            </TypoElementTitle>
                                         </Box>
                                     ))}
-                                    <TypoElement variant="h5">
+                                    <TypoElementTitle variant="h5">
                                         {t("name")}
-                                    </TypoElement>
+                                    </TypoElementTitle>
                                 </Box>
                             </Container>
                             <Box  /* droite */
@@ -205,7 +205,7 @@ function AboutPage() {
                                 }}>
                                 {aboutData.paragraph.map((step, index) => (
                                     <Box key={index}>
-                                        <TypoElement variant="body1"
+                                        <TypoElementTitle variant="body1"
                                             sx=
                                             {{
                                                 textAlign: 'end',
@@ -214,12 +214,12 @@ function AboutPage() {
                                                 }
                                             }}>
                                             {step.line}
-                                        </TypoElement>
+                                        </TypoElementTitle>
                                     </Box>
                                 ))}
-                                <TypoElement variant="h5">
+                                <TypoElementTitle variant="h5">
                                     {t("name")}
-                                </TypoElement>
+                                </TypoElementTitle>
                             </Container>
                         </Box>
                     )}

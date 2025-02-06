@@ -1,11 +1,14 @@
-// TypoElementTitle.js
 import React from "react";
 import { Typography } from "@mui/material";
 
-const TypoElementTitle = ({ variant, children, sx }) => (
+const TypoElementTitle = ({ variant, children, sx, isTitle = false }) => (
     <Typography variant={variant} sx={{
-        paddingY: "0rem",
-        fontFamily: "Bodoni Moda Variable",
+        ...(isTitle ? {
+            paddingY: "0rem",
+            fontFamily: "Bodoni Moda Variable",
+        } : {
+            fontFamily: "Simonetta",
+        }),
         ...sx,
     }}>
         {children}
