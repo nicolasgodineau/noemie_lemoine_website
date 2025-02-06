@@ -34,12 +34,12 @@ function MariagePage() {
     return (
         <Layout headerColor={theme.palette.colorLight} headerColorText={theme.palette.colorDark} backgroundColor={theme.palette.colorLight}>
             <MariagePresentationPage />
-            <MariageForfaitPage data={mariageData.mariageForfait1} forfait="forfait1" direction="column" />
+
             <MariageGalleryPage
                 imageKeys={firstImageKeys}
                 imagePositions={firstImagePositions}
             />
-            <MariageForfaitPage data={mariageData.mariageForfait2} forfait="forfait2" direction="column-reverse" />
+
             <MariageGalleryPage
                 imageKeys={secondImageKeys}
                 imagePositions={secondImagePositions}
