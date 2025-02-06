@@ -38,7 +38,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
+    "build": "NODE_NO_WARNINGS=1 gatsby build",
     "develop": "NODE_NO_WARNINGS=1 NODE_OPTIONS=--max-old-space-size=4096 gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "NODE_NO_WARNINGS=1 gatsby develop",
