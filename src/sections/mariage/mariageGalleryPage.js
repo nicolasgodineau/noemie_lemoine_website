@@ -8,7 +8,7 @@ import { Box, Container } from "@mui/material"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
 
-function MariageGalleryPage({ imageKeys }) {
+function MariageGalleryPage({ imageKeys, imagePositions = {} }) {
     const theme = useTheme()
 
     const isMobile = useMediaQuery(theme.breakpoints.up("lg"))
@@ -22,7 +22,15 @@ function MariageGalleryPage({ imageKeys }) {
           node {
             name
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED)
+              gatsbyImageData(
+                layout: CONSTRAINED
+                width: 1200
+                height: 1600
+                transformOptions: {
+                  fit: COVER
+                  cropFocus: CENTER
+                }
+              )
             }
           }
         }
@@ -70,6 +78,7 @@ function MariageGalleryPage({ imageKeys }) {
                 {imageKeys.map((key, index) => {
                     const imageData = imageMap[key];
                     const image = getImage(imageData);
+                    const objectPosition = imagePositions[key] || 'center'; // Position par défaut si non spécifiée
 
                     if (!image) {
                         // Affiche un avertissement si l'image n'est pas trouvée dans le mapping
@@ -83,6 +92,8 @@ function MariageGalleryPage({ imageKeys }) {
                                 maxHeight: "720px",
                                 height: "400px",
                                 width: "70%",
+                                overflow: "hidden",
+                                position: "relative",
                                 [theme.breakpoints.up("lg")]: {
                                     height: "80%",
                                 },
@@ -93,9 +104,12 @@ function MariageGalleryPage({ imageKeys }) {
                                 image={image}
                                 alt={`Image ${key}`}
                                 objectFit="cover"
+                                quality={100}
+                                objectPosition={objectPosition}
                                 style={{
                                     height: "100%",
                                     width: "100%",
+                                    position: "absolute",
                                     borderRadius: isMobile
                                         ? "136px 0px 300px 0px" /* version bureau */
                                         : "50px 0px 100px 0px" /* version mobile */,

@@ -63,6 +63,7 @@ function Portfolio1Section() {
                             src="../../images/portfolio/img_portfolio_2.webp"
                             alt="image d'illustration"
                             objectFit="cover"
+                            quality={100}
                             imgStyle={{
                                 borderRadius: "0px 0px 0px 200px",
                             }}
@@ -89,6 +90,7 @@ function Portfolio1Section() {
                                 src="../../images/portfolio/img_portfolio_1.webp"
                                 alt="image d'illustration"
                                 objectFit="cover"
+                                quality={100}
                                 imgStyle={{
                                     borderRadius: "0px 200px 0px 0px",
                                 }}

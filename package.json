@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Nicolas G",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@fontsource-variable/bodoni-moda": "^5.0.15",
@@ -38,7 +39,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "NODE_NO_WARNINGS=1 gatsby develop",
+    "develop": "NODE_NO_WARNINGS=1 NODE_OPTIONS=--max-old-space-size=4096 gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "NODE_NO_WARNINGS=1 gatsby develop",
     "serve": "gatsby serve",

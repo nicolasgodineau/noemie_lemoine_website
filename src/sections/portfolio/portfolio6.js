@@ -60,6 +60,7 @@ function Portfolio6Section() {
                             src="../../images/portfolio/img_portfolio_12.webp"
                             alt="image d'illustration"
                             objectFit="cover"
+                            quality={100}
                             style={{
                                 height: '90%',
                                 width: '50%',
@@ -71,6 +72,7 @@ function Portfolio6Section() {
                             src="../../images/portfolio/img_portfolio_11.webp"
                             alt="image d'illustration"
                             objectFit="cover"
+                            quality={100}
                             style={{
                                 height: '80%',
                                 width: '50%',
@@ -148,6 +150,7 @@ function Portfolio6Section() {
                             src="../../images/portfolio/img_portfolio_11.webp"
                             alt="image d'illustration"
                             objectFit="cover"
+                            quality={100}
                             style={{
                                 width: "70%",
                                 borderRadius: "0px 0px 0px 100px",
@@ -167,6 +170,7 @@ function Portfolio6Section() {
                                     src="../../images/portfolio/img_portfolio_12.webp"
                                     alt="image d'illustration"
                                     objectFit="cover"
+                                    quality={100}
                                     style={{
                                         height: "500px",
                                         borderRadius: "0px 70px 0px 0px",

@@ -1,12 +1,24 @@
 import React from "react"
-
 import { useTheme } from "@mui/material/styles";
 import { StaticImage } from "gatsby-plugin-image"
 import { Box, Container } from '@mui/material';
+import styled from 'styled-components';
+
+const StyledBox = styled(Box)`
+    .gatsby-image-wrapper {
+        @media (max-width: 900px) {
+            img {
+                border-radius: ${props => props.mobileRadius} !important;
+            }
+        }
+        img {
+            border-radius: ${props => props.desktopRadius};
+        }
+    }
+`;
 
 function Portfolio4Section() {
-
-    const theme = useTheme()
+    const theme = useTheme();
 
     return (
         <Container component="section"
@@ -14,10 +26,12 @@ function Portfolio4Section() {
             sx={{
                 backgroundColor: theme.palette.colorLight,
                 overflow: "hidden",
+                paddingY: "1rem",
                 [theme.breakpoints.up('lg')]: {
                     height: "100svh",
                     width: '100%',
                     display: "flex",
+                    alignItems: "center",
                 }
             }}>
             <Container
@@ -27,38 +41,66 @@ function Portfolio4Section() {
                     flexDirection: "column",
                     alignItems: "center",
                     alignContent: "space-around",
-                    gap: "3rem",
                     marginY: "1rem",
                     [theme.breakpoints.up('lg')]: {
                         width: '100%',
                         flexDirection: "row",
                         justifyContent: "flex-end",
+                        gap: "3rem",
+                        marginY: "1rem",
                     }
                 }}>
-                <Box sx={{ /* width: '50%', height: '75%', alignSelf: "end" */alignSelf: "end" }}>
+                <StyledBox
+                    sx={{
+                        alignSelf: "end",
+                        height: {
+                            xs: "45vh", // hauteur en mobile
+                            lg: "60vh"  // hauteur en desktop
+                        },
+                        width: {
+                            xs: "90%",  // largeur en mobile
+                            lg: "40%"   // largeur en desktop
+                        }
+                    }}
+                    mobileRadius="0 200px 0 0"
+                    desktopRadius="0 0 0 400px"
+                >
                     <StaticImage
                         src="../../images/portfolio/img_portfolio_8.webp"
                         alt="Image de gauche"
-                        objectFit="none"
+                        objectFit="cover"
+                        objectPosition="top"
                         style={{
                             width: '100%',
                             height: '100%',
-                            borderRadius: "0% 0% 0% 400px",
                         }}
                     />
-                </Box>
-                <Box sx={{ width: '60vmin', height: '90%', alignSelf: "end" }}>
+                </StyledBox>
+                <StyledBox
+                    sx={{
+                        height: {
+                            xs: "45vh", // hauteur en mobile
+                            lg: "80vh"  // hauteur en desktop
+                        },
+                        width: {
+                            xs: "90%",  // largeur en mobile
+                            lg: "40%"   // largeur en desktop
+                        },
+                        alignSelf: "end"
+                    }}
+                    mobileRadius="0 0 0 200px"
+                    desktopRadius="0 200px 0 0"
+                >
                     <StaticImage
                         src="../../images/portfolio/img_portfolio_7.webp"
                         alt="Image de droite"
+                        objectFit="cover"
                         style={{
                             width: '100%',
                             height: '100%',
-                            objectFit: 'contain',
-                            borderRadius: "0% 400px 0% 0%",
                         }}
                     />
-                </Box>
+                </StyledBox>
 
 
 

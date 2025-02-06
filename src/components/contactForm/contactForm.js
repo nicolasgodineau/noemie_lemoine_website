@@ -110,88 +110,109 @@ const ContactForm = () => {
     const inputStyle = {
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
-                borderColor: theme.palette.colorDark,
+                borderWidth: '0 0 1px 0',
+                borderColor: theme.palette.colorLight,
+                borderRadius: 0,
             },
             '&:hover fieldset': {
-                borderColor: theme.palette.colorDark,
+                borderWidth: '0 0 2px 0',
+                borderColor: theme.palette.colorLight,
             },
             '&.Mui-focused fieldset': {
-                borderColor: theme.palette.colorDark,
+                borderWidth: '0 0 2px 0',
+                borderColor: theme.palette.colorLight,
             },
+            '& input, & textarea': {
+                fontSize: '1rem',
+                fontFamily: 'Simonetta',
+                padding: '.7rem 0rem .1rem 0rem',
+            },
+            padding: '0',
         },
         '& .MuiInputLabel-root': {
-            color: theme.palette.colorDark,
+            color: theme.palette.colorLight,
             '&.Mui-focused': {
-                color: theme.palette.colorDark,
+                color: theme.palette.colorLight,
+            },
+            fontSize: '1rem',
+            fontFamily: 'Simonetta',
+            transform: 'translate(1rem, 1rem) scale(1)',
+            '&.Mui-focused, &.MuiFormLabel-filled': {
+                transform: 'translate(1rem, -0.5rem) scale(0.75)',
             },
         },
         '& .MuiInputBase-input': {
-            color: theme.palette.colorDark,
+            color: theme.palette.colorLight,
+            paddingLeft: 0,
+        },
+        '& .MuiFormHelperText-root': {
+            fontSize: '.7rem',
+            fontFamily: 'Simonetta',
+            marginLeft: '0rem',
         },
     };
 
     return (
-        <Container maxWidth="md" sx={{ py: 4 }}>
+        <Container maxWidth="md" sx={{ height: "100%" }}>
             <form onSubmit={handleSubmit}>
                 <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: 3
+                    gap: '0.7rem'
                 }}>
-                    <Box sx={{
-                        display: 'flex',
-                        gap: 2,
-                        flexWrap: 'wrap'
-                    }}>
-                        <TextField
-                            required
-                            name="name"
-                            label={t("form.name")}
-                            error={!!errors.name}
-                            helperText={errors.name}
-                            sx={{ ...inputStyle, flex: 1, minWidth: '250px' }}
-                        />
-                        <TextField
-                            required
-                            name="last_name"
-                            label={t("form.last_name")}
-                            error={!!errors.last_name}
-                            helperText={errors.last_name}
-                            sx={{ ...inputStyle, flex: 1, minWidth: '250px' }}
-                        />
-                    </Box>
-
-                    <Box sx={{
-                        display: 'flex',
-                        gap: 2,
-                        flexWrap: 'wrap'
-                    }}>
-                        <TextField
-                            required
-                            type="email"
-                            name="email"
-                            label={t("form.email")}
-                            error={!!errors.email}
-                            helperText={errors.email}
-                            sx={{ ...inputStyle, flex: 1, minWidth: '250px' }}
-                        />
-                        <TextField
-                            required
-                            type="tel"
-                            name="phone"
-                            label={t("form.phone")}
-                            error={!!errors.phone}
-                            helperText={errors.phone}
-                            sx={{ ...inputStyle, flex: 1, minWidth: '250px' }}
-                        />
-                    </Box>
-
+                    <TextField
+                        required
+                        name="name"
+                        size="small"
+                        label={t("form.name")}
+                        error={!!errors.name}
+                        helperText={errors.name}
+                        sx={{ ...inputStyle }}
+                    />
+                    <TextField
+                        required
+                        name="last_name"
+                        label={t("form.last_name")}
+                        error={!!errors.last_name}
+                        helperText={errors.last_name}
+                        sx={{ ...inputStyle }}
+                    />
+                    <TextField
+                        required
+                        type="email"
+                        name="email"
+                        label={t("form.email")}
+                        error={!!errors.email}
+                        helperText={errors.email}
+                        sx={{ ...inputStyle }}
+                    />
+                    <TextField
+                        required
+                        type="tel"
+                        name="phone"
+                        label={t("form.phone")}
+                        error={!!errors.phone}
+                        helperText={errors.phone}
+                        sx={{ ...inputStyle }}
+                    />
                     <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={fr}>
                         <DatePicker
                             label={t("form.date")}
                             value={date}
                             onChange={(newDate) => setDate(newDate)}
-                            sx={inputStyle}
+                            sx={{
+                                ...inputStyle,
+                                '& .MuiSvgIcon-root': {
+                                    color: theme.palette.colorLight,
+                                },
+                                '& .MuiInputAdornment-root': {
+                                    '& .MuiButtonBase-root': {
+                                        '&:hover': {
+                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                        },
+                                    },
+                                },
+                            }}
                             slotProps={{
                                 textField: {
                                     required: true,
@@ -199,10 +220,14 @@ const ContactForm = () => {
                                     helperText: errors.date,
                                     name: "date"
                                 },
+                                openPickerButton: {
+                                    sx: {
+                                        color: theme.palette.colorLight,
+                                    }
+                                }
                             }}
                         />
                     </LocalizationProvider>
-
                     <TextField
                         required
                         name="message"
@@ -213,24 +238,18 @@ const ContactForm = () => {
                         helperText={errors.message}
                         sx={inputStyle}
                     />
-
                     <Button
                         type="submit"
                         variant="contained"
                         sx={{
-                            backgroundColor: theme.palette.colorDark,
-                            color: theme.palette.colorLight,
-                            '&:hover': {
-                                backgroundColor: theme.palette.secondary.main,
-                                color: theme.palette.colorDark,
-                            },
+                            backgroundColor: theme.palette.colorLight,
+                            color: theme.palette.colorDark,
                         }}
                     >
                         {t("form.submit")}
                     </Button>
                 </Box>
             </form>
-
             <Snackbar
                 open={openSnackbar}
                 autoHideDuration={6000}

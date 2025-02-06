@@ -23,6 +23,7 @@ function Portfolio7Section() {
             <StaticImage
                 src="../../images/portfolio/img_portfolio_13.webp"
                 alt="image d'illustration"
+                quality={100}
                 objectFit="contain"
                 style={{
                     width: '100%',

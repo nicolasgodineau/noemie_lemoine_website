@@ -132,7 +132,7 @@ function AboutPage() {
                                 <StaticImage /* image droite */
                                     src="../images/about/img_about_1.webp"
                                     alt="image d'illustration"
-                                    objectFit="cover"
+                                    objectFit="contain"
                                     style={{
                                         height: "100%",
                                         width: '100%',

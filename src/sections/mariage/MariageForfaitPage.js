@@ -63,7 +63,6 @@ function MariageForfaitPage({ data, direction, forfait }) {
                             src="../../images/mariage/img_mariage_3.webp"
                             alt="image d'illustration"
                             objectFit="cover"
-                            objectPosition="left"
                             style={{
                                 height: '100%',
                                 width: '100%',

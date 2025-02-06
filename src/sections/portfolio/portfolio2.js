@@ -45,6 +45,7 @@ function Portfolio2Section() {
                                 src="../../images/portfolio/img_portfolio_3.webp"
                                 alt="image d'illustration 2"
                                 objectFit="cover"
+                                quality={100}
                             />
                         </Box>
                         <Box
@@ -56,6 +57,7 @@ function Portfolio2Section() {
                                 src="../../images/portfolio/img_portfolio_5.webp"
                                 alt="image d'illustration 2"
                                 objectFit="cover"
+                                quality={100}
                                 style={{
                                     height: "100vh",
                                     maxHeight: "800px",
@@ -72,6 +74,7 @@ function Portfolio2Section() {
                                 src="../../images/portfolio/img_portfolio_4.webp"
                                 alt="image d'illustration 2"
                                 objectFit="cover"
+                                quality={100}
                             />
                         </Box>
                     </Container>
@@ -94,6 +97,7 @@ function Portfolio2Section() {
                             src="../../images/portfolio/img_portfolio_5.webp"
                             alt="image d'illustration"
                             objectFit="cover"
+                            quality={100}
                             style={{ marginBottom: "40%" }}
                         />
                         <Box
@@ -114,12 +118,14 @@ function Portfolio2Section() {
                                 src="../../images/portfolio/img_portfolio_4.webp"
                                 alt="image d'illustration"
                                 objectFit="contain"
+                                quality={100}
                                 style={{ width: "40%", height: "80%", alignSelf: "flex-start" }}
                             />
                             <StaticImage
                                 src="../../images/portfolio/img_portfolio_3.webp"
                                 alt="image d'illustration"
                                 objectFit="contain"
+                                quality={100}
                                 style={{ width: "40%", height: "80%", alignSelf: "flex-end" }}
                             />
                         </Box>

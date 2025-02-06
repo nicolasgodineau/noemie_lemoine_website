@@ -52,8 +52,9 @@ function Portfolio5Section() {
                                 flexDirection: "row",
                             }}>
                             <StaticImage
-                                src="../../images/portfolio/img_portfolio_9.webp"
+                                src="../../images/portfolio/img_portfolio_9.jpg"
                                 alt="Image de gauche"
+                                quality={100}
                                 objectFit="contain"
                                 style={{
                                     width: '100%',
@@ -68,8 +69,9 @@ function Portfolio5Section() {
                                 flexDirection: "row",
                             }}>
                             <StaticImage
-                                src="../../images/portfolio/img_portfolio_10.webp"
+                                src="../../images/portfolio/img_portfolio_10.jpg"
                                 alt="Image de gauche"
+                                quality={100}
                                 objectFit="cover"
                                 style={{
                                     width: '100%',
@@ -94,8 +96,9 @@ function Portfolio5Section() {
                         }}
                     >
                         <StaticImage
-                            src="../../images/portfolio/img_portfolio_10.webp"
+                            src="../../images/portfolio/img_portfolio_10.jpg"
                             alt="image d'illustration"
+                            quality={100}
                             objectFit="cover"
                             style={{ marginBottom: "40%" }}
                         />
@@ -115,8 +118,9 @@ function Portfolio5Section() {
                             }}
                         >
                             <StaticImage
-                                src="../../images/portfolio/img_portfolio_9.webp"
+                                src="../../images/portfolio/img_portfolio_9.jpg"
                                 alt="image d'illustration"
+                                quality={100}
                                 objectFit="contain"
                                 style={{ width: "50%", alignSelf: "flex-end" }}
                             />

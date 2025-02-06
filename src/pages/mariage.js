@@ -15,17 +15,35 @@ function MariagePage() {
     const theme = useTheme()
     const mariageData = AllData.mariage;
 
-    // Tableaux d'identifiants pour les images à utiliser dans les composants MariageGalleryPage
     const firstImageKeys = ['img_mariage_4', 'img_mariage_5', 'img_mariage_6'];
     const secondImageKeys = ['img_mariage_8', 'img_mariage_9', 'img_mariage_10'];
+
+    // Configuration des positions pour les deux groupes d'images
+    const firstImagePositions = {
+        'img_mariage_4': 'center 40%',
+        'img_mariage_5': '40% 40%',
+        'img_mariage_6': 'center 70%'
+    };
+
+    const secondImagePositions = {
+        'img_mariage_8': 'center 30%',
+        'img_mariage_9': 'center 70%',
+        'img_mariage_10': 'center 20%'
+    };
 
     return (
         <Layout headerColor={theme.palette.colorLight} headerColorText={theme.palette.colorDark} backgroundColor={theme.palette.colorLight}>
             <MariagePresentationPage />
             <MariageForfaitPage data={mariageData.mariageForfait1} forfait="forfait1" direction="column" />
-            <MariageGalleryPage imageKeys={firstImageKeys} />
+            <MariageGalleryPage
+                imageKeys={firstImageKeys}
+                imagePositions={firstImagePositions}
+            />
             <MariageForfaitPage data={mariageData.mariageForfait2} forfait="forfait2" direction="column-reverse" />
-            <MariageGalleryPage imageKeys={secondImageKeys} />
+            <MariageGalleryPage
+                imageKeys={secondImageKeys}
+                imagePositions={secondImagePositions}
+            />
         </Layout>
     )
 }

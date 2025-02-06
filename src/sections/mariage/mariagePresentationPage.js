@@ -112,7 +112,6 @@ function MariagePresentationPage() {
                         src="../../images/mariage/img_mariage_1.webp"
                         alt="image d'illustration"
                         objectFit="cover"
-                        objectPosition="left"
                         style={{
                             height: "100%",
                             width: '100%',
