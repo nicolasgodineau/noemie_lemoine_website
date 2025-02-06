@@ -5,8 +5,8 @@ import { useTheme } from "@mui/material/styles"
 import Layout from '@layouts/layout.js'
 
 import MariageForfaitPage from "../sections/mariage/mariageForfaitPage.js";
-import MariageGalleryPage from "@sections/mariage/mariageGalleryPage.js";
-import MariagePresentationPage from "@sections/mariage/mariagePresentationPage.js";
+import MariageGalleryPage from "../sections/mariage/mariageGalleryPage.js";
+import MariagePresentationPage from "../sections/mariage/mariagePresentationPage.js";
 
 import AllData from "@languages"
 
