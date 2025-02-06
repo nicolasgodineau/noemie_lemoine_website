@@ -16,7 +16,6 @@
     "@mui/material": "^5.16.14",
     "@mui/x-date-pickers": "^6.20.2",
     "gatsby": "^5.14.1",
-    "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-image": "^3.14.0",
     "gatsby-plugin-manifest": "^5.14.0",
     "gatsby-plugin-sharp": "^5.14.0",

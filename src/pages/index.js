@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 
-import Layout from '@layouts/layout.js'
+import Layout from '../layout/layout.js'
 import Seo from "@components/seo";
 import { Box, Container, Typography } from "@mui/material";
 import PortfolioPage from "@pages/portfolio.js";

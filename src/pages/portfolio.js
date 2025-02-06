@@ -8,6 +8,8 @@ import Portfolio5Section from "@sections/portfolio/portfolio5.js";
 import Portfolio6Section from "@sections/portfolio/portfolio6.js";
 import Portfolio7Section from "@sections/portfolio/portfolio7.js";
 
+import Layout from '../layout/layout.js'
+import AllData from "../languages/fr.json"
 
 function PortfolioPage() {
 
