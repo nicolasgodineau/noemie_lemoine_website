@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { Container, Box } from "@mui/material"
 
-import TypoElement from "../../components/typoElement.js";
+import TypoElement from "@components/typoElement.js";
 import TypoElementTitle from "../../components/typoElementTitle.js";
 
 
